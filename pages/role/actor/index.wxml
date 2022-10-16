@@ -1,0 +1,5 @@
+<view class="list">
+  <actor-item wx:for="{{list}}" wx:key="id" actor="{{item}}" />
+</view>
+
+<m-loadmore loading="{{loading}}" />

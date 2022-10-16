@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "即将上映",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "skeleton": "../components/skeleton"
+  }
+}

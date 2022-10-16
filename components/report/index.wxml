@@ -1,0 +1,26 @@
+<m-modal
+    id="modal"
+    title="举报原因"
+    visible="{{visible}}"
+    show-cancel-button="{{false}}"
+    confirm-text-color="#e54847"
+    async-close
+    confirm-button-text="提交反馈"
+    bind:confirm="handleConfirm"
+  >
+    <view wx:if="{{loading}}" class="loading">
+      <m-spinner type="triple" color="#f60" />
+    </view>
+
+    <view v-else class="reason-list">
+      <view
+        class="reason-item {{ item.value === reason ? 'is-active': '' }}"
+        wx:for="{{reasons}}"
+        wx:key="value"
+        data-reason="{{ item.value }}"
+        bindtap="checkReason"
+      >
+        {{ item.label }}
+      </view>
+    </view>
+  </m-modal>

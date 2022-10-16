@@ -1,0 +1,38 @@
+<view class="container" wx:if="{{award.session}}">
+  <view class="award-header">
+    <view class="award-logo">
+      <image class="logo" mode="aspectFill" src="{{award.poster}}" />
+    </view>
+    <view class="award-info">
+      <view class="award-title">第{{ award.session }}届{{ award.title }}</view>
+      <view class="award-brief">
+        {{ award.year }} {{ award.place ? ' / '+award.place : "" }}
+      </view>
+    </view>
+  </view>
+
+  <view class="award-content">
+    <m-panel title="{{type.type}}" wx:for="{{award.data}}" wx:for-item="type" wx:key="id">
+      <!-- 影视获奖 -->
+      <block wx:if="{{type.is_actor === 0}}">
+        <movie-row wx:for="{{type.children}}" wx:key="id" movie="{{item}}">
+          <view class="win-tag" wx:if="{{item.win === 1}}">获奖</view>
+        </movie-row>
+      </block>
+
+      <!-- 影人获奖 -->
+      <block wx:else>
+        <actor-row wx:for="{{type.children}}" wx:for-item="actor" wx:key="id" actor="{{actor}}">
+          <view class="win-tag" wx:if="{{actor.win === 1}}">获奖</view>
+
+          <!-- 影视 -->
+          <view class="actor-movie" wx:if="{{actor.movie}}">
+            {{ actor.movie.title }}
+          </view>
+        </actor-row>
+      </block>
+    </m-panel>
+  </view>
+</view>
+
+<m-loadmore wx:if="{{ loading }}" loading />

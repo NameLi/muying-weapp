@@ -1,0 +1,135 @@
+.movie-item {
+  position: relative;
+  display: flex;
+  margin: 0 30rpx;
+  padding: 16rpx 0;
+}
+
+.movie-item .ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.movie-item .poster-wrapper {
+  position: relative;
+  width: 164rpx;
+  height: 220rpx;
+  overflow: hidden;
+  border-radius: 6rpx;
+}
+
+.movie-item .poster-wrapper .img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: rgba(245, 245, 245, 0.45);
+}
+
+.movie-item .movie-info {
+  flex: 1;
+  margin-left: 24rpx;
+  width: 0;
+}
+
+.movie-item .movie-info .title {
+  display: flex;
+  height: 44rpx;
+  line-height: 44rpx;
+}
+
+.movie-item .movie-info .title .name {
+  font-size: 32rpx;
+  color: #333;
+  flex: 1;
+  width: 0;
+}
+
+.movie-item .movie-info .title .rating {
+  width: 120rpx;
+  text-align: right;
+  font-size: 28rpx;
+  color: #feb300;
+  text-align: right;
+}
+
+.movie-item .movie-info .title .rating.is-third {
+  color: #f16c00;
+}
+
+.movie-item .movie-info .title .rating .value {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.movie-item .movie-info .title .rating .label {
+  font-size: 20rpx;
+  padding: 0 4rpx;
+}
+
+.movie-item .movie-info .info-item {
+  padding-top: 12rpx;
+  height: 46rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.movie-item .movie-info .info-item.wish-count .wish-count {
+  color: var(--color-theme);
+  font-size: 28rpx;
+}
+
+.movie-item .movie-info .info-item .category-tag {
+  display: inline-block;
+  margin-right: 8rpx;
+  padding: 0 6rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  border-radius: 4rpx;
+  font-size: 12rPX;
+  color: #feb300;
+  background-color: rgba(254, 179, 0, 0.15);
+}
+
+.movie-item .movie-info .info-item .category-tag::before {
+  border-color: #feb300;
+}
+
+.movie-item .sort {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  line-height: 40rpx;
+  width: 30rpx;
+  text-align: center;
+}
+
+.movie-item .sort .sort-bg {
+  position: absolute;
+  left: -50rpx;
+  top: 0;
+  width: 120rpx;
+  height: 40rpx;
+  transform: rotate(-45deg);
+  background: #adadad;
+  text-align: center;
+  z-index: -1;
+}
+
+.movie-item .sort .sort-bg.sort-1 {
+  background: #ff0000;
+}
+
+.movie-item .sort .sort-bg.sort-2 {
+  background: #ff4500;
+}
+
+.movie-item .sort .sort-bg.sort-3 {
+  background: #f4a460;
+}
+
+.movie-item .sort .sort-value {
+  color: #fff;
+  font-size: 22rpx;
+}

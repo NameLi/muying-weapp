@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "看点视频",
+  "navigationBarBackgroundColor": "#202538",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "video-player": "./components/video-player",
+    "video-info": "./components/video-info"
+  }
+}

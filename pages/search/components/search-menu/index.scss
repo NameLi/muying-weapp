@@ -1,0 +1,30 @@
+.menu-list {
+  display: flex;
+  justify-content: space-around;
+  padding: 30rpx 30rpx;
+  .menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 10rpx;
+    flex: 1;
+    height: 150rpx;
+    .menu-icon {
+      width: 80rpx;
+      height: 80rpx;
+      line-height: 80rpx;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 44rpx;
+      color: #fff;
+      background-color: #dedede;
+    }
+    .menu-name {
+      text-align: center;
+      height: 60rpx;
+      line-height: 60rpx;
+      font-size: 24rpx;
+    }
+  }
+}

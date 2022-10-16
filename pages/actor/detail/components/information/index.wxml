@@ -1,0 +1,22 @@
+<half-page full use-slot-header footer-close bind:close="close">
+  <m-cell-group border>
+    <m-cell title="中文名" value="{{actor.name}}" />
+    <m-cell title="英文名" value="{{actor.name_en}}" />
+    <m-cell title="性别" value="{{actor.gender}}" />
+    <m-cell title="生日" value="{{actor.birthday}}" />
+    <m-cell wx:if="{{actor.deathday}}" title="逝世" value="{{actor.deathday}}" />
+    <m-cell title="年龄" value="{{actor.age}}" />
+    <m-cell title="国籍" value="{{actor.country}}" />
+    <m-cell title="出生地" value="{{actor.born_place}}" />
+    <m-cell title="职业" value="{{professions}}" />
+    <m-cell title="星座" value="{{actor.constellation}}" />
+    <m-cell title="身高" value="{{actor.height}}" />
+    <m-cell title="民族" value="{{actor.nationality}}" />
+    <m-cell title="血型" value="{{actor.blood_type}}" />
+    <m-cell title="教育" value="{{actor.education}}" />
+  </m-cell-group>
+
+  <view class="content" wx:if="{{actor.summary}}">
+    <view class="summary">{{actor.summary}}</view>
+  </view>
+</half-page>

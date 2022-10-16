@@ -1,0 +1,39 @@
+<view class="main">
+	<m-cell-group border>
+		<m-cell title="头像">
+			<button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+				<image class="avatar" src="{{user.avatar}}" />
+			</button>
+		</m-cell>
+		<m-cell title="用户名" value="{{user.username}}" bind:click="showUsername" />
+	</m-cell-group>
+
+	<m-cell-group border custom-class="group-two">
+		<m-cell title="手机号" value="{{user.phone}}" />
+		<m-cell title="性别" value="{{user.gender}}" bind:click="showGenderModal" />
+		<m-cell title="生日">
+			<picker mode="date" value="{{birthday}}" start="1980-01-01" end="2010-01-01" bindchange="birthdayChange">
+				<text class="birthday">{{user.birthday ? user.birthday : '请选择'}}</text>
+			</picker>
+		</m-cell>
+	</m-cell-group>
+</view>
+
+<!-- 用户名 -->
+<m-modal title="编辑用户名" custom-class="{{ isFocus ? 'modal-position is-focus': 'modal-position' }}" visible="{{isShowUsername}}"
+	bind:cancel="hideUsernameModal" bind:confirm="usernameModalConfirm" loading="{{ submitLoading }}">
+	<!-- type="nickname" 不影藏的话进入页面时会触发 -->
+	<view class="username-content" wx:if="{{ isShowUsername }}">
+		<input class="username" adjust-position="{{false}}" type="nickname" bindinput="usernameChange" focus
+			value="{{username}}" placeholder="请输入用户名" bindfocus="inputFocus" bindblur="inputBlur" />
+		<text class="count">{{ username.length }}/10</text>
+	</view>
+</m-modal>
+
+<!-- 性别 -->
+<m-action-sheet show-cancel visible="{{isShowGender}}" actions="{{genders}}" bind:cancel="hideGenderModal"
+	bind:click="handleClickItem" />
+
+<!-- 提示 -->
+<m-toast id="toast" />
+<m-message id="message" />

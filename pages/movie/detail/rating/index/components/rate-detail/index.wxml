@@ -1,0 +1,33 @@
+<view class="rate-main">
+	<view class="subtitle">评分详细</view>
+	<view class="rate-content">
+		<!-- 分数 -->
+		<view class="rate-left">
+			<view class="rate-score">
+				<text class="rate">{{ rating }}</text>
+				<text class="label">分</text>
+			</view>
+			<view class="rate-count">{{ voteCount }}人评分</view>
+		</view>
+
+		<!-- 占比 -->
+		<view class="rate-right">
+			<view class="rate-item" wx:for="{{ratios}}" wx:key="star">
+				<text class="level">{{ item.label }}</text>
+				<view class="progress">
+					<view class="percent" style="width: {{ item.ratio }}"></view>
+				</view>
+				<text class="ratio">{{ item.ratio }}</text>
+			</view>
+		</view>
+	</view>
+
+	<!-- 好于 -->
+	<view class="better-than">
+		<view class="better-item" wx:for="{{betterThan}}" wx:key="genre">
+			<text>好于</text>
+			<em>{{ item.ratio }}</em>
+			<text>的{{ item.genre }}</text>
+		</view>
+	</view>
+</view>

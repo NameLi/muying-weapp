@@ -1,0 +1,84 @@
+<half-page full use-slot-header footer-close bind:close="close">
+
+  <!-- <view class="skeleton-wrapper" wx:if="{{loading}}">
+    <view class="skeleton"></view>
+    <view class="skeleton"></view>
+    <view class="skeleton"></view>
+    <view class="skeleton" style="width: 32%"></view>
+  </view> -->
+
+  <view class="detail-main">
+    <view class="detail-content">
+      <view class="detail-header">
+        <view class="detail-title">基本信息</view>
+      </view>
+      <view class="item">
+        <view class="label">片名：</view>
+        <view class="value">{{ movie.title }}</view>
+      </view>
+      <view class="item" wx:if="{{movie.title_original}}">
+        <view class="label">原名：</view>
+        <view class="value">
+          <text>{{ movie.title_original }}</text>
+        </view>
+      </view>
+      <view class="item">
+        <view class="label">别名：</view>
+        <view class="value">
+          <text>{{ akas }}</text>
+        </view>
+      </view>
+      <view class="item">
+        <view class="label">类别：</view>
+        <view class="value">{{ movie.category }}</view>
+      </view>
+      <view class="item">
+        <view class="label">类型：</view>
+        <view class="value">{{ genres }}</view>
+      </view>
+      <view class="item">
+        <view class="label">上映：</view>
+        <view class="value">{{ pubdates }}</view>
+      </view>
+
+      <view class="item" wx:if="{{movie.season_count}}">
+        <view class="label">季数：</view>
+        <view class="value">第 {{ movie.season_count }} 季</view>
+      </view>
+      <view class="item" wx:if="{{movie.episode_count}}">
+        <view class="label">集数：</view>
+        <view class="value">共 {{ movie.episode_count }} 集</view>
+      </view>
+
+      <view class="item" wx:if="{{durations}}">
+        <view class="label">片长：</view>
+        <view class="value">
+          {{ isEpisode ? "每集" : "" }}{{ durations }}分钟
+        </view>
+      </view>
+
+      <view class="item">
+        <view class="label">地区：</view>
+        <view class="value">{{ countries }}</view>
+      </view>
+      <view class="item">
+        <view class="label">色彩：</view>
+        <view class="value">{{ movie.color === 0 ? "黑白" : "彩色" }}</view>
+      </view>
+      <view class="item">
+        <view class="label">语言：</view>
+        <view class="value">{{ languages }}</view>
+      </view>
+    </view>
+
+    <view class="detail-content">
+      <view class="detail-header">
+        <view class="detail-title">简介</view>
+      </view>
+      <view class="summary">
+        <rich-text wx:if="{{movie.summary}}" nodes="{{ movie.summary}}" />
+        <view wx:else class="no-summary">暂无简介</view>
+      </view>
+    </view>
+  </view>
+</half-page>

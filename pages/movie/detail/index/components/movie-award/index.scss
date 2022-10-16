@@ -1,0 +1,41 @@
+.movie-award {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  height: 150rpx;
+  background-color: rgb(246, 246, 246);
+  border-radius: 6rpx;
+  .award-item {
+    width: 120rpx;
+    text-align: center;
+    .award-count {
+      .award-count__value {
+        font-weight: bold;
+        font-size: 32rpx;
+        color: rgb(223, 57, 54);
+      }
+      .award-count__label {
+        font-size: 20rpx;
+        color: rgb(223, 57, 54);
+      }
+    }
+    .award-label {
+      display: block;
+      margin-top: 20rpx;
+      font-size: 24rpx;
+      color: rgb(176, 179, 187);
+    }
+    &.award-detail {
+      padding-left: 30rpx;
+      flex: 1;
+      text-align: left;
+      .award-name {
+        font-size: 28rpx;
+        font-weight: bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+}

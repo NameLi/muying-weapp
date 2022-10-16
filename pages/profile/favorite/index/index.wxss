@@ -1,0 +1,58 @@
+.container .header {
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30rpx;
+  height: 68rpx;
+  background-color: var(--color-skeleton);
+}
+
+.container .header .count {
+  color: #999;
+  font-size: 24rpx;
+}
+
+.container .header .create-btn {
+  color: var(--color-theme);
+}
+
+.container .save-list {
+  padding: 78rpx 0;
+}
+
+.container .save-list .save-item {
+  display: flex;
+  height: 130rpx;
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid var(--color-skeleton);
+}
+
+.container .save-list .save-item .save-poster {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 6rpx;
+  object-fit: cover;
+}
+
+.container .save-list .save-item .save-content .save-title {
+  height: 50rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.container .save-list .save-item .save-content .save-info {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.container .no-data .create-btn {
+  color: var(--color-theme);
+}

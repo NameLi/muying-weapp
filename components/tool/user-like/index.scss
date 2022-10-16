@@ -1,0 +1,22 @@
+.tool-item {
+	.tool-item-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 48rpx;
+
+		&.is-checked {
+			color: var(--color-theme);
+		}
+
+		.icon {
+			font-size: 40rpx;
+		}
+	}
+
+	.tool-item-count {
+		height: 32rpx;
+		line-height: 28rpx;
+		font-size: 24rpx;
+	}
+}

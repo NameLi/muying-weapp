@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "m-collapse": "mind-ui-weapp/collapse",
+    "report": "/components/report"
+  }
+}

@@ -1,0 +1,45 @@
+<view class="page-main {{ round ? 'is-round' :'' }}" style="{{ _customStyle }}">
+  <!-- padding-top: {{ statusBarH }}px; -->
+
+  <!-- 自定义头部 -->
+  <view class="header" id="header">
+    <slot name="header" wx:if="{{ useSlotHeader }}" />
+    <!-- 头部 -->
+    <view class="page-header" wx:else>
+      <!-- 自定义顶部左区域 -->
+      <view class="header-left">
+        <slot name="header-left" />
+      </view>
+
+      <!-- 自定义标题，点击标题可返回顶部 -->
+      <view class="title">{{ title }}</view>
+      
+      <!-- 自定义顶部右区域 -->
+      <view class="header-right" wx:if="{{ useSlotHeaderRight }}">
+        <slot name="header-right" />
+      </view>
+
+      <!-- 返回上一页/关闭 -->
+      <view class="header-right-back" wx:else>
+        <c-icon name="close" class="back-icon" bindtap="goBack" />
+      </view>
+    </view>
+  </view>
+
+  <!-- 内容 -->
+  <view id="content" class="page-content">
+    <scroll-view enable-flex style="height: {{ contentHeight }}" bindscrolltolower="getMoreData" scroll-y>
+      <slot />
+    </scroll-view>
+  </view>
+
+  <view class="page-footer" id="footer">
+    <!-- 页底自定义内容 -->
+    <slot name="footer" wx:if="{{ useSlotFooter }}" />
+
+    <!-- 页底关闭返回上一页按钮 -->
+    <view class="page-icon-footer" wx:elif="{{ footerClose }}">
+      <c-icon name="close" class="icon" bind:tap="goBack" />
+    </view>
+  </view>
+</view>

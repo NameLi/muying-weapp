@@ -1,0 +1,25 @@
+.nav-list {
+  position: relative;
+  padding-left: 20rpx;
+  width: 100%;
+  height: 64rpx;
+  user-select: none;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+.nav-list .nav-item {
+  display: inline-block;
+  margin: 6rpx 10rpx 6rpx 0;
+  padding: 0 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  border-radius: 40rpx;
+  transition: all 0.2s;
+}
+
+.nav-list .nav-item.is-active {
+  color: #fff;
+  background-color: rgba(229, 72, 71, 0.85);
+}

@@ -1,0 +1,111 @@
+.subtitle {
+  position: relative;
+  margin: 0 20rpx;
+  padding-left: 16rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.subtitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 24rpx;
+  height: 30rpx;
+  width: 8rpx;
+  border-radius: 4rpx;
+  background-color: var(--color-theme);
+}
+
+.rate-main {
+  margin: 40rpx 20rpx 0;
+  border-radius: 8rpx;
+  box-shadow: 0 4rpx 12rpx #e5e5e5;
+}
+
+.rate-main .rate-content {
+  display: flex;
+  height: 240rpx;
+}
+
+.rate-main .rate-content .rate-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250rpx;
+  flex-direction: column;
+}
+
+.rate-main .rate-content .rate-left .rate-score .rate {
+  font-size: 48rpx;
+  color: var(--color-theme);
+  font-weight: bold;
+}
+
+.rate-main .rate-content .rate-left .rate-score .label {
+  font-size: 20rpx;
+  color: var(--color-theme);
+  margin-left: 2rpx;
+}
+
+.rate-main .rate-content .rate-left .rate-count {
+  color: #999;
+}
+
+.rate-main .rate-content .rate-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 20rpx 30rpx;
+  color: #999;
+  font-size: 24rpx;
+}
+
+.rate-main .rate-content .rate-right .rate-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.rate-main .rate-content .rate-right .rate-item .level {
+  width: 100rpx;
+  padding-right: 20rpx;
+  text-align: right;
+}
+
+.rate-main .rate-content .rate-right .rate-item .progress {
+  flex: 1;
+  height: 12rpx;
+  background-color: #e5e5e5;
+}
+
+.rate-main .rate-content .rate-right .rate-item .progress .percent {
+  width: 0;
+  height: 12rpx;
+  border-radius: 3rpx;
+  background-color: var(--color-theme);
+  transition: width 0.3s;
+}
+
+.rate-main .rate-content .rate-right .rate-item .ratio {
+  width: 100rpx;
+  padding-left: 20rpx;
+}
+
+.rate-main .better-than {
+  border-top: 1rpx solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #999;
+  height: 70rpx;
+}
+
+.rate-main .better-than .better-item {
+  margin-right: 36rpx;
+  font-size: 24rpx;
+}

@@ -1,0 +1,58 @@
+<view class="wrapper">
+
+  <!-- 步骤1 手机号校验 -->
+  <view class="step step_1" wx:if="{{step === 1}}">
+    <view class="field-item">
+      <text>手机号码</text>
+      <input value="{{account}}" type="tel" class="account" bindinput="accountInput" focus autocomplete="off"
+        placeholder="请输入注册手机号" />
+
+      <view wx:if="{{account}}" class="clear-icon" bindtap="clearAccount">
+        <c-icon class="icon" name="close" />
+      </view>
+    </view>
+
+    <view class="btn-container">
+      <m-button type="primary" loading="{{loading}}" bindtap="checkAccount">下一步</m-button>
+    </view>
+  </view>
+
+  <!-- 步骤2 手机验证码 -->
+  <view class="step step_2" wx:if="{{step === 2}}">
+    <view class="field-item">
+      <input class="code" value="{{code}}" type="tel" bindinput="codeInput" autocomplete="off" placeholder="请输入验证码" />
+      <m-button size="small" type="primary" disabled="{{sendWaiting}}" bindtap="showCaptchaModal">{{ codeText }}
+      </m-button>
+    </view>
+    <view class="tip">验证码会发送至您注册的手机号</view>
+
+    <view class="btn-container">
+      <m-button type="primary" loading="{{loading}}" bindtap="checkCode">下一步</m-button>
+    </view>
+  </view>
+
+  <!-- 步骤3 新密码 -->
+  <view class="step step_3" wx:if="{{step === 3}}">
+    <view class="field-item {{ isShowPassword ? 'is-show' : '' }}">
+      <text class="field-label">新密码</text>
+      <input class="password" value="{{password}}" bindinput="passwordInput"
+        type="{{isShowPassword ? 'text' : 'password'}}" autocomplete="off" placeholder="请输入新密码" />
+
+      <!-- 密码显示与隐藏 -->
+      <view wx:if="{{password}}" class="password-icon" bindtap="togglePassword">
+        <c-icon wx:if="{{isShowPassword}}" class="icon" name="see-fill" />
+        <c-icon wx:else name="see-fill" class="icon" />
+      </view>
+    </view>
+
+    <view class="btn-container">
+      <m-button type="primary" loading="{{loading}}" bindtap="updateUserPassword">提 交</m-button>
+    </view>
+  </view>
+
+  <!-- 图片验证码 -->
+  <captcha-modal id="captchaModal" type="forget" phone="{{account}}" bind:on-success="captchaSuccessHandle" />
+</view>
+
+<m-toast id="toast" />
+<m-message id="message" />

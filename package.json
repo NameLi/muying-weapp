@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "fast-deep-equal": "^3.1.3",
+    "mind-ui-weapp": "^1.0.3",
+    "miniprogram-computed": "^4.4.0",
+    "rfdc": "^1.3.0"
+  }
+}

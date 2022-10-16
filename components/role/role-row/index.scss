@@ -1,0 +1,36 @@
+.role-row {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    margin-right: 16rpx;
+    padding-bottom: 15rpx;
+    width: 188rpx;
+
+    .role-avatar {
+        position: relative;
+        width: 188rpx;
+        height: 268rpx;
+        overflow: hidden;
+        object-fit: cover;
+        border-radius: 6rpx;
+        background-color: rgba(#f5f5f5, 0.45);
+    }
+
+    .role-info {
+        .role-name {
+            padding-top: 10rpx;
+            line-height: 32rpx;
+            font-size: 28rpx;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .role-label {
+            color: #888;
+            font-size: 24rpx;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}

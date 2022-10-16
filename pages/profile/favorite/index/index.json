@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的收藏夹",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "create-page": "../components/create-page",
+    "skeleton": "../components/skeleton"
+  }
+}

@@ -1,0 +1,7 @@
+<view class="video-wrapper">
+  <view class="video-box">
+    <video class="video" object-fit="contain" src="{{src}}" bindplay="doPlay" controls autoplay="{{ autoplay }}"
+      custom-cache="{{false}}">
+    </video>
+  </view>
+</view>

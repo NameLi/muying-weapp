@@ -1,0 +1,33 @@
+<half-page height="{{height}}" round="{{ round }}" title="全部评论" use-slot-footer bind:close="close" bind:load-more="loadMore">
+	<view class="comment-header">
+		<view class="comment-count" wx:if="{{total}}">评论 {{ total }}</view>
+		<view class="comment-type" wx:if="{{total}}">
+			<tab-switch bind:change="onChange" disabled="{{loading}}" />
+		</view>
+	</view>
+
+	<!-- 评论内容区 -->
+	<view class="comment-list">
+		<comment-item wx:for="{{list}}" wx:key="id" comment="{{item}}" type="{{type}}"
+			bind:show-action-sheet="showActionSheetHandle" />
+
+		<view class="skeleton" wx:if="{{isShowSkeleton}}">
+			<view class="skeleton-animation">
+				<comment-skeleton wx:for="1234" wx:key="index" />
+			</view>
+		</view>
+
+		<m-loadmore loading="{{loading}}" wx:if="{{total && page !== 1}}" />
+
+		<no-data wx:if="{{!total && !loading}}">还没有用户发表过评论</no-data>
+	</view>
+
+	<!-- 评论发布 -->
+	<!--  wx:if="{{ !isShowSkeleton }}" -->
+	<view slot="footer" class="comment-bar">
+		<comment-bar _id="{{ _id }}" type="{{ type }}" bind:create-success="getComments" />
+	</view>
+
+	<!-- 评论删除/举报 -->
+	<comment-tool id="action-sheet" bind:on-delete="deleteHandle" />
+</half-page>

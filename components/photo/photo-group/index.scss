@@ -1,0 +1,11 @@
+.photo-group {
+    .photo-item {
+      display: inline-block;
+      margin-right: 8rpx;
+      .photo {
+        height: 180rpx;
+        border-radius: 6rpx;
+        object-fit: cover;
+      }
+    }
+  }

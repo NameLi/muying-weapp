@@ -1,0 +1,11 @@
+<view class="award">
+  <image mode="aspectFill" class="poster" src="{{award.poster}}" />
+  <view class="info">
+    <view class="title">{{ award.title }}</view>
+    <view class="content" wx:if="{{ award.type_name }}">{{ award.type_name }}</view>
+  </view>
+  <view class="count" bindtap="pathTo">
+    <text>获奖{{ awardCount }}次</text>
+    <c-icon class="icon" name="arrow-right" />
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "忘记密码",
+  "usingComponents": {
+    "captcha-modal": "../components/captcha-modal"
+  }
+}

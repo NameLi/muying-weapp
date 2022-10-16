@@ -1,0 +1,6 @@
+<view class="nav-list">
+  <view wx:for="{{list}}" wx:key="id" class="nav-item {{item.name == value ? 'is-active' : ''}}"
+    data-name="{{item.name}}" bindtap="checkItem">
+    {{ item.name }}
+  </view>
+</view>

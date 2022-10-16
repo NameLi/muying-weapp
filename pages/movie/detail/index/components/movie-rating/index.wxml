@@ -1,0 +1,63 @@
+<view class="movie-rating-wrapper">
+  <view class="wish-count" wx:if="{{movie.release_status === 1}}">
+    <view class="count-inner">
+      <text class="count">{{ movie.wish_count }}</text>
+      <text class="count-label">人想看</text>
+    </view>
+    <view class="release-date">{{ movie.release_date }}上映</view>
+  </view>
+
+  <view class="rating-container" wx:elif="{{imdb.rating || movie.rating || douban.rating}}">
+    <!-- IMDB评分 -->
+    <block wx:if="{{imdb.rating}}">
+      <view class="rating-map">
+        <view class="rating-from">IMDB评分</view>
+        <view class="rating-score">{{ imdb.rating }}</view>
+        <view class="rating-count">{{ imdb.count }}人评</view>
+      </view>
+
+      <view class="line" wx:if="{{movie.rating || douban.rating}}"></view>
+    </block>
+
+    <!-- 用户评分 -->
+    <block wx:if="{{movie.rating}}">
+      <view class="rating-map" bindtap="pathToRate">
+        <view class="rating-from">慕影评分</view>
+        <view class="rating-score">{{ movie.rating }}</view>
+        <view class="rating-count">{{ movie.vote_count }}人评</view>
+      </view>
+
+      <view class="line" wx:if="{{douban.rating}}"></view>
+    </block>
+
+    <!-- 豆瓣评分 -->
+    <block wx:if="{{douban.rating}}">
+      <view class="rating-map">
+        <view class="rating-from">
+          <text>豆瓣评分</text>
+          <c-icon class="icon" name="question-fill" bindtap="showDoubanRatingTip" />
+        </view>
+        <view class="rating-score">{{ douban.rating }}</view>
+        <view class="rating-count">{{ douban.count }}人评</view>
+      </view>
+    </block>
+  </view>
+
+  <view wx:else class="no-rating">
+    <text>暂无评分</text>
+  </view>
+
+  <!-- <view class="rating-footer">
+      <view class="status-count">
+        <view class="count-item" style="margin-right: 8px">{{ movie.wish_count }} 人想看</view>
+        <view class="count-item">{{ movie.seen_count }} 人看过</view>
+      </view>
+    </view> -->
+
+  <m-modal title="豆瓣评分" visible="{{visible}}" show-cancel-button="{{false}}" confirm-button-text="我知道了"
+    confirm-text-color="#feb300" bind:confirm="handleConfirm">
+    <view class="tip-content">
+      <text>豆瓣评分获取于互联网公开数据，如涉及版权问题，可联系作者删除。</text>
+    </view>
+  </m-modal>
+</view>

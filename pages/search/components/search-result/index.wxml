@@ -1,0 +1,45 @@
+<view class="container search-result">
+  <view class="menu-list menu-{{type}}">
+    <view class="menu-item {{type === 'movie' ? 'is-active': ''}}" data-type="movie" bindtap="typeChange">
+      影视
+    </view>
+    <view class="menu-item {{type === 'actor' ? 'is-active': ''}}" data-type="actor" bindtap="typeChange">
+      影人
+    </view>
+    <view class="menu-item {{type === 'role' ? 'is-active': ''}}" data-type="role" bindtap="typeChange">
+      角色
+    </view>
+  </view>
+
+  <!-- 搜索结果 -->
+  <view class="result-list">
+    <!-- 加载中 -->
+    <m-transition name="fade">
+      <view class="init-loading" wx:if="{{isShowLoading}}">
+        <m-spinner type="triple" color="#f60, #7fd901, #36a2e0" />
+      </view>
+    </m-transition>
+
+    <!-- 无查询内容 -->
+    <view wx:if="{{isShowNoData}}" class="no-data">未找到相关内容</view>
+
+    <!-- 影视搜索结果 -->
+    <view class="movie-result" wx:if="{{type === 'movie'}}">
+      <movie-item bind:on-checked="checkedHandle" wx:for="{{movies}}" movie="{{item}}" wx:key="id"
+        keyword="{{keyword}}" />
+    </view>
+
+    <!-- 影人搜索结果 -->
+    <view class="actor-result" wx:elif="{{type === 'actor'}}">
+      <actor-item bind:on-checked="checkedHandle" wx:for="{{actors}}" actor="{{item}}" wx:key="id"
+        keyword="{{keyword}}" />
+    </view>
+
+    <!-- 角色搜索结果 -->
+    <view class="role-result" wx:elif="{{type === 'role'}}">
+      <role-item bind:on-checked="checkedHandle" wx:for="{{roles}}" role="{{item}}" wx:key="id" keyword="{{keyword}}" />
+    </view>
+
+    <m-loadmore wx:if="{{!isShowNoData}}" loading="{{loading}}" />
+  </view>
+</view>

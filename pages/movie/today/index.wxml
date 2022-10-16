@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="menu-wrapper">
+    <view class="menu {{form.sortby === 'hot' ? 'is-active' : ''}}" data-type="hot" bindtap="typeChangeHandle">
+      热度排序
+    </view>
+    <view class="menu {{form.sortby === 'date' ? 'is-active' : ''}}" data-type="date" bindtap="typeChangeHandle">
+      时间排序
+    </view>
+  </view>
+
+  <!-- 加载骨架屏 -->
+  <skeleton wx:if="{{isShowSkeleton}}" top="105rpx" />
+
+  <view class="main">
+    <movie-item wx:for="{{list}}" wx:key="id" movie="{{item}}" />
+  </view>
+  
+  <m-loadmore loading="{{loading}}" wx:if="{{!isShowSkeleton}}" />
+</view>

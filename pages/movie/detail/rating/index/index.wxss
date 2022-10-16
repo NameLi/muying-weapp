@@ -1,0 +1,18 @@
+.loading {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tip {
+  margin: 20rpx;
+  font-size: 24rpx;
+  color: var(--color-theme);
+}

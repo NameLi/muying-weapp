@@ -1,0 +1,5 @@
+<view class="tab-switch">
+	<m-navbar-group bind:change="onChange" acive-name="{{aciveName}}" disabled="{{disabled}}">
+		<m-navbar custom-class="m-tab-item" wx:for="{{tabs}}" title="{{item.label}}" name="{{item.value}}" wx:key="value" />
+	</m-navbar-group>
+</view>

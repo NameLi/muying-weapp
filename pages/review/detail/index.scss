@@ -1,0 +1,94 @@
+.container {
+
+  .header-author {
+    display: flex;
+    align-items: center;
+    height: 100rpx;
+
+    .header-author-avatar {
+      width: 40rpx;
+      height: 40rpx;
+      border-radius: 50%;
+    }
+
+    .header-author-name {
+      margin-left: 16rpx;
+      font-size: 24rpx;
+      font-weight: normal;
+    }
+  }
+
+  .main {
+    padding: 0 30rpx 20rpx;
+
+    .review-title {
+      padding: 30rpx 0;
+      font-size: 44rpx;
+      line-height: 60rpx;
+      font-weight: bold;
+      text-align: justify;
+    }
+
+    .author {
+      display: flex;
+      padding: 10rpx 0;
+
+      .author-avatar {
+        height: 70rpx;
+        width: 70rpx;
+        border-radius: 50%;
+      }
+
+      .author-info {
+        margin-left: 20rpx;
+        line-height: 34rpx;
+
+        .author-name {
+          font-weight: bold;
+          font-size: 28rpx;
+        }
+
+        .review-info {
+          font-size: 28rpx;
+          color: #999;
+        }
+      }
+    }
+
+    .extra-info {
+      margin-top: 20rpx;
+      color: #aaa;
+      font-size: 28rpx;
+      line-height: 40rpx;
+      text-align: right;
+
+      .extra-info-label {
+        margin-left: 16rpx;
+      }
+    }
+
+    .origin {
+      padding-bottom: 30rpx;
+      font-size: 28rpx;
+      text-align: right;
+      color: #999;
+
+      .origin-link {
+        color: var(--color-theme);
+      }
+    }
+
+    .review-content {
+      line-height: 1.8;
+      color: #57534f;
+      text-align: justify;
+      word-break: break-all;
+    }
+
+    .copyright {
+      line-height: 70rpx;
+      font-size: 24rpx;
+      color: #999;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.comment-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 92rpx;
+    border-top: 1rpx solid #eee;
+    background-color: #fff;
+
+    .input-bar {
+        flex: 1;
+        margin: 0 30rpx;
+
+        .virtual-input {
+            padding: 0 30rpx;
+            height: 60rpx;
+            line-height: 60rpx;
+            font-size: 24rpx;
+            border-radius: 60rpx;
+            color: #999;
+            background-color: #efefef;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<view class="tool-vote">
+  <!-- 赞成 -->
+  <view wx:if="{{review.vote_type !== -1}}" class="vote-item {{ review.vote_type === 1 ? 'is-active' : '' }}"
+    data-type="up" bindtap="voteClick">
+    <c-icon class="review-icon" name="up" />
+    <text class="review-count">{{ review.vote_type === 1 ? "已赞同 " : "赞同 " }}{{ review.vote_up_count }}</text>
+  </view>
+  <!-- 反对 -->
+  <view wx:if="{{review.vote_type !== 1}}" class="vote-item {{ review.vote_type === -1 ? 'is-active' : '' }}"
+    data-type="down" bindtap="voteClick">
+    <c-icon class="review-icon" name="down" />
+    <text class="review-count">{{ review.vote_type === 1 ? "已反对 " : "反对 " }}{{ review.vote_down_count }}</text>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "captcha-modal": "../components/captcha-modal"
+  }
+}

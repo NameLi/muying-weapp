@@ -1,0 +1,7 @@
+<view class="list">
+    <review-item wx:for="{{list}}" review="{{item}}" wx:key="id" />
+</view>
+
+<m-loadmore wx:if="{{!noData}}" loading="{{loading}}" />
+
+<no-data wx:else content="您还没有关注任何影评" />

@@ -1,0 +1,17 @@
+<half-page full use-slot-header footer-close bind:close="close">
+  <m-cell-group border>
+    <m-cell title="中文名" value="{{role.name}}" />
+    <m-cell title="英文名" value="{{role.name_en}}" />
+    <m-cell title="别名" value="{{akas}}" />
+
+    <m-cell wx:for="{{role.defaults}}" title="{{item.label}}" value="{{item.value}}" wx:key="label" />
+
+    <m-cell wx:for="{{role.extras}}" title="{{item.label}}" value="{{item.value}}" wx:key="label" />
+
+    <m-cell title="标签" value="{{tags}}" />
+  </m-cell-group>
+
+  <view class="content">
+    <view class="summary">{{role.brief}}</view>
+  </view>
+</half-page>

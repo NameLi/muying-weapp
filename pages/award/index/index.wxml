@@ -1,0 +1,11 @@
+<view class="award-main">
+  <view class="award-group" wx:for="{{awards}}" wx:key="id">
+    <view class="award-content border_right">
+      <view class="award-item m-hairline--rb" hover-class="is-hover" data-name="{{ item.name }}" bindtap="pathTo">
+        <text>{{ item.title }}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<m-loadmore loading="{{loading}}" />

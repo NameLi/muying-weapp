@@ -1,0 +1,13 @@
+<view>
+    <!-- 用户操作 -->
+    <m-action-sheet
+      visible="{{visible}}"
+      actions="{{actions}}"
+      bind:cancel="handleCancel"
+      bind:click="handleClickItem"
+      show-cancel
+    />
+
+    <!-- 举报 -->
+    <report id="reportModal" bind:on-success="reportHandle" />
+</view>

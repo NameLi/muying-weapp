@@ -1,0 +1,19 @@
+<half-page height="86vh" round title="编辑收藏夹" use-slot-header-right>
+  <c-icon class="back" slot="header-left" name="close" bindtap="goBack" />
+
+  <view slot="header-right" class="create-btn" bindtap="updateUserFavorite">保存</view>
+
+  <view class="save-content">
+    <view class="form">
+      <view class="field-item">
+        <input class="title" value="{{form.name}}" bindinput="titleInput" maxlength="20" placeholder-class="placeholder" placeholder="请输入收藏夹名称" />
+        <view class="field-word-count">{{ nameCount }}/20</view>
+      </view>
+      <view class="field-item">
+        <textarea class="content" value="{{form.brief}}" bindinput="contentInput" maxlength="200" placeholder-class="placeholder" placeholder="请输入收藏夹描述（选填）" />
+        <view class="field-word-count">{{ briefCount }}/200</view>
+      </view>
+    </view>
+  </view>
+</half-page>
+

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "相册",
+  "usingComponents": {
+    "photo-item": "./components/photo-item"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "header-bar": "./components/home-header",
+    "home-menu": "./components/home-menu",
+    "home-swiper": "./components/home-swiper",
+    "home-loading": "./components/home-loading"
+  }
+}

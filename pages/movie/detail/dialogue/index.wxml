@@ -1,0 +1,7 @@
+<view class="list">
+  <view class="item m-hairline--bottom" wx:for="{{list}}" wx:key="id">
+    <text decode>{{item.content}}</text>
+  </view>
+</view>
+
+<m-loadmore wx:if="{{loading}}" loading="{{loading}}" />

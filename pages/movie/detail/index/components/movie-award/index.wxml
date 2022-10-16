@@ -1,0 +1,22 @@
+<view class="movie-award">
+  <view class="award-item" wx:if="{{movie.awards_count}}">
+    <view class="award-count">
+      <text class="award-count__value">{{ movie.awards_count }}</text>
+      <text class="award-count__label">次</text>
+    </view>
+    <view class="award-label">获奖</view>
+  </view>
+
+  <view class="award-item" wx:if="{{movie.awards_nominate_count}}">
+    <view class="award-count">
+      <text class="award-count__value">{{ movie.awards_nominate_count }}</text>
+      <text class="award-count__label">次</text>
+    </view>
+    <view class="award-label">提名</view>
+  </view>
+
+  <view class="award-item award-detail">
+    <view class="award-name">{{ award.title }}</view>
+    <view class="award-label">{{ award.info }}</view>
+  </view>
+</view>

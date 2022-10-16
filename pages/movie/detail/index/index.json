@@ -1,0 +1,19 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "movie-info": "./components/movie-info",
+    "movie-rating": "./components/movie-rating",
+    "photo-wall": "./components/photo-wall",
+    "serial-row": "./components/serial-row",
+    "movie-award": "./components/movie-award",
+    "movie-extra": "./components/movie-extra",
+    "movie-bar": "./components/movie-bar",
+    "skeleton": "./components/skeleton",
+    "favorite-list": "./components/favorite-list",
+    "favorite-create": "/pages/profile/favorite/components/create-page",
+    "information": "./components/information",
+    "rate-create-page": "../rating/create",
+    "rate-detail-page": "../rating/index",
+    "comment-page": "/components/comment-page"
+  }
+}

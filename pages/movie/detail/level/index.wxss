@@ -1,0 +1,14 @@
+.list {
+  padding: 0 30rpx 30rpx;
+}
+
+.list .item {
+  padding: 26rpx 0;
+  line-height: 1.6;
+  font-size: 28rpx;
+}
+
+.list .item .content {
+  margin-top: 12rpx;
+  text-align: justify;
+}

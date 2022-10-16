@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "那年今日",
+  "usingComponents": {
+    "skeleton": "../components/skeleton"
+  }
+}

@@ -1,0 +1,6 @@
+<m-cell border wx:for="{{list}}" wx:for-item="p" wx:key="id" title="{{p.pubdate}}">
+  <text>{{ p.country }}</text>
+  <text class="is-premiere">{{ p.premiere ? "(首映)" : "" }}</text>
+</m-cell>
+
+<m-loadmore wx:if="{{loading}}" loading="{{loading}}" />

@@ -1,0 +1,28 @@
+  .main {
+    position: relative;
+
+    .group-title-holder {
+      z-index: 1;
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 80rpx;
+      box-shadow: 0 2rpx 6rpx #cdcdcd;
+    }
+
+    .group {
+      margin-bottom: 1px;
+      .group-title {
+        z-index: 1;
+        position: sticky;
+        top: 0;
+        height: 80rpx;
+        line-height: 80rpx;
+        padding: 0 30rpx;
+        font-size: 28rpx;
+        font-weight: bold;
+        background-color: #fff;
+      }
+    }
+  }

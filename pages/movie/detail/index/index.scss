@@ -1,0 +1,149 @@
+page {
+  background-color: #f5f5f5;
+}
+
+.container {
+  .movie-subtitle {
+    font-size: 24rpx;
+    color: #e1e1e1;
+  }
+
+  .btn-group {
+    display: flex;
+    align-items: center;
+
+    .btn {
+      margin-left: 20rpx;
+      padding: 0 10rpx;
+      border-radius: 6rpx;
+      height: 48rpx;
+      line-height: 48rpx;
+      background-color: rgba(#fff, 0.25);
+
+      &.is-wish {
+        color: rgba(#fff, 0.35);
+        background-color: rgba(#fff, 0.1);
+      }
+    }
+
+    &.has-rating {
+      font-size: 24rpx;
+
+      .my-rating {
+        margin-left: 8rpx;
+        color: #f7ba2a;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .movie-rate {
+    display: flex;
+    align-items: center;
+
+    .movie-rate-value {
+      margin-left: 4rpx;
+      font-size: 24rpx;
+    }
+  }
+
+  .is-coming {
+    height: 40rpx;
+
+    .wish-count {
+      color: #f7ba2a;
+      font-size: 28rpx;
+      margin-right: 4rpx;
+    }
+
+    .wish-label {
+      font-size: 24rpx;
+    }
+  }
+
+  .article-list {
+    .article-item {
+      padding: 20rpx 0;
+    }
+  }
+}
+
+.info-wrapper {
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  background-color: #232020;
+
+  .custom-panel {
+    margin: 0;
+    background-color: transparent;
+
+    .panel-more {
+      color: #fff;
+    }
+  }
+
+  .egg {
+    margin: 30rpx 20rpx 0;
+    color: #b0b3bb;
+    font-size: 28rpx;
+
+    .icon {
+      padding-right: 10rpx;
+      font-size: 32rpx;
+    }
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30rpx 20rpx 0;
+    color: #f5f5f5;
+
+    .tag {
+      font-size: 24rpx;
+      line-height: 56rpx;
+      height: 56rpx;
+      padding: 0 24rpx;
+      margin: 0 16rpx 16rpx 0;
+      border-radius: 28rpx;
+      background: rgba(#fff, 0.1);
+    }
+  }
+
+  .summary {
+    white-space: normal;
+    color: #f5f5f5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-align: justify;
+    white-space: pre-wrap;
+  }
+
+  .actor-list {
+    .actor-row {
+      .actor-name {
+        color: #fff;
+      }
+
+      .actor-label {
+        color: rgba(#f5f5f5, 0.75);
+      }
+    }
+  }
+
+  .role-list {
+    .role-row {
+      .role-name {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.actor-name,
+.actor-extra,
+.role-name {
+  color: #fff;
+}

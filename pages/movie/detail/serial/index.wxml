@@ -1,0 +1,5 @@
+<view class="list">
+  <serial-item wx:for="{{serials}}" serial="{{item}}" wx:key="id" />
+</view>
+
+<m-loadmore wx:if="{{loading}}" loading="{{loading}}" />

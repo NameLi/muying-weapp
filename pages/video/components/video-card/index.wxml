@@ -1,0 +1,52 @@
+<view class='video-item'>
+  <view class='video-content'>
+    <!-- 看點 -->
+    <view class="video" wx:if="{{isPlay}}">
+      <video class="video-player" src="{{src}}" bindplay="doPlay" controls="{{controls}}" autoplay
+        bindtimeupdate="timeUpdate" custom-cache="{{false}}">
+      </video>
+      <view class='progress-wrapper'>
+        <view class='progress' style='transform: translate3d({{progress - 100}}%, 0, 0)'></view>
+      </view>
+    </view>
+    <!-- 看點 -->
+
+    <!-- 看點封面 -->
+    <view class='video-cover' catchtap="doPlay">
+      <view class="video-title">{{ video.title }}</view>
+      <image class='video-poster' lazy-load src='{{ video.poster }}' />
+      <view class="video-play">
+        <c-icon name="play" class="play-icon" />
+      </view>
+
+      <view class="video-info">
+        <view class="video-plays">{{ video.play_count }} 次播放</view>
+        <view class="video-duration">{{ duration }}</view>
+      </view>
+    </view>
+    <!-- 看點封面 -->
+  </view>
+
+  <!-- 看點 toobar -->
+  <!-- 作者与评论 -->
+  <view class="video-footer">
+    <view class="video-author" catchtap="pathToAuthor">
+      <image class='author-avatar' lazy-load src='{{author.avatar}}' />
+      <view class="author-name">{{ author.username }}</view>
+    </view>
+
+    <view class="space" catchtap="pathToDetail"></view>
+
+    <view class="video-tool">
+      <view class="tool-item">
+        <c-icon class="tool-item-icon" name="like" />
+        <text class="tool-item-count">{{ video.like_count }}</text>
+      </view>
+      <view class="tool-item">
+        <c-icon class="tool-item-icon" name="comment" />
+        <text class="tool-item-count">{{ video.comment_count }}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 看點 toobar -->
+</view>

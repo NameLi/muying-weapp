@@ -1,0 +1,42 @@
+.skeleton-wrapper {
+    padding-top: 68rpx;
+    z-index: 3;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+
+    .skeleton {
+      .skeleton-item {
+        display: flex;
+        align-items: center;
+        margin: 0 30rpx;
+        height: 130rpx;
+
+        .item-poster {
+          width: 90rpx;
+          height: 90rpx;
+          border-radius: 6rpx;
+          background-color: var(--color-skeleton);
+        }
+
+        .item-info {
+          flex: 1;
+          margin-left: 16rpx;
+
+          .item-info-title {
+            margin-bottom: 18rpx;
+            height: 36rpx;
+            background-color: var(--color-skeleton);
+          }
+
+          .item-info-count {
+            height: 32rpx;
+            background-color: var(--color-skeleton);
+          }
+        }
+      }
+    }
+  }

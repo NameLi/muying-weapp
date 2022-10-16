@@ -1,0 +1,9 @@
+<view class="container">
+  <nav-group scroll-top="{{ scrollTop }}" bind:on-change="searchChange" />
+
+  <view class="main">
+    <movie-row wx:for="{{ list }}" movie="{{ item }}" wx:key="id" />
+  </view>
+
+  <m-loadmore loading="{{ loading }}" />
+</view>

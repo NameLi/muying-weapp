@@ -1,0 +1,35 @@
+.actor-row {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  margin-right: 16rpx;
+  padding-bottom: 15rpx;
+  width: 188rpx;
+}
+
+.actor-row .actor-avatar {
+  position: relative;
+  width: 188rpx;
+  height: 268rpx;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 6rpx;
+  background-color: rgba(245, 245, 245, 0.45);
+}
+
+.actor-row .actor-info .actor-name {
+  padding-top: 10rpx;
+  line-height: 32rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.actor-row .actor-info .actor-label {
+  color: #ccc;
+  font-size: 24rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

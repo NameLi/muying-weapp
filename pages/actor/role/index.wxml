@@ -1,0 +1,12 @@
+<view class="role-header">
+  <view class="role-count">角色 {{ total }}</view>
+  <view class="role-type" wx:if="{{total}}">
+    <tab-switch bind:change="onChange" disabled="{{loading}}" />
+  </view>
+</view>
+
+<view class="role-list">
+  <role-item wx:for="{{list}}" wx:key="id" role="{{item}}" />
+</view>
+
+<m-loadmore loading="{{loading}}" wx:if="{{!isShowSkeleton}}" />

@@ -1,0 +1,36 @@
+<view class="favorite-container">
+  <header-scroll-bar title="{{favorite.name}}" subtitle="共 {{ favorite.count }} 部影视" scroll-top="{{ scrollTop }}" bgcolor="#d67624" />
+
+  <!-- 收藏夹信息 -->
+  <favorite-info favorite="{{favorite}}" images="{{photos}}" bind:show-edit="showEditPage" loading="{{loading}}" />
+
+  <!-- 收藏影视列表 -->
+  <view wx:if="{{total}}">
+    <view class="favorite-list">
+      <movie-item wx:for="{{list}}" wx:for-item="movie" wx:key="id" movie="{{movie}}">
+        <view class="movie-tool">
+          <text>收藏于{{ movie.saved_at }}</text>
+          <c-icon name="more" catchtap="showMore" data-movie="{{ movie }}" />
+        </view>
+      </movie-item>
+
+      <m-loadmore loading="{{loading}}" />
+    </view>
+  </view>
+
+  <view wx:else>
+    <no-data content="这个收藏夹是空的" />
+  </view>
+
+  <!-- 取消收藏 -->
+  <m-action-sheet visible="{{visible}}" actions="{{actions}}" show-cancel bind:cancel="handleCancel"
+    bind:click="handleClickItem" />
+</view>
+
+<page-container custom-style="background: transparent" show="{{ isShowEdit }}" bind:leave="halfPageLeave">
+  <edit-page wx:if="{{ isShowEdit }}" favorite="{{ favorite }}" bind:close="hideEditPage" bind:change="updateSuccess" />
+</page-container>
+
+<m-message id="message" />
+<m-toast id="toast" />
+<m-modal id="modal" />

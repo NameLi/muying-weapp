@@ -1,0 +1,36 @@
+<view class="login">
+  <view class="app-welcome">
+    <view>登录</view>
+  </view>
+
+  <!-- 表单 -->
+  <view class="form">
+    <view class="form-item">
+      <input class="input" placeholder-class="placeholder" model:value="{{account}}" type="number" focus maxlength="11"
+        placeholder="请输入手机号" />
+      <m-icon custom-class="icon close-icon" name="cross" size="28" wx:if="{{isShowClear}}" bindtap="clearAccount" />
+    </view>
+
+    <view class="form-item">
+      <input class="input" placeholder-class="placeholder" model:value="{{password}}"
+        type="{{isShowPassword ? 'text' : 'password'}}" maxlength="12" placeholder="请输入密码" />
+      <m-icon custom-class="icon see-icon {{ isShowPassword ? 'is-show' : '' }}" name="see-fill" size="36"
+        bindtap="togglePassword" />
+    </view>
+
+    <view class="submit">
+      <m-button type="primary" color="#fff" bgcolor="#e54847" round full loading="{{loading}}" bindtap="doLogin">登 录
+      </m-button>
+    </view>
+  </view>
+
+  <view class="tool">
+    <view class="register" bindtap="pathToRegister">
+      账号注册
+    </view>
+    <view class="forget" bindtap="pathToForget">找回密码</view>
+  </view>
+</view>
+
+<m-toast id="toast" />
+<m-message id="message" />

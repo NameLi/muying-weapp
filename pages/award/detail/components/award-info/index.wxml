@@ -1,0 +1,14 @@
+<view class="award-main">
+  <view class="award-poster">
+    <image class="award-logo" mode="heightFix" src="{{award.poster}}" />
+    <view class="award-info">
+      <text class="award-info__label" wx:if="{{award.categories}}">{{ award.categories }}</text>
+      <text class="award-info__label" wx:if="{{award.year}}">始于{{ award.year }}年</text>
+      <text class="award-info__label" wx:if="{{award.country}}">{{ award.country }}</text>
+    </view>
+  </view>
+
+  <view class="award-title">{{ award.title }}</view>
+  <view class="award-subtitle">{{ award.original_title }}</view>
+  <view class="award-brief" bindtap="pathTo">{{ award.brief }}</view>
+</view>

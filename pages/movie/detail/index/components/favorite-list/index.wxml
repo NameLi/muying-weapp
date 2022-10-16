@@ -1,0 +1,28 @@
+<half-page height="70vh" round title="选择收藏夹" use-slot-header-right use-slot-footer bind:close="close">
+
+  <view slot="header-right" class="create-btn" bindtap="showCreateModal">新建</view>
+
+  <view class="save-main">
+    <view class="save-content">
+      <m-cell-group border wx:if="{{list.length}}">
+        <m-cell title="{{item.name}}" wx:for="{{list}}" wx:key="id">
+          <m-checkbox value="{{item.is_checked}}" data-index="{{ index }}" bind:change="checkChange" round />
+        </m-cell>
+      </m-cell-group>
+    </view>
+
+    <view class="no-data" wx:if="{{list.length === 0 && !loading}}">
+      您还没有收集夹
+    </view>
+
+    <view class="loading" wx:if="{{loading}}">
+      <m-spinner wx:if="{{loading}}" type="triple" color="#f60, #7fd901, #36a2e0" />
+    </view>
+  </view>
+
+  <view class="footer m-hairline--top" slot="footer">
+    <m-button bindtap="submit" type="ghost" full wx:if="{{list.length}}" loading="{{submitLoading}}">
+      <text class="save-btn">保存</text>
+    </m-button>
+  </view>
+</half-page>

@@ -1,0 +1,29 @@
+<view class="movie-card-container">
+  <view class="card" bindtap="pathTo">
+    <image class="movie-poster" mode="aspectFill" lazy-load src="{{movie.poster}}" />
+
+    <view class="movie-info-wrapper">
+      <view class="movie-header">
+        <view class="movie-title ellipsis">{{ movie.title }}</view>
+
+        <view class="movie-rating" wx:if="{{movie.rating}}">
+          <m-rate
+            value="{{movie.rating}}"
+            step="{{2}}"
+            max="{{10}}"
+            size="24"
+            readonly
+            allow-half
+          />
+          <text class="rating">{{ movie.rating }}分</text>
+        </view>
+      </view>
+      <view class="movie-info ellipsis">
+        <text>{{ movie.year }}</text
+        ><text class="delimiter" wx:if="movie.countries">·</text><text>{{ movie.countries }}</text
+        ><text class="delimiter" wx:if="movie.genres">·</text><text>{{ movie.genres }}</text
+        ><text class="delimiter" wx:if="movie.duration">·</text><text>{{ movie.duration }}</text>
+      </view>
+    </view>
+  </view>
+</view>

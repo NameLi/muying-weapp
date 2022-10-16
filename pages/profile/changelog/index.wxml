@@ -1,0 +1,31 @@
+<view class="container">
+  <m-timeline>
+    <m-timeline-item text="v1.0">
+      <view class="content">
+        <view class="title">2022-10-15</view>
+        <view class="intro">完成项目测试与优化，源码开源。</view>
+      </view>
+    </m-timeline-item>
+    
+    <m-timeline-item text="v0.1">
+      <view class="content">
+        <view class="title">2022-10-12</view>
+        <view class="intro">项目中使用的组件库 mind-ui-weapp 升级为使用 npm 方式安装。</view>
+      </view>
+    </m-timeline-item>
+
+    <m-timeline-item text="alpha">
+      <view class="content">
+        <view class="title">2022-10-01</view>
+        <view class="intro">项目主体功能基本完成，加载骨架屏动画待完善。</view>
+      </view>
+    </m-timeline-item>
+
+    <m-timeline-item text="idea">
+      <view class="content">
+        <view class="title">2022-08-01</view>
+        <view class="intro">项目初始化，着手复刻 “慕影网” H5 端的小程序版</view>
+      </view>
+    </m-timeline-item>
+  </m-timeline>
+</view>

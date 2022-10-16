@@ -1,0 +1,12 @@
+<view class="actor-row actor-class" bindtap="pathTo">
+  <image class="actor-avatar" mode="aspectFill" lazy-load src="{{actor.avatar}}" />
+
+  <view class="actor-info">
+    <view class="actor-name actor-name-class">{{ actor.name }}</view>
+    <view class="actor-label actor-extra-class" wx:if="{{actor.profession === '导演'}}">导演</view>
+    <view class="actor-label actor-extra-class" wx:elif="{{actor.profession === '演员' && actor.act}}">
+      饰: {{ actor.act }}
+    </view>
+  </view>
+  <slot />
+</view>

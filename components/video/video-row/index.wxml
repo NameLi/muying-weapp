@@ -1,0 +1,7 @@
+<view class="video-item">
+    <!-- <view class="video-header">
+      <view class="video-type">{{ video.type }}</view>
+    </view> -->
+    <image mode="aspectFill" class="video-poster" lazy-load src="{{video.poster}}" />
+    <view class="video-footer">{{ video.title }}</view>
+</view>

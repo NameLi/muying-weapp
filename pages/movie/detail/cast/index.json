@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "演员表",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "cast-panel": "./components/cast-panel"
+  }
+}

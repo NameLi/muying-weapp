@@ -1,0 +1,60 @@
+.role-item {
+  display: flex;
+  padding: 20rpx 0;
+  margin: 0 30rpx;
+  position: relative;
+}
+
+.role-item .role-avatar {
+  position: relative;
+  width: 138rpx;
+  height: 190rpx;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 6rpx;
+  background-color: rgba(245, 245, 245, 0.45);
+}
+
+.role-item .role-info {
+  flex: 1;
+  margin-left: 28rpx;
+}
+
+.role-item .role-info .role-name {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.role-item .role-info .info-item {
+  font-size: 28rpx;
+  line-height: 46rpx;
+  color: #999;
+}
+
+.role-item .role-info .info-item.info {
+  margin-top: 6rpx;
+  font-size: 24rpx;
+  line-height: 1.6;
+}
+
+.role-item .role-info .role-brief {
+  margin-top: 26rpx;
+  white-space: normal;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #999;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-align: justify;
+}
+
+.tag {
+  height: 46rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  color: #999;
+  padding-top: 12rpx;
+}

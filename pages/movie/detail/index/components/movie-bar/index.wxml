@@ -1,0 +1,30 @@
+<view class="movie-bar-wrapper">
+  <view class="movie-bar">
+    <!-- 影评 -->
+    <view class="review" bindtap="pathToReview">
+      <c-icon class="review-icon" name="article-fill" />
+      <text class="review-count" wx:if="{{movie.review_count}}">共有{{ movie.review_count }}条影评</text>
+      <text class="review-count" wx:else>还没有人发布过影评</text>
+    </view>
+
+    <view class="bar-tool">
+      <!-- 收藏 -->
+      <view class="tool-item" bindtap="showFavoriteModal">
+        <view class="tool-item-icon {{movie.is_collection ? 'is-checked': ''}}">
+          <c-icon class="icon" name="star-fill" />
+        </view>
+        <view class="tool-item-count">
+          {{ movie.collection_count || "收藏" }}
+        </view>
+      </view>
+
+      <!-- 评论 -->
+      <view class="tool-item" bindtap="showCommentModal">
+        <view class="tool-item-icon">
+          <c-icon class="icon" name="comment-fill" />
+        </view>
+        <view class="tool-item-count">{{ movie.comment_count || "评论" }}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+<view class="image-group class">
+  <view class="list" wx:if="{{photos}}">
+    <image mode="aspectFill" class="image-item {{'item_' + index}}" wx:for="{{photos}}" lazy-load src="{{item}}" wx:key="index" />
+  </view>
+  <image mode="aspectFill" class="no-image" wx:else src="https://img.ixook.com/image/default.jpg@avatar" />
+</view>

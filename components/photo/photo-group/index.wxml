@@ -1,0 +1,5 @@
+<view class="photo-group">
+    <view class="photo-item" wx:for="{{photos}}" wx:key="id">
+        <image class="photo" mode="heightFix" lazy-load src="{{item.url}}" />
+    </view>
+</view>

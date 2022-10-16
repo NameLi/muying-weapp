@@ -1,0 +1,64 @@
+.panel {
+    margin: 20rpx;
+    padding-bottom: 20rpx;
+    background-color: #fff;
+    border-radius: 12rpx;
+
+    .panel-header {
+        padding: 0 20rpx;
+        height: 84rpx;
+        line-height: 84rpx;
+        font-size: 28rpx;
+        display: flex;
+        align-items: center;
+
+        .panel-title {
+            flex: 1;
+            font-weight: 500;
+            display: inline-block;
+
+            &:not(.no-icon)::before {
+                content: "";
+                vertical-align: middle;
+                display: inline-block;
+                margin-top: -4rpx;
+                margin-right: 8rpx;
+                width: 6rpx;
+                height: 28rpx;
+                border-radius: 10px;
+                background-color: var(--color-theme);
+            }
+        }
+
+        .panel-more {
+            height: 80rpx;
+            font-size: 24rpx;
+            padding-left: 8rpx;
+            color: inherit;
+
+            .icon {
+                color: inherit;
+                font-size: 24rpx;
+                vertical-align: top;
+            }
+        }
+    }
+
+    .panel-content {
+        width: 100%;
+        padding: 0 22rpx;
+
+        &.scroll-x {
+            padding: 0 8rpx 0 22rpx;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            -webkit-overflow-scrolling: touch;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+}

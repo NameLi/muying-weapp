@@ -1,0 +1,24 @@
+<view class="skeleton-wrapper {{ isHalf ? 'is-half' : '' }}">
+  <view class="skeleton">
+    <view class="poster" wx:if="{{!isHalf}}">
+      <view class="title"></view>
+    </view>
+
+    <view class="info"></view>
+    <view class="panel">
+      <view class="panel-title"></view>
+      <view class="panel-content">
+        <view class="summary-item"></view>
+        <view class="summary-item"></view>
+        <view class="summary-item"></view>
+        <view class="summary-item" style="width: 32%"></view>
+      </view>
+    </view>
+    <view class="panel">
+      <view class="panel-title"></view>
+      <view class="panel-content">
+        <view class="panel-item" wx:for="123456" wx:key="index"></view>
+      </view>
+    </view>
+  </view>
+</view>

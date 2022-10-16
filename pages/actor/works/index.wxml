@@ -1,0 +1,14 @@
+<view class="works-header">
+  <view class="works-count">作品 {{ total }}</view>
+  <view class="works-type" wx:if="{{total}}">
+    <tab-switch bind:change="onChange" tabs="{{tabs}}" disabled="{{loading}}" />
+  </view>
+</view>
+
+<view class="works-list">
+  <movie-row wx:for="{{list}}" wx:key="id" movie="{{item}}" />
+  <!-- 占位 -->
+  <view class="movie-row place-holder"></view>
+</view>
+
+<m-loadmore loading="{{loading}}" />

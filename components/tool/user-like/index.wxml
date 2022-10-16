@@ -1,0 +1,6 @@
+<view class="tool-item tool-item-class {{ data.allow_like ? 'is-disabled': '' }}" bindtap="likeClick">
+    <view class="tool-item-icon {{ data.is_like ? 'is-checked' : '' }}">
+        <c-icon class="icon" name="like-fill" />
+    </view>
+    <view class="tool-item-count">{{ data.like_count || defaultCount }}</view>
+</view>

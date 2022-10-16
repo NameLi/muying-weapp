@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "favorite-info":"./components/favorite-info",
+    "edit-page": "../components/edit-page"
+  }
+}

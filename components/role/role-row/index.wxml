@@ -1,0 +1,6 @@
+<view class="role-row role-class" bindtap="pathTo">
+    <image mode="aspectFill" class="role-avatar" lazy-load src="{{role.avatar}}" />
+    <view class="role-info">
+        <view class="role-name role-name-class ellipsis">{{ role.name }}</view>
+    </view>
+</view>

@@ -1,0 +1,25 @@
+<view class="article-item m-hairline--bottom article-class" bindtap="pathTo">
+  <view class="article-title">
+    <text class="title">{{ article.title }}</text>
+  </view>
+
+  <view class="article-author">
+    <image mode="aspectFill" class="author-avatar" src="{{author.avatar}}" />
+    <view class="author-name">{{ author.username }}</view>
+  </view>
+
+  <view class="article-content">
+    <view class="article-brief">{{ article.brief }}</view>
+    <view class="article-cover" wx:if="{{article.cover}}">
+      <image mode="aspectFill" class="cover" lazy-load src="{{article.cover}}" />
+    </view>
+  </view>
+
+  <view class="article-footer">
+    <view class="tool-item">{{ article.like_count }} 点赞</view>
+    <text class="tool-item__delimiter">·</text>
+    <view class="tool-item">{{ article.read_count }} 浏览</view>
+    <view style="flex: 1"></view>
+    <view class="tool-item">{{ created_at }}</view>
+  </view>
+</view>

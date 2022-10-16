@@ -1,0 +1,73 @@
+<view class="actor">
+  <header-scroll-bar title="{{actor.name}}" subtitle="{{actor.name_en}}" scroll-top="{{ scrollTop }}"
+    poster="{{actor.avatar}}" end-top="140">
+    <view wx:if="{{!loading}}" class="header-btn actor-focus {{actor.is_collection ? 'is-focus' : ''}}"
+      bindtap="focusActor">
+      {{ actor.is_collection ? "已关注" : "关注" }}
+    </view>
+  </header-scroll-bar>
+
+  <view class="actor-info" style="height:{{ isShowFullAvatar ? maxHeight: '460rpx' }}" bindtap="showFullAvatar">
+    <block wx:if="{{!isDefaultPoster}}">
+      <view class="actor-avatar" style="{{bgImage}}"></view>
+      <view class="actor-avatar actor-avatar-larger" style="{{bgImageLarger}}"></view>
+    </block>
+
+    <view class="actor-info-footer">
+      <view class="actor-name">{{ actor.name }}</view>
+      <view class="actor-name_en">{{ actor.name_en }}</view>
+
+      <view class="actor-extra">
+        <text>{{ actor.gender }}</text>
+        <text class="delimiter" wx:if="{{actor.gender}}">·</text>
+        <text>{{ actor.birthday }}</text>
+        <text class="delimiter" wx:if="{{actor.country}}">·</text>
+        <text>{{ actor.country }}</text>
+      </view>
+    </view>
+
+    <view wx:if="{{!loading}}" class="actor-focus {{ actor.is_collection ? 'is-focus' : '' }}" catchtap="focusActor">
+      {{ actor.is_collection ? "已关注" : "关注" }}
+    </view>
+  </view>
+
+  <!-- 信息统计 -->
+  <actor-count actor="{{actor}}" />
+
+  <!-- 奖项 -->
+  <actor-award wx:if="{{actor.award_count}}" _id="{{actor.id}}" award="{{actor.award}}"
+    award-count="{{actor.award_count}}" />
+
+  <!-- 简介 -->
+  <m-panel title="个人简介" subtitle="更多信息" scroll-x="{{ false }}" arrow bindtap="showInformationPage">
+    <view wx:if="{{actor.summary}}" class="summary">{{actor.summary}}</view>
+    <view wx:else class="summary no-data">暂无简介</view>
+  </m-panel>
+
+  <!-- 相册 -->
+  <m-panel wx:if="{{actor.photo_count}}" title="相册" subtitle="全部{{actor.photo_count}}张"
+    to="/pages/photo/index?type=actor&id={{actor.id}}">
+    <photo-group photos="{{actor.photos}}" />
+  </m-panel>
+
+  <!-- 影视作品 -->
+  <m-panel wx:if="{{actor.works_count}}" title="影视作品" subtitle="全部{{actor.works_count}}部"
+    to="../works/index?id={{actor.id}}">
+    <movie-row wx:for="{{actor.works}}" wx:key="id" movie="{{item}}" />
+  </m-panel>
+
+  <!-- 角色 -->
+  <m-panel wx:if="{{actor.role_count}}" title="饰演角色" subtitle="全部{{actor.role_count}}部"
+    to="../role/index?id={{actor.id}}">
+    <role-row wx:for="{{actor.roles}}" wx:key="id" role="{{item}}" />
+  </m-panel>
+</view>
+
+<footer-info />
+
+<m-message id="message" />
+
+<page-container custom-style="background: transparent" show="{{ isShowHalfPage }}" bind:leave="halfPageLeave">
+  <!-- 详细介绍 -->
+  <information wx:if="{{isShowInformation}}" actor="{{ actor }}" bind:close="hideInformationPage" />
+</page-container>

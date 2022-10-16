@@ -1,0 +1,6 @@
+<view class="no-data-container" style="{{ height ? 'height: '+ height : '' }}">
+	<view class="no-data">
+		<view wx:if="{{ content }}">{{ content }}</view>
+		<slot wx:else />
+	</view>
+</view>

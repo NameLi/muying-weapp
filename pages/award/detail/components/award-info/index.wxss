@@ -1,0 +1,71 @@
+.award-main .award-poster {
+  padding-top: 100rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600rpx;
+  background-color: #bb9354;
+}
+
+.award-main .award-poster .award-logo {
+  max-width: 220rpx;
+  max-height: 325rpx;
+}
+
+.award-main .award-poster .award-info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 12rpx 30rpx;
+}
+
+.award-main .award-poster .award-info .award-info__label {
+  vertical-align: top;
+  display: inline-block;
+  margin-right: 10rpx;
+  padding: 0 12rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  font-size: 24rpx;
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 4rpx;
+  color: #fff;
+}
+
+.award-main .award-title {
+  margin: 40rpx 30rpx 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.award-main .award-subtitle {
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  color: #666;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.award-main .award-info {
+  margin-top: 10rpx;
+  padding: 0 30rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.award-main .award-brief {
+  margin-top: 10rpx;
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  line-height: 44rpx;
+  color: #333;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  text-align: justify;
+}

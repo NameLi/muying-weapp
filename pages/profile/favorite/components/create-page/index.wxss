@@ -1,0 +1,45 @@
+.back {
+  color: var(--color-theme);
+  padding: 0 10rpx;
+  font-size: 24rpx;
+}
+
+.create-btn {
+  font-size: 28rpx;
+  color: var(--color-theme);
+  padding: 0 10rpx;
+}
+
+.save-content .form .field-item {
+  position: relative;
+  margin: 0 30rpx;
+  padding: 20rpx 0;
+}
+
+.save-content .form .field-item .title,
+.save-content .form .field-item .content {
+  width: 100%;
+  border: none;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.save-content .form .field-item .placeholder {
+  color: #c5c5c5;
+}
+
+.save-content .form .field-item .title {
+  height: 92rpx;
+  line-height: 92rpx;
+}
+
+.save-content .form .field-item .content {
+  min-height: 92rpx;
+  line-height: 1.5;
+}
+
+.save-content .form .field-item .field-word-count {
+  position: absolute;
+  right: 0;
+  bottom: 46rpx;
+  color: #c5c5c5;
+}

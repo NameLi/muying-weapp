@@ -1,0 +1,22 @@
+.favorite-container .skeleton {
+  position: absolute;
+  left: 0;
+  top: 330rpx;
+  right: 0;
+  bottom: 0;
+}
+
+.favorite-container .favorite-list {
+  padding: 15rpx 0;
+}
+
+.favorite-container .favorite-list .movie-tool {
+  display: flex;
+  justify-content: space-between;
+  margin: 12rpx -12rpx 0;
+  padding: 0 12rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  font-size: 24rpx;
+  color: #999;
+}

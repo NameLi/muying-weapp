@@ -1,0 +1,41 @@
+<view class="comment-item">
+    <view class="comment-header" wx:if="{{author}}">
+        <image class="author-avatar" lazy-load src="{{author.avatar}}" />
+
+        
+        <view class="author-info">
+            <view class="author-name">{{ author.username }}</view>
+            <view wx:if="{{ comment.is_author === 1 }}" class="is-author">我评</view>
+
+            <!-- 影视用户评分 -->
+            <block wx:if="{{type === 'movie'}}">
+                <m-rate class="author-rating" value="{{comment.rating}}" size="20" step="2" max="10" readonly
+                    allow-half />
+            </block>
+        </view>
+
+        <view class="more" bindtap="showActionSheet" wx:if="{{comment.is_delete === 0}}">
+            <m-icon name="more" size="24" />
+        </view>
+    </view>
+
+    <view wx:if="{{comment.is_delete}}" class="comment-content">
+        <view class="is-delete">{{ comment.content }}</view>
+    </view>
+
+    <view wx:else class="comment-content">{{ comment.content }}</view>
+
+    <view class="comment-footer">
+        <view class="comment-date">{{ created_at }}</view>
+
+        <view class="tool-list" wx:if="{{comment.is_delete === 0}}">
+            <view class="tool-item" bindtap="likeClick">
+                <text wx:if="{{ comment.like_count }}">{{ comment.like_count }}</text>
+                <view
+                    class="like-icon {{ comment.is_like === 1 ? 'is-active': '' }} {{ comment.allow_like === 0 ? 'is-disabled': ''}}">
+                    <m-icon custom-class="m-icon" name="like-fill" color="{{comment.is_like === 1 ? 'red' : ''}}" size="28" />
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

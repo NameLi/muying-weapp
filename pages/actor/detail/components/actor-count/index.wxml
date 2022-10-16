@@ -1,0 +1,16 @@
+<view class="actor-count">
+  <view class="info-card">
+    <view class="card-item">
+      <view class="value">{{ actor.collection_count }}人</view>
+      <view class="label">已关注数</view>
+    </view>
+    <view class="card-item">
+      <view class="value">{{ actor.works_count }}部</view>
+      <view class="label">作品总数</view>
+    </view>
+    <view class="card-item">
+      <view class="value">{{ actor.role_count }}个</view>
+      <view class="label">饰演角色</view>
+    </view>
+  </view>
+</view>

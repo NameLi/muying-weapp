@@ -1,0 +1,6 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "serial-info": "./components/serial-info"
+  }
+}

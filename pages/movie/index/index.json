@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "movie-row": "./components/movie-row",
+    "nav-group": "./components/nav-group"
+  }
+}

@@ -1,0 +1,49 @@
+.award-item {
+  margin: 5rpx 30rpx;
+  padding-bottom: 20rpx;
+  .award {
+    display: flex;
+    align-items: center;
+    margin: 20rpx 0;
+    height: 100rpx;
+    .award-poster {
+      width: 100rpx;
+      height: 100rpx;
+      .poster {
+        width: 100rpx;
+        height: 100rpx;
+        object-fit: cover;
+        border-radius: 6rpx;
+        background-color: #f7f7f7;
+      }
+    }
+    .award-info {
+      flex: 1;
+      margin-left: 20rpx;
+      font-size: 28rpx;
+      .award-title {
+        font-weight: bold;
+        line-height: 40rpx;
+      }
+      .award-brief {
+        margin-top: 10rpx;
+        font-size: 24rpx;
+      }
+    }
+  }
+  .award-children {
+    .award-detail {
+      font-size: 24rpx;
+      .award-type {
+        height: 60rpx;
+        line-height: 68rpx;
+      }
+      .award-actor {
+        color: #999;
+        .actor-name {
+          margin-right: 6rpx;
+        }
+      }
+    }
+  }
+}

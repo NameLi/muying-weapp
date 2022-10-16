@@ -1,0 +1,62 @@
+<!-- 加载动画 -->
+<m-transition show="{{ loading }}" name="fade-out">
+  <skeleton />
+</m-transition>
+
+
+<view class="container">
+  <header-bar title="{{ isShowHeaderAuthor ? '': '影评' }}">
+    <m-transition show="{{ isShowHeaderAuthor }}" name="fade">
+      <view class="header-author">
+        <image class="header-author-avatar" mode="aspectFill" src="{{author.avatar}}" />
+        <view class="header-author-name">{{ author.username }}</view>
+      </view>
+    </m-transition>
+  </header-bar>
+
+
+  <!-- 内容 -->
+  <view class="main">
+    <view class="review-title">{{ review.title }}</view>
+
+    <!-- 作者信息 -->
+    <view class="author" wx:if="author">
+      <image class="author-avatar" src="{{author.avatar}}" />
+      <view class="author-info">
+        <view class="author-name">{{ author.username }}</view>
+        <view class="review-info">{{ review.created_at }}</view>
+      </view>
+    </view>
+
+    <!-- 原创 / 剧透 -->
+    <view class="extra-info" wx:if="{{review.is_original || review.is_spoiler === 1}}">
+      <text class="extra-info-label" wx:if="{{review.is_original === 1}}">原创</text>
+      <text class="extra-info-label" wx:if="{{review.is_spoiler === 1}}">该影评可能存在剧透</text>
+    </view>
+
+    <!-- 来源 -->
+    <view class="origin" wx:if="{{review.from && review.from !== 'muying'}}">
+      <text>该影评来自：</text>
+      <text class="origin-link" bindtap='copyText' data-text="{{review.from_link}}">{{ review.from_zh }}</text>
+    </view>
+
+    <!-- 内容 -->
+    <rich-text class="review-content" nodes="{{review.content}}" />
+
+    <!-- 影评版权信息 -->
+    <view class="copyright">{{ review.copyright_zh }}</view>
+
+    <!-- 所属影视 -->
+    <view style="height: 20rpx"></view>
+    <movie-card wx:if="{{review.movie}}" movie="{{review.movie}}" />
+  </view>
+
+  <!-- 影评操作 -->
+  <!--  wx:if="{{!loading && review.from === 'muying'}}" -->
+  <tool-bar type="reviews" use-slot-left data="{{review}}">
+    <tool-vote slot="left" review="{{review}}" />
+  </tool-bar>
+</view>
+
+<m-message id="message" />
+<m-toast id="toast" />

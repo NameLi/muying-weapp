@@ -1,0 +1,12 @@
+<m-loadmore wx:if="{{loading}}" loading="{{loading}}" />
+
+<view class="list">
+  <view class="item" wx:for="{{list}}" wx:key="type">
+    <view class="type" wx:if="{{item.children.length}}">{{ item.type_zh }}</view>
+    <view class="company-list">
+      <view class="company-item" wx:for="{{item.children}}" wx:for-item="company" wx:key="id">
+        {{ company.name }}
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,93 @@
+.movie-rating-wrapper {
+  margin: 10rpx 20rpx;
+  border-radius: 12rpx;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 30rpx 0;
+
+  .wish-count {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 136rpx;
+
+    .count-inner {
+      .count {
+        padding: 0 10rpx;
+        font-size: 48rpx;
+        color: rgb(254, 179, 0);
+        font-weight: bold;
+      }
+    }
+
+    .release-date {
+      position: absolute;
+      right: 20rpx;
+      bottom: -15rpx;
+      color: #e5e5e5;
+    }
+  }
+
+  .no-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 136rpx;
+  }
+
+  .rating-container {
+    display: flex;
+    justify-content: space-around;
+
+    .rating-map {
+      min-width: 120rpx;
+      text-align: center;
+
+      .rating-from {
+        position: relative;
+
+        .icon {
+          position: absolute;
+          top: -10rpx;
+          right: -13rpx;
+          font-size: 28rpx;
+          padding: 10rpx;
+        }
+      }
+
+      .rating-score {
+        height: 76rpx;
+        line-height: 76rpx;
+        font-size: 44rpx;
+        font-weight: bold;
+        color: rgb(254, 179, 0);
+      }
+
+      .rating-count {
+        color: #fff;
+      }
+    }
+
+    .line {
+      width: 1rpx;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  .rating-footer {
+    .status-count {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      margin: 40rpx 30rpx 0;
+      color: #999;
+    }
+  }
+
+  .tip-content {
+    text-align: left;
+    text-align: justify;
+    line-height: 1.6;
+  }
+}

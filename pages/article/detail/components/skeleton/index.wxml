@@ -1,0 +1,13 @@
+<view class="skeleton-container" style="top: {{ headerBarH }}px;">
+	<view class="skeleton skeleton-animation">
+		<view class="title"></view>
+		<view class="author">
+			<view class="avatar"></view>
+			<view class="username"></view>
+		</view>
+		<view class="content">
+			<view class="line" wx:for="123456" wx:key="index"></view>
+			<view class="line" style="width: 40%"></view>
+		</view>
+	</view>
+</view>

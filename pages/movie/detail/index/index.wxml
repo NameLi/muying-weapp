@@ -1,0 +1,141 @@
+<!-- 加载动画 -->
+<m-transition show="{{ loading }}" name="fade-out">
+  <skeleton is-half="{{ isHalf }}" />
+</m-transition>
+
+<view class="container">
+  <!-- 吸顶头部 -->
+  <header-scroll-bar wx:if="{{poster}}" poster="{{ poster }}" scroll-top="{{ scrollTop }}" title="{{ movie.title }}"
+    placeholder="{{ movie.category }}" bgcolor="{{ movie.bgcolor }}">
+
+    <view slot="subtitle">
+      <view class="is-coming" wx:if="{{ movie.release_status === 1 }}">
+        <text class="wish-count">{{ movie.wish_count }}</text>
+        <text class="wish-label">人想看</text>
+      </view>
+
+      <view class="movie-rate" wx:elif="{{movie.rating}}">
+        <m-rate value="{{movie.rating}}" size="24" step="{{2}}" max="{{10}}" allow-half readonly />
+        <text class="movie-rate-value">{{ movie.rating }}</text>
+      </view>
+
+      <view class="movie-subtitle" wx:else>{{ movie.title_original }}</view>
+    </view>
+  </header-scroll-bar>
+
+  <!-- 基本信息 -->
+  <view class="info-wrapper" style="{{bgStyle}}">
+    <!-- 基本信息 -->
+    <movie-info movie="{{movie}}" loading="{{loading}}" bind:show-detail="showInformationPage"
+      bind:show-rate="showRatePage" bind:wish-change="wishChange" />
+
+    <!-- 评分 -->
+    <movie-rating movie="{{movie}}" bind:show-rate="showRateDetailPage" />
+
+    <!-- 标签 -->
+    <view class="tag-list">
+      <view class="tag" wx:for="{{movie.tags}}" wx:key="index">
+        {{ item }}
+      </view>
+    </view>
+
+    <!-- 彩蛋 -->
+    <view class="egg" wx:if="{{movie.egg_hunt}}">
+      <c-icon class="icon" name="egg" />
+      <text>有{{ movie.egg_hunt }}个彩蛋，不要错过哦~</text>
+    </view>
+
+    <!-- 剧情 -->
+    <m-panel title="剧情" scroll-x="{{ false }}" color="#fff" panel-class="custom-panel" arrow bindtap="showInformationPage"
+      wx:if="{{movie.summary}}">
+      <view class="summary">
+        <view>{{ movie.summary }}</view>
+      </view>
+    </m-panel>
+
+    <!-- 演员 -->
+    <m-panel title="演员" color="#fff" panel-class="custom-panel" wx:if="{{movie.cast_count}}"
+      subtitle="全部{{movie.cast_count}}" to="../cast/index?id={{movie.id}}">
+      <actor-row actor-name-class="actor-name" actor-extra-class="actor-extra" wx:for="{{movie.cast}}" wx:key="union_id"
+        actor="{{item}}" />
+    </m-panel>
+
+    <!-- 角色 -->
+    <m-panel title="角色" color="#fff" panel-class="custom-panel" wx:if="{{movie.role_count}}"
+      subtitle="全部{{movie.role_count}}" to="../role/index?id={{movie.id}}">
+      <role-row role-name-class="role-name" wx:for="{{movie.roles}}" wx:key="id" role="{{item}}" />
+    </m-panel>
+  </view>
+
+  <!-- 视频 -->
+  <m-panel wx:if="{{movie.video_count}}" title="视频" subtitle="全部{{movie.video_count}}"
+    to="../video/index?id={{movie.id}}">
+    <video-row wx:for="{{movie.videos}}" wx:key="id" video="{{item}}" />
+  </m-panel>
+
+  <!-- 相册 -->
+  <m-panel wx:if="{{movie.photo_count}}" title="相册" subtitle="全部{{movie.photo_count}}"
+    to="/pages/photo/index?type=movie&id={{movie.id}}">
+    <photo-wall photos="{{movie.photos}}" />
+  </m-panel>
+
+  <!-- 奖项 -->
+  <m-panel wx:if="{{movie.awards_total_count}}" title="奖项" to="../award/index?id={{movie.id}}">
+    <movie-award movie="{{movie}}" />
+  </m-panel>
+
+  <!-- 资料 -->
+  <m-panel title="资料" wx:if="{{hasExtra}}">
+    <movie-extra movie="{{movie}}" />
+  </m-panel>
+
+  <!-- 系列 -->
+  <m-panel wx:if="{{movie.serial_count}}" title="同一系列" subtitle="全部{{movie.serial_count}}"
+    to="../serial/index?id={{movie.id}}">
+    <serial-row wx:for="{{movie.serials}}" wx:key="id" serial="{{item}}" />
+  </m-panel>
+
+  <!-- 文章资讯 -->
+  <m-panel wx:if="{{movie.article_count}}" title="文章资讯" subtitle="全部{{movie.article_count}}"
+    to="../article/index?id={{movie.id}}">
+    <article-item wx:for="{{movie.articles}}" wx:key="id" article="{{item}}" />
+  </m-panel>
+
+  <!-- 相似 -->
+  <m-panel title="相似影视" wx:if="{{movie.like_movies.length}}">
+    <movie-row wx:for="{{movie.like_movies}}" wx:key="id" movie="{{item}}" />
+  </m-panel>
+
+  <!-- 操作栏 -->
+  <movie-bar movie="{{ movie }}" bind:show-favorite="showFavoritePage" bind:show-comment="showCommentPage" />
+</view>
+
+
+<!-- 内容层 -->
+<page-container custom-style="background: transparent" show="{{ isShowHalfPage }}" bind:enter="halfPageEnter"
+  bind:leave="halfPageLeave" bind:afterleave="halfPageAfterLeave">
+  <!-- 收藏夹列表 -->
+  <favorite-list wx:if="{{isShowFavorite}}" movie="{{ movie }}" bind:show-create="showFavoritCreatePage"
+    bind:close="hideFavoritePage" bind:favorite-update="favoriteUpdate" />
+
+  <!-- 创建收藏夹 -->
+  <favorite-create wx:if="{{ isShowFavoriteCreate }}" height="calc(100vh - {{headerBarH + 10}}px)"
+    bind:close="hideFavoritCreatePage" bind:create="favoriteCreateSuccess" />
+
+  <!-- 详细介绍 -->
+  <information wx:if="{{isShowInformation}}" movie="{{ movie }}" bind:close="hideInformationPage" />
+
+  <!-- 用户评分 -->
+  <rate-create-page wx:if="{{ isShowRate }}" movie="{{ movie }}" edit="{{ isRateEdit }}" bind:close="hideRatePage"
+    bind:rating-change="ratingChange" />
+
+  <!-- 评分详情 -->
+  <rate-detail-page wx:if="{{ isShowRateDetail }}" movie="{{ movie }}" bind:close="hideRateDetailPage" />
+
+  <!-- 评论 -->
+  <comment-page wx:if="{{ isShowComment }}" _id="{{ movie.id }}" type="movies" bind:close="hideCommentPage" />
+</page-container>
+
+<!-- 提示 -->
+<m-toast id="toast" />
+<m-message id="message" />

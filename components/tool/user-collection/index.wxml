@@ -1,0 +1,8 @@
+<view class="tool-item tool-item-class {{ data.allow_collection ? 'is-disabled' : ''}}" bindtap="likeClick">
+    <view class="tool-item-icon {{ data.is_collection ? 'is-checked': ''}}">
+        <c-icon name="star-fill" class="icon" />
+    </view>
+    <view class="tool-item-count">
+        {{ data.collection_count || defaultCount }}
+    </view>
+</view>

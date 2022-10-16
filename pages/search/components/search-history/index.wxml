@@ -1,0 +1,13 @@
+<view class="record" wx:if="{{histories.length}}">
+  <view class="record-header">
+    <text class="record-title">历史记录</text>
+    <c-icon class="icon" name="delete" bindtap="clearHistories" />
+  </view>
+
+  <view class="record-list">
+    <view class="record-item" wx:for="{{histories}}" wx:for-item="keyword" wx:key="index" bindtap="keywordChecked"
+      data-keyword="{{ keyword }}">
+      {{ keyword }}
+    </view>
+  </view>
+</view>

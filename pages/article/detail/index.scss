@@ -1,0 +1,132 @@
+.article {
+  padding-bottom: 40rpx;
+  .header-author {
+    display: flex;
+    align-items: center;
+    height: 100rpx;
+    .header-author-avatar {
+      width: 40rpx;
+      height: 40rpx;
+      border-radius: 50%;
+    }
+    .header-author-name {
+      margin-left: 16rpx;
+      font-size: 24rpx;
+      font-weight: normal;
+    }
+  }
+
+  .header-title {
+    z-index: 99;
+    position: absolute;
+    // left: 0;
+    // bottom: 0;
+    // right: 0;
+  }
+
+  .article-main {
+    padding: 20rpx 30rpx;
+    .article-title {
+      padding: 16rpx 0;
+      font-size: 36rpx;
+      line-height: 60rpx;
+      font-weight: bold;
+      text-align: justify;
+    }
+    .article-header {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      padding: 30rpx 0;
+      .read-count {
+        line-height: 70rpx;
+        color: #999;
+      }
+      .author {
+        display: flex;
+        .author-avatar {
+          height: 70rpx;
+          width: 70rpx;
+          border-radius: 50%;
+        }
+        .author-info {
+          margin-left: 20rpx;
+          line-height: 34rpx;
+          .author-name {
+            font-weight: bold;
+            font-size: 28rpx;
+          }
+          .article-info {
+            font-size: 24rpx;
+            color: #999;
+          }
+        }
+      }
+    }
+
+    .article-cover {
+      width: 100%;
+      border-radius: 12rpx;
+    }
+
+    .article-content {
+      margin-top: 30rpx;
+      font-size: 32rpx;
+      line-height: 1.6;
+      word-break: break-all;
+    }
+  }
+  .movie-card {
+    padding: 30rpx;
+  }
+}
+
+.article-content {
+  img {
+    max-width: 100%;
+  }
+}
+// 影片信息卡
+.subject-card-item {
+  display: flex;
+  margin: 12rpx 0;
+  padding: 18rpx;
+  border-radius: 12rpx;
+  background-color: #fafafa;
+  .subject-card-delete {
+    display: none;
+  }
+  .subject-card-poster {
+    img {
+      margin: 0 !important;
+      padding: 0;
+      width: 122rpx !important;
+      height: 178rpx !important;
+      border-radius: 6rpx;
+      object-fit: cover;
+      background-color: #f5f5f5;
+    }
+  }
+  .subject-card-info {
+    flex: 1;
+    margin-left: 20rpx;
+    .subject-card-info-title {
+      font-size: 32rpx;
+      line-height: 40rpx;
+      font-weight: bold;
+    }
+    .subject-card-info-list {
+      margin-top: 10rpx;
+      .subject-card-info-rating {
+        color: var(--color-theme);
+        font-size: 28rpx;
+      }
+      .subject-card-info-item {
+        margin-top: 10rpx;
+        font-size: 28rpx;
+        color: #999;
+        line-height: 44rpx;
+      }
+    }
+  }
+}

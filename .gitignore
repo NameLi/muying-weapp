@@ -1,0 +1,14 @@
+project.private.config.json
+package-lock.json
+
+miniprogram_npm
+node_modules
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

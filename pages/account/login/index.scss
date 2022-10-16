@@ -1,0 +1,64 @@
+.login {
+  position: relative;
+  min-height: 100vh;
+
+  .app-welcome {
+    margin-top: 120rpx;
+    padding: 0 80rpx;
+    font-size: 48rpx;
+    font-weight: bold;
+  }
+
+  // 表单
+  .form {
+    padding: 60rpx 80rpx 0;
+
+    .form-item {
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-top: 40rpx;
+      height: 81rpx;
+      border-bottom: 1px solid #eee;
+
+      .icon {
+        padding: 10rpx;
+      }
+
+      .input {
+        flex: 1;
+        position: relative;
+        height: 80rpx;
+        line-height: 80rpx;
+        font-size: 28rpx;
+        border: none;
+        background-color: #fff;
+
+        &.placeholder {
+          color: rgb(201, 201, 201);
+        }
+      }
+
+      .see-icon {
+        color: #ccc;
+
+        &.is-show {
+          color: var(--color-theme);
+        }
+      }
+    }
+
+    .submit {
+      padding-top: 120rpx;
+    }
+  }
+
+  .tool {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50rpx;
+    padding: 0 80rpx;
+    font-size: 24rpx;
+    color: #999;
+  }
+}

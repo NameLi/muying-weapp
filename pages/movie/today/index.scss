@@ -1,0 +1,25 @@
+.container {
+  .menu-wrapper {
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    background: #fff;
+    border-bottom: 1rpx solid #eee;
+    .menu {
+      flex: 1;
+      text-align: center;
+      font-size: 28rpx;
+      &.is-active {
+        color: var(--color-theme);
+      }
+    }
+  }
+  .main {
+    padding-top: 105rpx;
+  }
+}

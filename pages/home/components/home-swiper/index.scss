@@ -1,0 +1,40 @@
+.home-swiper__wrap {
+    margin: 20rpx 20rpx 0;
+    position: relative;
+
+    .home-swiper {
+        height: 380rpx;
+        border-radius: 8rpx;
+        overflow: hidden;
+
+        .slide-image {
+            height: 380rpx;
+            width: 100%;
+            border-radius: 8rpx;
+        }
+    }
+
+    .swiper-indicator {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        bottom: 14rpx;
+        height: 4rpx;
+        text-align: center;
+
+        .dot {
+            display: inline-block;
+            margin: 0 2rpx;
+            width: 30rpx;
+            height: 4rpx;
+            background: #fff;
+            vertical-align: top;
+            border-radius: 2rpx;
+
+            &.is-active {
+                background: var(--color-theme);
+            }
+        }
+    }
+
+}

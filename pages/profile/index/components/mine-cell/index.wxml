@@ -1,0 +1,13 @@
+<view class="menu-cell">
+  <m-cell-group custom-class="cell-group" border card wx:if="{{user}}">
+    <m-cell icon="tag" icon-color="#ffbe10" title="我的资料" url="/pages/profile/information/index" />
+    <m-cell icon="star" icon-color="#ffbe10" title="影片收藏夹" url="/pages/profile/favorite/index/index" />
+  </m-cell-group>
+
+  <m-cell-group custom-class="cell-group" border card>
+    <m-cell icon="feed" icon-color="#ffbe10" title="意见反馈" url="/pages/profile/feedback/index" />
+    <m-cell icon="aboutus" icon-color="#ffbe10" title="关于作者" url="/pages/profile/aboutus/index" />
+    <m-cell icon="edit" icon-color="#ffbe10" title="更新日志" url="/pages/profile/changelog/index" />
+    <m-cell icon="set" icon-color="#ffbe10" title="设置" url="/pages/profile/setting/index" />
+  </m-cell-group>
+</view>

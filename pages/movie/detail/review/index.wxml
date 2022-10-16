@@ -1,0 +1,18 @@
+<view wx:if="{{total}}" class="review-header {{ total === 0 ? 'is-hidden' : '' }}">
+  <view class="review-count">影评 {{ total }}</view>
+  <view class="review-type" wx:if="{{total}}">
+    <tab-switch bind:change="onChange" disabled="{{loading}}" />
+  </view>
+</view>
+
+<view class="review-list">
+  <review-item wx:for="{{list}}" wx:for-item="review" review="{{review}}" wx:key="id" />
+</view>
+
+<view wx:if="{{noData}}" class="no-review-container">
+  <view class="no-review">
+    <p>还没有影评</p>
+  </view>
+</view>
+
+<m-loadmore wx:if="{{!noData}}" loading="{{loading}}" />

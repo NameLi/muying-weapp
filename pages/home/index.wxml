@@ -1,0 +1,37 @@
+<!-- 加载动画 -->
+<m-transition show="{{ loading }}" name="fade-out">
+  <home-loading />
+</m-transition>
+
+<view class="page {{ isReady ? 'is-visible' : 'is-hidden' }}">
+  <!-- 头部 -->
+  <header-bar scroll-top="{{ scrollTop }}" bgcolor="{{ bgcolor }}" />
+
+  <!-- 轮播 -->
+  <home-swiper swiper="{{ swiper }}" bind:onchange="swiperChange" />
+
+  <!-- 菜单 -->
+  <home-menu />
+
+  <m-panel title="正在热映" subtitle="{{theater.total}}部" to="/pages/movie/theater/index">
+    <movie-row wx:for="{{theater.data}}" movie="{{ item }}" wx:key="id" />
+  </m-panel>
+
+  <!-- 即将上映 -->
+  <m-panel title="即将上映" subtitle="{{coming.total}}部" to="/pages/movie/coming/index">
+    <movie-row wx:for="{{coming.data}}" movie="{{ item }}" wx:key="id">
+      <view class="coming-date">{{ item.release_date }}</view>
+    </movie-row>
+  </m-panel>
+
+  <!-- 那年今日 -->
+  <m-panel title="那年今日" subtitle="{{today.total}}部" to="/pages/movie/today/index">
+    <movie-row wx:for="{{today.data}}" movie="{{ item }}" wx:key="id" />
+  </m-panel>
+
+  <m-panel title="文章资讯" scroll-x="{{false}}">
+    <article-item wx:for="{{article.data}}" article="{{item}}" wx:key="id" />
+  </m-panel>
+
+  <footer-info />
+</view>

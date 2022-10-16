@@ -1,0 +1,7 @@
+
+<view class="main">
+  <cast-panel wx:for="{{cast}}" wx:for-item="actor" wx:key="id" actors="{{actor.children}}" title="{{actor.name}}"
+  count="{{actor.count}}" />
+</view>
+
+<m-loadmore wx:if="{{loading}}" loading="{{loading}}" />

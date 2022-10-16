@@ -1,0 +1,26 @@
+<view class="skeleton-container" style="padding-top: {{ statusBarH }}px;">
+  <view class="skeleton skeleton-animation">
+    <view class="header-bar" style="height: {{headerBarH}}px;{{ headerStyle }}">
+      <view class="search" style="height: {{searchBarH}}px;"></view>
+    </view>
+
+    <view class="swiper"></view>
+
+    <view class="menu">
+      <view class="menu-item" wx:for="1234" wx:key="index">
+        <view class="menu-icon"></view>
+        <view class="menu-name"></view>
+      </view>
+    </view>
+
+    <view class="panel" wx:for="123" wx:key="index">
+      <view class="panel-title"></view>
+      <view class="panel-content">
+        <view class="row-item" wx:for="12345" wx:key="index">
+          <view class="row-poster"></view>
+          <view class="row-name"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+.movie-extra {
+  white-space: nowrap;
+  padding: 20rpx 10rpx;
+  background-color: rgb(246, 246, 246);
+  border-radius: 6rpx;
+  .extra-item {
+    margin: 0 20rpx;
+    display: flex;
+    justify-content: space-between;
+    height: 70rpx;
+    line-height: 70rpx;
+    .extra-name {
+      font-weight: bold;
+      font-size: 28rpx;
+      color: #333;
+    }
+    .extra-label {
+      font-size: 26rpx;
+      color: rgb(128, 141, 176);
+      .m-icon {
+        font-size: 24rpx !important;
+      }
+    }
+  }
+}

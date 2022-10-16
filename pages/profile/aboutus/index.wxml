@@ -1,0 +1,11 @@
+<view class="main">
+	<m-cell-group border card>
+		<m-cell title="作者" value="冰糖雪梨" />
+		<m-cell title="城市" value="苏州" />
+		<m-cell title="工作" value="前端开发" />
+		<m-cell title="QQ群" value="577133021" data-text="577133021" bindtap="copyText" />
+		<m-cell title="主页">
+			<text class="link" data-text="577133021" bindtap="copyText">https://ixook.com</text>
+		</m-cell>
+	</m-cell-group>
+</view>

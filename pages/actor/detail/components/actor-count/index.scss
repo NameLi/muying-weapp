@@ -1,0 +1,37 @@
+.actor-count {
+  margin: 20rpx;
+  background-color: #fff;
+  border-radius: 12rpx;
+  padding: 20rpx 0;
+  .info-card {
+    display: flex;
+    height: 110rpx;
+    align-items: center;
+    .card-item {
+      position: relative;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      &:nth-child(1)::after,
+      &:nth-child(2)::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 1px;
+        height: 80rpx;
+        background-color: #e5e5e5;
+      }
+      .value {
+        font-size: 32rpx;
+        font-weight: bold;
+        line-height: 46rpx;
+      }
+      .label {
+        font-size: 28rpx;
+        color: #888;
+      }
+    }
+  }
+}

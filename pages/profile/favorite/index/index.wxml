@@ -1,0 +1,32 @@
+<skeleton wx:if="{{ loading }}" />
+
+<view class="container">
+
+  <!-- 收藏夹列表 -->
+  <view class="header" wx:if="{{total}}">
+    <view class="count">{{ total }}个收藏夹</view>
+    <view class="create-btn" bindtap="showCreatePage">新建收藏夹</view>
+  </view>
+
+  <view class="save-list">
+    <view class="save-item" wx:for="{{list}}" data-id="{{ item.id }}" wx:key="id" bindtap="pathToDetail">
+      <view class="save-content">
+        <view class="save-title">{{ item.name }}</view>
+        <view class="save-info">{{ item.count }}个内容</view>
+      </view>
+    </view>
+  </view>
+
+  <no-data wx:if="{{total === 0 && !loading}}">
+    <view class="no-data">
+      您还没有收藏夹，立即<text class="create-btn" bindtap="showCreatePage">创建</text>？
+    </view>
+  </no-data>
+</view>
+
+<page-container custom-style="background: transparent" show="{{ isShowCreate }}" bind:leave="halfPageLeave">
+  <create-page wx:if="{{ isShowCreate }}" bind:close="hideCreatePage" bind:create="createSuccess" />
+</page-container>
+
+<m-toast id="toast" />
+<m-message id="message" />

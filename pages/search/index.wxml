@@ -1,0 +1,17 @@
+<view class="container">
+  <!-- 搜索栏 -->
+  <search-bar value="{{keyword}}" bind:keyword-change="keywordChange" bind:on-clear="clearKeyword" />
+
+  <!-- 搜索结果 -->
+  <search-result id="searchResult" wx:if="{{keyword}}" keyword="{{keyword}}" bind:keyword-change="storageKeyword" />
+
+  <!-- 未搜索时显示内容 -->
+  <view wx:if="{{!keyword}}">
+
+    <!-- 历史搜索记录 -->
+    <search-history histories="{{histories}}" bind:on-clear="clearHistories" bind:on-keyword="keywordChange" />
+  </view>
+</view>
+
+<m-toast id="toast" />
+<m-modal id="modal" />

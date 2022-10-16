@@ -1,0 +1,85 @@
+.user-info-wrapper {
+  position: relative;
+  background-color: var(--color-theme);
+
+  .icon-tool {
+    position: absolute;
+    right: 30rpx;
+    bottom: 80rpx;
+    width: 60rpx;
+    text-align: center;
+    color: #fff;
+    font-size: 40rpx;
+  }
+
+  .icon-news {
+    right: 100rpx;
+  }
+}
+
+.user-info {
+  padding: 0 30rpx 80rpx;
+  height: 240rpx;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+
+  .user-avatar {
+    position: relative;
+    width: 110rpx;
+    height: 110rpx;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3rpx #fff;
+    background-color: #fff;
+
+    .avatar {
+      width: 110rpx;
+      height: 110rpx;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .user-sex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: 0rpx;
+      bottom: 0rpx;
+      font-size: 20rpx;
+      width: 32rpx;
+      height: 32rpx;
+      border-radius: 50%;
+      background-color: #fff;
+
+      &.icon-boy {
+        color: #409eff;
+      }
+
+      &.icon-girl {
+        color: #f56c6c;
+      }
+    }
+  }
+
+  .user-intro {
+    flex: 1;
+    margin-left: 26rpx;
+    color: #fff;
+
+    .user-name {
+      font-size: 36rpx;
+      font-weight: bold;
+    }
+  }
+
+  .login-btn {
+    margin-left: 20rpx;
+    color: #fff;
+    font-size: 32rpx;
+    padding: 20rpx;
+  }
+}

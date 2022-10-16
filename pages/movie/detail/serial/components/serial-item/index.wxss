@@ -1,0 +1,22 @@
+.serial-item {
+  display: flex;
+  padding: 20rpx 0;
+  margin: 0 30rpx;
+  position: relative;
+}
+
+.serial-item .serial-info {
+  flex: 1;
+  margin-left: 28rpx;
+}
+
+.serial-item .serial-info .serial-name {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.serial-item .serial-info .serial-label {
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  color: #999;
+}

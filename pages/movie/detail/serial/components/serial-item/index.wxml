@@ -1,0 +1,9 @@
+<view class="serial-item" bindtap="pathToSerial">
+  <image-group images="{{photos}}" />
+
+  <view class="serial-info">
+    <view class="serial-name ellipsis">{{ serial.name }}</view>
+    <view class="serial-label ellipsis">{{ serial.name_en }}</view>
+    <view class="serial-label">影视数量 {{ serial.count }}</view>
+  </view>
+</view>

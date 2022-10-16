@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "奖项荣誉",
+  "usingComponents": {
+    "award-item": "./components/award-item"
+  }
+}

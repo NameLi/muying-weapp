@@ -1,0 +1,27 @@
+.serial-row {
+  vertical-align: top;
+  display: inline-block;
+  margin: 0 8rpx;
+  padding-bottom: 15rpx;
+  width: 188rpx;
+  box-sizing: border-box;
+  .poster-group {
+    display: flex;
+    justify-content: center;
+    height: 170rpx;
+    .image-group {
+      transform: scale(1.1);
+      transform-origin: 0 0;
+    }
+  }
+  .title {
+    padding-top: 12rpx;
+    line-height: 36rpx;
+    font-size: 28rpx;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+  }
+}

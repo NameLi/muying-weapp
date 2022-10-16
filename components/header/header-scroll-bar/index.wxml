@@ -1,0 +1,33 @@
+<view class="header-wrapper">
+  <view class="header-shadow" style="height: {{headerBarH}}px;"></view>
+
+  <view class="header" style="padding-top: {{statusBarH}}px;height: {{headerBarH}}px;">
+
+    <view class="header-bg {{ isReady && !isTop ? 'is-show': '' }}" style="{{ bgcolorStyle }};{{ opacity }}"></view>
+
+    <view class="back" style="height: {{headerContentH}}px;" bindtap="goBack">
+      <c-icon class="back-icon {{ isHome ? 'home-icon': '' }}" name="{{ isHome ? 'home-2' : 'back' }}" />
+    </view>
+
+    <view class="category {{ isTop ? 'is-show': '' }}">{{ placeholder }}</view>
+
+    <view class="header-content {{ !isTop ? 'is-show' : '' }}" style="height: {{headerContentH}}px;">
+      <view class="header-box">
+        <view class="header-poster" wx:if="{{poster}}">
+          <image mode="heightFix" class="poster" src="{{poster}}" />
+        </view>
+        <view class="header-info">
+          <view class="title">{{ title }}</view>
+          <view class="subtitle" wx:if="{{ subtitle }}">{{ subtitle }}</view>
+          <slot name="subtitle" wx:else />
+        </view>
+      </view>
+    </view>
+
+    <button open-type="share" class="share"
+      style="left:{{ capsuleL }}px;width:{{ capsuleH }}px;height: {{ capsuleH }}px;" wx:if="{{share}}"
+      bindtap="showShare">
+      <m-icon name="share" color="#fff" size="40" />
+    </button>
+  </view>
+</view>

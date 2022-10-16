@@ -1,0 +1,16 @@
+<view class="main" wx:if="{{isFeedback}}">
+    <view class="success">反馈成功，感谢您的支持</view>
+</view>
+
+<view class="main" wx:else>
+    <view class="container">
+        <textarea class="content" model:value="{{content}}" focus show-confirm-bar="{{false}}"
+            adjust-position="{{false}}" rows="6" maxlength="maxlength" placeholder="请详细描述您遇到的问题，不低于10个字" />
+        <view class="word-count">{{ wordLength }}/{{ maxlength }}</view>
+    </view>
+
+    <m-button type="primary" color="#fff" bgcolor="#e54847" custom-class="submit" loading="{{submitLoading}}" bind:click="submit">提 交</m-button>
+</view>
+
+<m-toast id="toast" />
+<m-message id="message" />

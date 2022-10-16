@@ -1,0 +1,10 @@
+<view class="movie-row" bindtap="pathTo">
+  <view class="poster-wrapper">
+    <image mode="aspectFill" class="img-cover" lazy-load src="{{movie.poster}}" />
+    <view class="info">
+      <text class="info-epispde" wx:if="{{movie.episode_count}}">全{{ movie.episode_count }}集</text>
+      <text class="info-rating" wx:if="{{movie.rating}}">{{ movie.rating }}</text>
+    </view>
+  </view>
+  <view class="title">{{ movie.title }}</view>
+</view>

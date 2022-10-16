@@ -1,0 +1,36 @@
+.panel {
+  padding: 0;
+  .panel-header {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    display: flex;
+    padding: 0 20rpx;
+    height: 86rpx;
+    line-height: 86rpx;
+    font-size: 28rpx;
+    background-color: rgb(245, 245, 245);
+    .panel-title {
+      flex: 1;
+      .panel-type {
+        font-weight: bold;
+        display: inline-block;
+        &::before {
+          content: "";
+          vertical-align: middle;
+          display: inline-block;
+          margin-top: -4rpx;
+          margin-right: 12rpx;
+          width: 8rpx;
+          height: 8rpx;
+          background: #f8a52d;
+        }
+      }
+    }
+    .panel-count {
+      padding-right: 20rpx;
+      font-size: 24rpx;
+      padding-left: 8rpx;
+    }
+  }
+}

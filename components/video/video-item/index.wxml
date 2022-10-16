@@ -1,0 +1,19 @@
+<view class="video-item m-hairline--bottom" bindtap="pathToVideo">
+  <view class="video-content">
+    <image mode="aspectFill" class="video-poster" lazy-load src="{{video.poster}}" />
+    <view class="video-is--play" wx:if="{{isCurrent}}">
+      <text>播放中</text>
+    </view>
+    <view class="video-duration">{{ duration }}</view>
+  </view>
+  <view class="video-info">
+    <view class="video-title">{{ video.title }}</view>
+    <!-- <view class="video-author"></view> -->
+    <view class="video-tool">
+      <view class="video-tool-item">
+        {{ video.like_count }}赞 · {{ video.play_count }}播放
+      </view>
+      <view class="video-tool-item">{{ created_at }}</view>
+    </view>
+  </view>
+</view>

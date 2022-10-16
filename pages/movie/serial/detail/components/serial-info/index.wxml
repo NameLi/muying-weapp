@@ -1,0 +1,12 @@
+<header-scroll-bar title="{{serial.name}}" subtitle="共{{ serial.count }}部" scroll-top="{{ scrollTop }}" poster="{{serial.poster}}" end-top="140" />
+
+<view class="serial-info">
+  <image mode="aspectFill" src="{{serial.poster}}" class="serial-poster" />
+
+  <view class="serial-info-footer">
+    <view class="serial-name">{{ serial.name }}</view>
+    <view class="serial-extra">
+      <text>共{{ serial.count }}部</text>
+    </view>
+  </view>
+</view>

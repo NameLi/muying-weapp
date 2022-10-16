@@ -1,0 +1,27 @@
+<view class="award-item m-hairline--bottom">
+  <view class="award-year">{{ award.year }}年</view>
+
+  <view class="award-children" wx:for="{{award.children}}" wx:key="id">
+    <view class="award-info">
+      <view class="award-title">第{{ item.session }}届 {{ item.award }}</view>
+      <view class="award-type">
+        {{ item.type }} {{ item.win === 1 ? "(提名)" : "" }}
+      </view>
+    </view>
+    <view class="award-movie" wx:if="{{item.movie}}" data-movie="{{ item.movie }}" bindtap="pathToMovie">
+      <view class="movie-poster">
+        <image mode="aspectFill" class="poster" src="{{item.movie.poster}}" />
+      </view>
+      <view class="movie-detail">
+        <view class="movie-title">{{ item.movie.title }}</view>
+        <view class="movie-rating">
+          <m-rate value="{{item.movie.rating}}" size="26" step="2" max="10" allow-half readonly />
+          <text class="rating-value">{{ item.movie.rating }}</text>
+        </view>
+        <view class="movie-info">
+          {{ item.movie.year }} / {{ item.movie.genres }} / {{ item.movie.countries }}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

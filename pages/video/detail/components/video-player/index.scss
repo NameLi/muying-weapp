@@ -1,0 +1,34 @@
+  .video-wrapper {
+    width: 100%;
+    height: 422rpx;
+    background-color: #000;
+
+    .video-box {
+      z-index: 98;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 422rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+
+      .video {
+        width: 100%;
+        height: 422rpx;
+      }
+
+      .progress-wrapper {
+        z-index: 99;
+        height: 3rpx;
+        background: #dedede;
+
+        .progress {
+          height: 3rpx;
+          background: #51ace6;
+        }
+      }
+    }
+  }

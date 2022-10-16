@@ -1,0 +1,15 @@
+.m-tabs {
+  z-index: 2;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.m-tabs .m-tabs__line {
+  height: 8rpx !important;
+}
+
+.photo-list {
+  padding: 5rpx;
+}

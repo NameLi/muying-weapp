@@ -1,0 +1,29 @@
+.container {
+  .navbar-group {
+    z-index: 9;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+  }
+
+  .m-tabs {
+    border-bottom: 1px solid #e5e5e5;
+
+    .m-tabs__line {
+      height: 8rpx;
+    }
+
+    .m-tabs__nav {
+      display: block;
+
+      .m-tabs-item {
+        display: inline-block;
+        font-weight: bold;
+
+        .m-tabs-item__text {
+          transition: all 0.2s;
+        }
+      }
+    }
+  }
+}

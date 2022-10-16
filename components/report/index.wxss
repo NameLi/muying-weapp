@@ -1,0 +1,22 @@
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120rpx;
+}
+
+.reason-list {
+  display: flex;
+  flex-wrap: wrap;
+  color: #333;
+}
+
+.reason-list .reason-item {
+  width: 50%;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.reason-list .reason-item.is-active {
+  color: var(--color-theme);
+}

@@ -1,0 +1,15 @@
+<view class="holder" style="height: {{headerBarH}}px;"></view>
+
+<view class="header-bar-wrapper {{ isTop ? 'is-top' : '' }}"
+  style="padding-top: {{statusBarH}}px;height: {{headerBarH}}px;">
+  <view class="header-bar" style="{{headerStyle}}">
+    <view class="search" style="height: {{searchBarH}}px" bindtap="pathToSearch">
+      <c-icon class="search-icon" name="search" />
+      <text class="search-label">请输入你要搜索的内容</text>
+    </view>
+  </view>
+
+  <!-- 轮播图背景色 -->
+</view>
+
+<view class="bgcolor {{ !isTop ? 'transparent': '' }}" style="{{ backgroundStyle }}"></view>

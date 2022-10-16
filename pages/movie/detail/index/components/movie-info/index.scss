@@ -1,0 +1,151 @@
+.movie-info-wrapper {
+    display: flex;
+    padding: 0 20rpx 20rpx;
+    overflow: hidden;
+
+    .movie-poster {
+        width: 192rpx;
+        height: 268rpx;
+        border-radius: 4rpx;
+        overflow: hidden;
+        background-color: rgba(#f5f5f5, 0.45);
+        box-shadow: 5rpx 5rpx 10rpx rgba(#000, 0.25);
+
+        .poster {
+            width: 192rpx;
+            height: 268rpx;
+        }
+    }
+
+    .movie-info {
+        position: relative;
+        margin-left: 25rpx;
+        flex: 1;
+        color: rgb(176, 179, 187);
+
+        .award-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            position: absolute;
+            right: -20rpx;
+            top: 0;
+            padding-right: 20rpx;
+            width: 72rpx;
+            height: 52rpx;
+            border-radius: 50rpx 0 0 50rpx;
+            background-color: rgba(#000000, 0.35);
+            box-shadow: 0 4rpx 4rpx rgba(#000000, 0.15);
+
+            &::after {
+                content: "";
+                z-index: -1;
+                position: absolute;
+                left: 2rpx;
+                top: 2rpx;
+                width: 48rpx;
+                height: 48rpx;
+                border-radius: 50%;
+                background-color: rgba(#000000, 0.45);
+            }
+
+            .honour-icon {
+                width: 32rpx;
+                height: 32rpx;
+            }
+        }
+
+        .title {
+            margin: 3rpx 0;
+            line-height: 44rpx;
+            font-size: 36rpx;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            padding: 4rpx 0;
+            line-height: 34rpx;
+            font-size: 28rpx;
+            color: #e3e3e3;
+        }
+
+        .info-brief {
+            margin-top: 12rpx;
+            min-height: 104rpx;
+            line-height: 46rpx;
+            color: #fff;
+
+            &.is-episode {
+                margin-top: 8rpx;
+                line-height: 34rpx;
+            }
+
+            .info-list {
+                font-size: 24rpx;
+
+                .delimiter {
+                    margin: 0 2rpx;
+                }
+            }
+        }
+
+        .btn-group {
+            display: flex;
+            margin-top: 12rpx;
+            justify-content: space-between;
+
+            &.has-rating {
+                padding: 0 20rpx;
+                height: 52rpx;
+                align-items: center;
+                background-color: rgba(255, 255, 255, 0.15);
+                border-radius: 8rpx;
+                color: #fff;
+
+                .rating-value {
+                    display: flex;
+                    align-items: center;
+                    height: 52rpx;
+
+                    .text {
+                        margin-right: 16rpx;
+                    }
+
+                    .m-rate {
+                        transform-origin: left;
+                        transform: scale(.7);
+                    }
+                }
+
+                .rating-date {
+                    color: #e5e5e5;
+                }
+            }
+
+            .btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 226rpx;
+                height: 52rpx;
+                line-height: 52rpx;
+                text-align: center;
+                color: #fff;
+                border-radius: 8rpx;
+                background-color: rgba(#000, 0.25);
+
+                .icon {
+                    font-size: 24rpx;
+                    margin-right: 8rpx;
+                }
+
+                &.is-wish {
+                    color: rgba(255, 255, 255, 0.35);
+                    background-color: rgba(105, 108, 123, 0.35);
+                }
+            }
+        }
+    }
+}

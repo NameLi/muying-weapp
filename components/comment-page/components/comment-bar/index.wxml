@@ -1,0 +1,7 @@
+<view class="comment-bar">
+    <view class="input-bar">
+        <view wx:if="{{ !isFocus }}" class="virtual-input" bindtap="showCommentBox">来点碎碎念...</view>
+        <comment-edit content="{{ content }}" _id="{{ _id }}" type="{{ type }}" bind:input="contentChange"
+            bind:close="hideCommentBox" bind:create-success="create" wx:else />
+    </view>
+</view>

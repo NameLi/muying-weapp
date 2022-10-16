@@ -1,0 +1,25 @@
+<half-page height="88vh" round use-slot-header-right title="我的评分">
+	<view class="close-icon" slot="header-left">
+		<c-icon class="icon" name="close" size="32" bind:tap="goBack" />
+	</view>
+
+	<block wx:if="{{!readonly}}">
+		<view class="create-btn" slot="header-right" bindtap="createUserMovieRating">发布</view>
+	</block>
+
+	<view class="rate-content">
+		<view class="rate-score">{{ rating }}</view>
+
+		<view class="rate">
+			<m-rate readonly="{{readonly}}" value="{{form.rating}}" bind:change="rateChange" allow-half size="60" step="2"
+				max="10" />
+		</view>
+		<view class="form">
+			<view class="field-item">
+				<textarea class="content" disabled="{{readonly}}" value="{{form.content}}" bindinput="contentChange"
+					maxlength="200" placeholder-class="placeholder" placeholder="分享你的观后感（选填）" />
+				<view class="field-word-count">{{ contentCount }}/200</view>
+			</view>
+		</view>
+	</view>
+</half-page>

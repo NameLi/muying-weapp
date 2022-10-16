@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#202538",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "看点",
+  "usingComponents": {
+    "video-card": "./components/video-card"
+  }
+}

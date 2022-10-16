@@ -1,0 +1,12 @@
+<view class="panel">
+  <view class="panel-header">
+    <view class="panel-title">
+      <text class="panel-type">{{ title }}</text>
+    </view>
+    <view class="panel-count">({{ count }})</view>
+  </view>
+
+  <view class="panel-content">
+    <actor-item wx:for="{{actors}}" wx:key="id" actor="{{item}}" />
+  </view>
+</view>

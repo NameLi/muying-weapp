@@ -1,0 +1,20 @@
+<view class='nav-wrapper'>
+  <view class='nav-list'>
+    <view class='nav-item' data-url="/pages/movie/theater/index" catchtap='navigateTo'>
+      <c-icon class="icon" name='video' />
+      <text class='nav-item__name'>热映中</text>
+    </view>
+    <view class='nav-item' data-url="/pages/movie/top/index" catchtap='navigateTo'>
+      <c-icon class="icon" name='level' />
+      <text class='nav-item__name'>高分榜</text>
+    </view>
+    <view class='nav-item' data-url="/pages/award/index/index" catchtap='navigateTo'>
+      <c-icon class="icon" name='trophy' />
+      <text class='nav-item__name'>奖项</text>
+    </view>
+    <view class='nav-item' data-url="/pages/movie/today/index" catchtap='navigateTo'>
+      <c-icon class="icon" name='date' />
+      <text class='nav-item__name'>那年今日</text>
+    </view>
+  </view>
+</view>

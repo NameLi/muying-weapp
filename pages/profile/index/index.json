@@ -1,0 +1,11 @@
+{
+  "navigationBarBackgroundColor": "#e54847",
+  "backgroundColor": "#f5f5f5",
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "mine-cell": "./components/mine-cell",
+    "mine-info": "./components/mine-info",
+    "mine-menu": "./components/mine-menu"
+  }
+}

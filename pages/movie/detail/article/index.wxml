@@ -1,0 +1,5 @@
+<view class="main">
+  <article-item article-class="article-item" wx:for="{{list}}" article="{{item}}" wx:key="id" />
+</view>
+
+<m-loadmore loading="{{loading}}" />

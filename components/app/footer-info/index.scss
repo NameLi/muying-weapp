@@ -1,0 +1,16 @@
+.app-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80rpx;
+    color: #cbcbcb;
+    .app-logo {
+      width: 40rpx;
+      height: 40rpx;
+      filter: grayscale(100%);
+      opacity: 0.5;
+    }
+    .app-name {
+      margin-left: 6rpx;
+    }
+  }

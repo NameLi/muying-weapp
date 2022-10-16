@@ -1,0 +1,47 @@
+<view class="movie-extra">
+
+  <!-- 上映日期 -->
+  <view class="extra-item" wx:if="{{movie.pubdate_count}}">
+    <view class="extra-name">上映日期</view>
+    <view class="extra-label" data-type="pubdate" bindtap="pathTo">
+      查看全部({{ movie.pubdate_count }})
+      <m-icon name="arrow-right" size="24" />
+    </view>
+  </view>
+
+  <!-- 家长引导 -->
+  <view class="extra-item" wx:if="{{movie.level_count}}">
+    <view class="extra-name">家长引导</view>
+    <view class="extra-label" data-type="level" bindtap="pathTo">
+      查看全部({{ movie.level_count }})
+      <m-icon name="arrow-right" size="24" />
+    </view>
+  </view>
+
+  <!-- 经典台词 -->
+  <view class="extra-item" wx:if="{{movie.dialogue_count}}">
+    <view class="extra-name">经典台词</view>
+    <view class="extra-label" data-type="dialogue" bindtap="pathTo">
+      查看全部({{ movie.dialogue_count }})
+      <m-icon name="arrow-right" size="24" />
+    </view>
+  </view>
+
+  <!-- 幕后知识 -->
+  <view class="extra-item" wx:if="{{movie.knowledge_count}}">
+    <view class="extra-name">幕后知识</view>
+    <view class="extra-label" data-type="knowledge" bindtap="pathTo">
+      查看全部({{ movie.knowledge_count }})
+      <m-icon name="arrow-right" size="24" />
+    </view>
+  </view>
+
+  <!-- 制作发行 -->
+  <view class="extra-item" wx:if="{{movie.company_count}}">
+    <view class="extra-name">制作发行</view>
+    <view class="extra-label" data-type="company" bindtap="pathTo">
+      {{ movie.company_count }}家公司参与制作发行
+      <m-icon name="arrow-right" size="24" />
+    </view>
+  </view>
+</view>

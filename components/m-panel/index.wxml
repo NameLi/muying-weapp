@@ -1,0 +1,15 @@
+<view class="panel panel-class" style="{{ color ? 'color:'+ color : ''}}">
+  <view class="panel-header">
+    <view class="panel-title {{ color === '#fff' ? 'no-icon':'' }}">{{ title }}</view>
+
+    <view class="panel-more" bindtap="pathTo">
+      <text class="subtitle" wx:if="{{subtitle}}">{{ subtitle }}</text>
+      <slot name="subtitle" wx:else />
+      <c-icon wx:if="{{ to || arrow }}" name="arrow-right" class="icon" />
+    </view>
+  </view>
+
+  <view class="panel-content {{ scrollX ? 'scroll-x' :''}}">
+    <slot />
+  </view>
+</view>

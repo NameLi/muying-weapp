@@ -1,0 +1,15 @@
+<m-modal visible="{{visible}}" close-on-click-modal="{{false}}" show-confirm-button="{{false}}">
+  <view class="title">请输入以下验证码数字</view>
+
+  <view class="captcha-main">
+    <image mode="heightFix" class="captcha" src="{{captche}}" alt="点击重新获取" bindtap="getCaptcha" />
+  </view>
+
+  <view class="code-input-main">
+    <view class="code-input-main-item" wx:for="{{codeList}}" wx:key="index">
+      {{ code[index] || "" }}
+    </view>
+    <input class="code-input" bindinput="inputChange" value="{{code}}" focus="{{isFocus}}" maxlength="{{codeLength}}"
+      type="tel" />
+  </view>
+</m-modal>

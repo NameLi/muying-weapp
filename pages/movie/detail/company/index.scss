@@ -1,0 +1,18 @@
+.list {
+  .item {
+    line-height: 92rpx;
+    font-size: 28rpx;
+    .type {
+      font-weight: bold;
+      padding: 0 30rpx;
+      background-color: rgb(245, 245, 245);
+    }
+    .company-list {
+      .company-item {
+        padding: 0 30rpx;
+        height: 100rpx;
+        line-height: 100rpx;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "TOP 100",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "skeleton": "../components/skeleton"
+  }
+}

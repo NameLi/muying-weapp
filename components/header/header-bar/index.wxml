@@ -1,0 +1,11 @@
+<view class="header-wrapper" style="{{ wrapperStyle }}">
+    <view class="header" style="padding-top: {{statusBarH}}px;height: {{headerBarH}}px;{{ style }}">
+        <view class="back" style="height: {{headerBarH - statusBarH}}px;" wx:if="{{back}}" bindtap="goBack">
+            <c-icon class="{{ isHome ? 'home-icon': 'back-icon' }}" name="{{ isHome ? 'home-2' : 'back' }}" />
+        </view>
+        <view class="header-content {{ !back ? 'no-back' : '' }}">
+            <view wx:if="{{ title }}" class="title">{{ title }}</view>
+            <slot wx:else />
+        </view>
+    </view>
+</view>

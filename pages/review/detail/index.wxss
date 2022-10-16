@@ -1,0 +1,91 @@
+.container .header-author {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+}
+
+.container .header-author .header-author-avatar {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+}
+
+.container .header-author .header-author-name {
+  margin-left: 16rpx;
+  font-size: 24rpx;
+  font-weight: normal;
+}
+
+.container .main {
+  padding: 0 30rpx 20rpx;
+}
+
+.container .main .review-title {
+  padding: 30rpx 0;
+  font-size: 44rpx;
+  line-height: 60rpx;
+  font-weight: bold;
+  text-align: justify;
+}
+
+.container .main .author {
+  display: flex;
+  padding: 10rpx 0;
+}
+
+.container .main .author .author-avatar {
+  height: 70rpx;
+  width: 70rpx;
+  border-radius: 50%;
+}
+
+.container .main .author .author-info {
+  margin-left: 20rpx;
+  line-height: 34rpx;
+}
+
+.container .main .author .author-info .author-name {
+  font-weight: bold;
+  font-size: 28rpx;
+}
+
+.container .main .author .author-info .review-info {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.container .main .extra-info {
+  margin-top: 20rpx;
+  color: #aaa;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  text-align: right;
+}
+
+.container .main .extra-info .extra-info-label {
+  margin-left: 16rpx;
+}
+
+.container .main .origin {
+  padding-bottom: 30rpx;
+  font-size: 28rpx;
+  text-align: right;
+  color: #999;
+}
+
+.container .main .origin .origin-link {
+  color: var(--color-theme);
+}
+
+.container .main .review-content {
+  line-height: 1.8;
+  color: #57534f;
+  text-align: justify;
+  word-break: break-all;
+}
+
+.container .main .copyright {
+  line-height: 70rpx;
+  font-size: 24rpx;
+  color: #999;
+}

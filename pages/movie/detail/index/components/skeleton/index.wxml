@@ -1,0 +1,33 @@
+<view class="skeleton-wrapper {{ isHalf ? 'is-half':'' }}" style="{{style}}">
+  <view class="skeleton skeleton-animation">
+    <view class="movie-info" wx:if="{{!isHalf}}">
+      <view class="poster">
+        <view class="img"></view>
+      </view>
+      <view class="info">
+        <view class="title"></view>
+        <view class="subtitle"></view>
+        <view class="info-brief">
+          <view class="info-item"></view>
+          <view class="info-item" style="width: 32%"></view>
+        </view>
+
+        <view class="btn-group">
+          <view class="btn"></view>
+          <view class="btn"></view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 评分 -->
+    <view class="rating-container"></view>
+
+    <!-- 简介 -->
+    <view class="sunmmary">
+      <view class="line"></view>
+      <view class="line"></view>
+      <view class="line"></view>
+      <view class="line" style="width: 32%"></view>
+    </view>
+  </view>
+</view>

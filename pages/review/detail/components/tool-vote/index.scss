@@ -1,0 +1,24 @@
+.tool-vote {
+  display: flex;
+  height: 60rpx;
+  color: var(--color-theme);
+  .vote-item {
+    display: flex;
+    align-items: center;
+    margin-right: 10rpx;
+    padding: 0 16rpx;
+    border-radius: 6rpx;
+    background-color: rgba(#e54847, 0.08);
+    &.is-active {
+      color: #fff;
+      background-color: var(--color-theme);
+    }
+    .review-icon {
+      font-size: 32rpx;
+    }
+    .review-count {
+      padding: 0 12rpx;
+      font-size: 24rpx;
+    }
+  }
+}

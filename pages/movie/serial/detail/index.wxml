@@ -1,0 +1,11 @@
+<view class="container">
+  <!-- 系列信息 -->
+  <serial-info serial="{{serial}}" scroll-top="{{ scrollTop }}" />
+
+  <!-- 系列影视列表 -->
+  <view class="serial-list">
+    <movie-item wx:for="{{serial.movies}}" wx:key="id" movie="{{item}}" />
+  </view>
+</view>
+
+<m-loadmore wx:if="{{loading}}" loading="{{loading}}" />

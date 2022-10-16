@@ -1,0 +1,5 @@
+<view class="award">
+  <award-item wx:for="{{awards}}" wx:key="id" award="{{item}}" />
+</view>
+
+<m-loadmore loading="{{loading}}" />

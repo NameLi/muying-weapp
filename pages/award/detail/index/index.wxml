@@ -1,0 +1,12 @@
+<header-scroll-bar title="{{award.title}}" scroll-top="{{ scrollTop }}" subtitle="{{award.original_title}}"
+  poster="{{award.poster}}" placeholder="{{ award.title }}" bgcolor="#bb9354" />
+
+<award-info award="{{award}}" />
+
+<view class="award-session-list">
+  <view class="session-title">历届列表</view>
+  <view class="session-item" wx:for="{{award.session}}" wx:key="index" data-session="{{ award.session - index }}"
+    bindtap="pathToSession">
+    第{{ award.session - index }}届
+  </view>
+</view>

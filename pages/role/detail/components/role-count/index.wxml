@@ -1,0 +1,16 @@
+<view class="role-count">
+  <view class="info-card">
+    <view class="card-item">
+      <view class="value">{{ role.collection_count }}人</view>
+      <view class="label">关注数</view>
+    </view>
+    <view class="card-item">
+      <view class="value">{{ role.movie_count }}部</view>
+      <view class="label">影视数</view>
+    </view>
+    <view class="card-item">
+      <view class="value">{{ role.actor_count }}个</view>
+      <view class="label">影人数</view>
+    </view>
+  </view>
+</view>

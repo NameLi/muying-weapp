@@ -1,0 +1,34 @@
+.award {
+  display: flex;
+  align-items: center;
+  margin: 20rpx;
+  padding: 0 20rpx;
+  height: 150rpx;
+  border-radius: 8rpx;
+  background-color: #fff;
+  .poster {
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .info {
+    margin-left: 20rpx;
+    flex: 1;
+    .title {
+      font-size: 32rpx;
+      font-weight: bold;
+    }
+    .content {
+      margin-top: 10rpx;
+      font-size: 28rpx;
+    }
+  }
+  .count {
+    font-size: 28rpx;
+    color: #999;
+    .icon {
+      font-size: 24rpx;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+<mine-info user="{{user}}" />
+<mine-menu count="{{count}}" is-login="{{isLogin}}" />
+<mine-cell user="{{user}}" />
+
+<footer-info />

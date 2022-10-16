@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "actor-count": "./components/actor-count",
+    "actor-award": "./components/actor-award",
+    "information": "./components/information"
+  }
+}

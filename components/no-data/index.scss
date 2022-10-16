@@ -1,0 +1,11 @@
+.no-data-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+
+    .no-data {
+        color: #aaa;
+        font-size: 28rpx;
+    }
+}

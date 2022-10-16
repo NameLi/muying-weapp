@@ -1,0 +1,46 @@
+<view class="login">
+  <view class="app-welcome">
+    <p>注册</p>
+  </view>
+
+  <!-- 表单 -->
+  <view class="form">
+    <view class="form-item">
+      <input class="account" type="tel" value="{{form.account}}" bindinput="accountInput" autocomplete="off"
+        maxlength="11" placeholder="请输入手机号" />
+      <m-icon name="cross" class="icon" size="28" wx:if="{{isShowClear}}" bindtap="clearAccount" />
+    </view>
+
+    <view class="form-item">
+      <input class="password" type="{{isShowPassword ? 'text' : 'password'}}" bindinput="passwordInput"
+        value="{{form.password}}" maxlength="16" autocomplete="off" placeholder="请设置初始密码（6-12位）" />
+      <c-icon name="see-fill" class="icon {{isShowPassword ? 'is-show': '' }}" bindtap="togglePassword" />
+    </view>
+
+    <view class="form-item code">
+      <input class="code" type="text" value="{{form.code}}" bindinput="codeInput" maxlength="4" autocomplete="off"
+        placeholder="请输入验证码" />
+
+      <view class="send-code" wx:if="{{!sendWaiting}}" bindtap="getVerifyCode">
+        获取验证码
+      </view>
+      <view class="send-code" wx:else>{{ codeText }}</view>
+    </view>
+
+    <view class="submit">
+      <m-button type="primary" color="#fff" bgcolor="#e54847" round full loading="{{loading}}" bindtap="doRegister">注 册
+      </m-button>
+    </view>
+  </view>
+
+  <view class="tool">
+    <view class="register" bindtap="pathToLogin">账号登录</view>
+    <view class="forget" bindtap="pathToForget">找回密码</view>
+  </view>
+</view>
+
+<!-- 图形验证码 -->
+<captcha-modal id="captchaModal" phone="{{form.account}}" bind:on-success="captchaSuccessHandle" />
+
+<m-toast id="toast" />
+<m-message id="message" />

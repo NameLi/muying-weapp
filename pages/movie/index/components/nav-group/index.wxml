@@ -1,0 +1,25 @@
+<view class="nav-group-wrapper">
+  <menu-skeleton wx:if="{{loading}}" />
+
+  <view class="nav-group {{ isFixed ? 'is-fixed' : '' }}">
+    <!-- 分类 -->
+    <nav-list value="{{form.category}}" list="{{categories}}" data-type="category" bind:change="typeChange" />
+
+    <!-- 类型 -->
+    <nav-list value="{{form.genre}}" list="{{genres}}" data-type="genre" bind:change="typeChange" />
+
+    <!-- 国家/地区 -->
+    <nav-list value="{{form.country}}" list="{{countries}}" data-type="country" bind:change="typeChange" />
+
+    <!-- 年份 -->
+    <nav-list value="{{form.year}}" list="{{years}}" data-type="year" bind:change="typeChange" />
+  </view>
+
+  <m-transition show="{{isShowMenu}}" name="slide-down">
+    <view class="nav-group-fixed" bindtap="showGroupMenu">
+      <view class="current-menu">
+        {{ checkedMenus }}
+      </view>
+    </view>
+  </m-transition>
+</view>

@@ -1,0 +1,51 @@
+page {
+  background-color: #f5f5f5;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.review-header {
+  z-index: 1;
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+  width: 100vw;
+  height: 80rpx;
+  font-size: 28rpx;
+  box-shadow: 0 0 6rpx #ccc;
+  background-color: #fff;
+}
+
+.review-header.is-hidden {
+  visibility: hidden;
+}
+
+.review-header .review-count {
+  font-weight: bold;
+}
+
+.review-header .review-type {
+  z-index: 2;
+  position: relative;
+}
+
+.review-list {
+  padding-top: 5rpx;
+}
+
+.no-review-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+.no-review-container .no-review {
+  color: #aaa;
+  font-size: 28rpx;
+}

@@ -1,0 +1,4 @@
+<view class="app-info">
+    <image class="app-logo" src="/images/logo.png" alt="" />
+    <view class="app-name">{{ APP_NAME }}</view>
+</view>

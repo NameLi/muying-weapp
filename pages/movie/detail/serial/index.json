@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "影视系列",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "serial-item": "./components/serial-item"
+  }
+}

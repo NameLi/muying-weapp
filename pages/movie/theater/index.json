@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "正在热映",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "skeleton": "../components/skeleton"
+  }
+}

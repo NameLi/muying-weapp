@@ -1,0 +1,44 @@
+.video-item {
+  display: inline-block;
+  position: relative;
+  margin-right: 16rpx;
+  width: 310rpx;
+  height: 180rpx;
+  border-radius: 4rpx;
+  overflow: hidden;
+}
+
+.video-item .video-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.video-item .video-header .video-type {
+  height: 30rpx;
+  line-height: 30rpx;
+  padding: 0 12rpx;
+  font-size: 20rpx;
+  color: #fff;
+  border-radius: 0 0 4rpx 0;
+  background-color: rgba(255, 180, 0, 0.85);
+}
+
+.video-item .video-poster {
+  width: 310rpx;
+  height: 180rpx;
+  background-color: #f7f7f7;
+}
+
+.video-item .video-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0 16rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  color: #fff;
+  font-size: 24rpx;
+  background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+}

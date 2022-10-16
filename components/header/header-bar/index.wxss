@@ -1,0 +1,51 @@
+.header-wrapper .header {
+  display: flex;
+  align-items: center;
+  z-index: 1998;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  color: #fff;
+  background-color: var(--color-theme);
+}
+
+.header-wrapper .header .back {
+  z-index: 9;
+  position: absolute;
+  left: 10rpx;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80rpx;
+  font-size: 38rpx !important;
+}
+
+.header-wrapper .header .back .home-icon {
+  font-size: 40rpx !important;
+}
+
+.header-wrapper .header .back::after {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  right: -5rpx;
+  height: 32rpx;
+  width: 1rpx;
+  background-color: rgba(245, 245, 245, 0.35);
+}
+
+.header-wrapper .header .header-content {
+  position: relative;
+  margin: 0 120rpx;
+  font-size: 32rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #fff;
+  font-weight: bold;
+}
+
+.header-wrapper .header .header-content.no-back {
+  margin: 0 20rpx;
+}

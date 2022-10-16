@@ -1,0 +1,21 @@
+<view class="favorite-container">
+  <view class="banner">
+    <view class="banner__round banner__round--left"></view>
+    <view class="banner__round banner__round--right"></view>
+  </view>
+
+  <view class="favorite-content">
+    <image-group images="{{ images }}" />
+
+    <view class="favorite-info">
+      <view class="favorite-title">{{ favorite.name }}</view>
+      <view class="favorite-count">共 {{ favorite.count }} 部影视</view>
+      <view class="favorite-brief">{{ favorite.brief }}</view>
+    </view>
+
+    <c-icon wx:if="{{ !loading }}" class="edit" name="edit" bindtap="showEditAction" />
+  </view>
+
+  <m-action-sheet visible="{{visible}}" actions="{{actions}}" show-cancel bind:cancel="handleCancel"
+    bind:click="handleClickItem" />
+</view>

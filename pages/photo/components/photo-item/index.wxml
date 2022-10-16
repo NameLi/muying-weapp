@@ -1,0 +1,1 @@
+<image class="photo-item" mode="aspectFill" lazy-load src="{{photo.url}}" />

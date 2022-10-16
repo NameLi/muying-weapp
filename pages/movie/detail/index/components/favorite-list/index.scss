@@ -1,0 +1,28 @@
+.create-btn {
+  padding: 0 10rpx;
+  color: var(--color-theme);
+}
+
+.save-main {
+
+  .no-data {
+    margin-top: 20vh;
+    text-align: center;
+    font-size: 28rpx;
+    color: #999;
+  }
+
+  .loading {
+    padding-top: 20vh;
+  }
+}
+
+.footer {
+  padding-bottom: 14rpx;
+  height: 100rpx;
+
+  .save-btn {
+    font-size: 28rpx;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,52 @@
+<!-- 加载动画 -->
+<m-transition show="{{ loading }}" name="fade-out">
+  <skeleton />
+</m-transition>
+
+
+<view class="article">
+  <!-- header -->
+  <header-bar title="{{ isShowHeaderAuthor ? '': '文章资讯' }}">
+    <m-transition show="{{ isShowHeaderAuthor }}" name="fade">
+      <view class="header-author">
+        <image class="header-author-avatar" mode="aspectFill" src="{{author.avatar}}" />
+        <view class="header-author-name">{{ author.username }}</view>
+      </view>
+    </m-transition>
+  </header-bar>
+
+
+  <view class="article-main">
+    <!-- 文章标题 -->
+    <view class="article-title">{{ article.title }}</view>
+
+    <!-- 作者信息 -->
+    <view class="article-header">
+      <view class="author">
+        <image mode="aspectFill" class="author-avatar" src="{{author.avatar}}" />
+        <view class="author-info">
+          <view class="author-name">{{ author.username }}</view>
+          <view class="article-info">{{ article.created_at }}</view>
+        </view>
+      </view>
+      <view class="read-count">{{ article.read_count }}阅读</view>
+    </view>
+
+    <!-- 封面 -->
+    <image mode="aspectFill" wx:if="{{article.cover}}" class="article-cover" src="{{article.cover}}" />
+
+    <!-- 文章内容 -->
+    <rich-text class="article-content" nodes="{{article.content}}" />
+  </view>
+
+  <!-- 所属影视 -->
+  <view class="movie-card">
+    <movie-card wx:if="{{article.movie}}" movie="{{article.movie}}" />
+  </view>
+
+  <!-- 底部工具栏 -->
+  <tool-bar type="articles" data="{{article}}" />
+</view>
+
+<m-toast id="toast" />
+<m-message id="message" />

@@ -1,0 +1,13 @@
+<view class="search-wrapper">
+  <view class="search">
+    <view class="search-form">
+      <c-icon class="icon" name="search" />
+
+      <input class="search-input" confirm-type="search" type="search" value="{{value}}" focus bindinput="keywordChange" bindconfirm="doSearch"
+        placeholder="找影视 / 影人 / 角色" />
+
+      <c-icon class="icon-clear" name="close" wx:if="{{value}}" bindtap="clearValue" />
+    </view>
+    <text class="go-back" bindtap="cancel">取消</text>
+  </view>
+</view>

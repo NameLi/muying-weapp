@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "影评",
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "skeleton": "./components/skeleton",
+    "tool-vote": "./components/tool-vote"
+  }
+}

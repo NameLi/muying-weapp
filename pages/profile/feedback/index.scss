@@ -1,0 +1,36 @@
+.main {
+  padding: 30rpx;
+
+  .success {
+    height: 40vh;
+    line-height: 40vh;
+    text-align: center;
+    font-size: 28rpx;
+    color: var(--color-theme);
+  }
+
+  .container {
+    position: relative;
+
+    .content {
+      padding: 20rpx;
+      width: 100%;
+      font-size: 28rpx;
+      border: 0;
+      border-radius: 8rpx;
+      background-color: #f5f5f5;
+    }
+
+    .word-count {
+      z-index: 1;
+      position: absolute;
+      right: 15rpx;
+      bottom: 15rpx;
+      color: #666;
+    }
+  }
+
+  .submit {
+    margin: 40rpx 0 0;
+  }
+}

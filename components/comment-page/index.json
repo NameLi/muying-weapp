@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "comment-item": "./components/comment-item",
+    "comment-tool": "./components/comment-tool",
+    "comment-bar": "./components/comment-bar"
+  }
+}

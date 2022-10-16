@@ -1,0 +1,34 @@
+.record {
+  padding: 0 30rpx;
+
+  .record-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50rpx;
+
+    .record-title {
+      font-size: 28rpx;
+      font-weight: bold;
+    }
+
+    .icon {
+      font-size: 32rpx;
+    }
+  }
+
+  .record-list {
+    margin: 12rpx -12rpx 0;
+
+    .record-item {
+      display: inline-block;
+      margin: 12rpx;
+      padding: 0 24rpx;
+      height: 48rpx;
+      line-height: 48rpx;
+      border-radius: 4rpx;
+      border: 1px solid rgb(240, 240, 240);
+      background-color: rgb(244, 244, 244);
+    }
+  }
+}

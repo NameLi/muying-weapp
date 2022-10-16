@@ -1,0 +1,34 @@
+<view class="container">
+  <!-- 视频播放器 -->
+  <video-player video="{{video}}" />
+
+  <!-- 视频信息 -->
+  <video-info video="{{video}}" />
+
+  <!-- 所属影视 -->
+  <view class="video-card">
+    <movie-card movie="{{video.movie}}" />
+  </view>
+
+  <!-- 视频纵向 -->
+  <view class="menu-list">
+    <view class="menu-item {{v.type_en === currentTypeEn ? 'is-active' : ''}}" wx:for="{{videos}}" wx:for-item="v"
+      wx:key="type_en" data-type="{{ v.type_en }}" bindtap="typeChange">
+      {{ v.type }} {{ v.count }}
+    </view>
+  </view>
+
+  <view class="video-list" wx:if="{{videoList.length}}">
+    <video-item play-id="{{id}}" tapJump="{{false}}" wx:for="{{videoList}}" wx:key="id" video="{{item}}"
+      bind:on-play="playHandle" />
+  </view>
+
+  <no-data wx:else height="200rpx" content="暂无视频" />
+
+
+  <!-- tabbar -->
+  <tool-bar type="videos" data="{{video}}" comment-height="calc(100vh - 423rpx)" />
+</view>
+
+<m-toast id="toast" />
+<m-message id="message" />

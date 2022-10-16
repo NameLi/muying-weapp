@@ -1,0 +1,66 @@
+.container {
+  .header {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30rpx;
+    height: 68rpx;
+    background-color: var(--color-skeleton);
+
+    .count {
+      color: #999;
+      font-size: 24rpx;
+    }
+
+    .create-btn {
+      color: var(--color-theme);
+    }
+  }
+
+  .save-list {
+    padding: 78rpx 0;
+
+    .save-item {
+      display: flex;
+      height: 130rpx;
+      padding: 20rpx 30rpx;
+      border-bottom: 1rpx solid var(--color-skeleton);
+
+      .save-poster {
+        width: 90rpx;
+        height: 90rpx;
+        border-radius: 6rpx;
+        object-fit: cover;
+      }
+
+      .save-content {
+
+        // margin-left: 16rpx;
+        .save-title {
+          height: 50rpx;
+          line-height: 40rpx;
+          font-size: 28rpx;
+          font-weight: bold;
+        }
+
+        .save-info {
+          height: 40rpx;
+          line-height: 40rpx;
+          font-size: 24rpx;
+          color: #999;
+        }
+      }
+    }
+  }
+
+  .no-data {
+    .create-btn {
+      color: var(--color-theme);
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.photo-wall {
+  margin-left: 12rpx;
+  white-space: nowrap;
+  .photo-item {
+    display: inline-block;
+    margin-right: 16rpx;
+    .photo {
+      height: 180rpx;
+      border-radius: 6rpx;
+    }
+  }
+}

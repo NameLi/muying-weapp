@@ -1,0 +1,22 @@
+<view class="user-info-wrapper">
+  <view class="user-info" wx:if="{{user}}">
+    <view class="user-avatar" bindtap="pathToInfo">
+      <image class="avatar" src="{{user.avatar}}" />
+
+      <c-icon wx:if="{{user.gender === '男'}}" class="user-sex icon-boy" name="boy" />
+      <c-icon wx:elif="{{user.gender === '女'}}" class="user-sex icon-girl" name="girl" />
+    </view>
+
+    <view class="user-intro" bindtap="pathToInfo">
+      <view class="user-name">{{ user.username }}</view>
+      <view class="user-signature">{{ user.signature }}</view>
+    </view>
+  </view>
+
+  <view class="user-info" wx:else>
+    <view class="user-avatar">
+      <image class="avatar" src="/images/logo.png" />
+    </view>
+    <view class="login-btn" bindtap="pathToLogin">立即登录</view>
+  </view>
+</view>

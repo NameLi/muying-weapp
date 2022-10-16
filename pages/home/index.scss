@@ -1,0 +1,19 @@
+page {
+  background-color: #f5f5f5;
+  padding-bottom: 10rpx;
+}
+
+.page {
+  visibility: hidden;
+  &.is-visible {
+    visibility: visible;
+  }
+}
+
+// 即将上映日期
+.coming-date {
+  height: 36rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  color: #888;
+}

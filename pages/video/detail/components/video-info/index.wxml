@@ -1,0 +1,32 @@
+<view class="video-info">
+  <!-- 作者 -->
+  <view class="author-wrapper">
+    <view class="author">
+      <image class="author-avatar" src="{{author.avatar}}" />
+      <view class="author-info">
+        <text class="author-name">{{ author.username }}</text>
+        <text class="author-video">上传视频 {{ author.video_count }} 个</text>
+      </view>
+    </view>
+    <view class="report-btn" bindtap="showReportModal">举报</view>
+  </view>
+
+  <view class="video-title">
+    <view class="title">{{ video.title }}</view>
+    <view wx:if="{{video.content}}" class="arrow-more {{ isShowContent ? 'is-show' : '' }}" bindtap="toggleContent">
+      <m-icon name="arrow-up" />
+    </view>
+  </view>
+
+  <view class="info">
+    <view class="created_at">发布于 {{ video.created_at }}</view>
+    <view class="play_count">{{ video.play_count }} 次播放</view>
+  </view>
+
+  <m-collapse visible="{{isShowContent}}" duraion="300">
+    <view class="video-brief">{{ video.content }}</view>
+  </m-collapse>
+
+  <!-- 举报 -->
+  <report id="reportModal" />
+</view>

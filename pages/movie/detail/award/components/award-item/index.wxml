@@ -1,0 +1,22 @@
+<view class="award-item m-hairline--bottom">
+  <view class="award">
+    <view class="award-poster">
+      <image mode="aspectFill" class="poster" src="{{award.poster}}" />
+    </view>
+    <view class="award-info">
+      <view class="award-title">第{{ award.session }}届 {{ award.award }}</view>
+      <view class="award-brief">{{ award.year }}年</view>
+    </view>
+  </view>
+
+  <view class="award-children">
+    <view class="award-detail" wx:for="{{award.children}}" wx:key="id">
+      <view class="award-type">
+        {{ item.type }} {{ item.win === 0 ? "(提名)" : "(获奖)" }}
+      </view>
+      <view class="award-actor">
+        <text class="actor-name" wx:for="{{item.actors}}" wx:for-item="actor" wx:key="id">{{ actor.name }} {{ item.actors.length - 1 > index ? "/" : "" }}</text>
+      </view>
+    </view>
+  </view>
+</view>

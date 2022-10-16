@@ -1,0 +1,53 @@
+.nav-wrapper {
+  position: relative;
+  margin: 20rpx;
+  padding: 40rpx 0 20rpx;
+  background-color: #fff;
+  border-radius: 12rpx;
+}
+
+.nav-wrapper .nav-list {
+  display: flex;
+}
+
+.nav-wrapper .nav-list .nav-item {
+  flex: 1;
+  text-align: center;
+}
+
+.nav-wrapper .nav-list .nav-item .icon {
+  display: inline-block;
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 44rpx;
+  border-radius: 12rpx;
+}
+
+.nav-wrapper .nav-list .nav-item .nav-item__name {
+  display: block;
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.nav-wrapper .nav-list .nav-item:nth-child(1) > .icon {
+  color: #f8a52d;
+  background: rgba(248, 165, 45, 0.15);
+}
+
+.nav-wrapper .nav-list .nav-item:nth-child(2) > .icon {
+  color: #ff4f4d;
+  background: rgba(255, 79, 77, 0.15);
+}
+
+.nav-wrapper .nav-list .nav-item:nth-child(3) > .icon {
+  color: #41acff;
+  background: rgba(65, 172, 255, 0.15);
+}
+
+.nav-wrapper .nav-list .nav-item:nth-child(4) > .icon {
+  color: #916dff;
+  background: rgba(145, 109, 255, 0.15);
+}

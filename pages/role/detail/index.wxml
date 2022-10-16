@@ -1,0 +1,65 @@
+<view class="role">
+  <!-- 加载 -->
+  <!-- <skeleton wx:if="{{loading}}" is-half="{{isHalf}}" /> -->
+
+  <header-scroll-bar title="{{role.name}}" subtitle="{{role.name_en}}" scroll-top="{{ scrollTop }}"
+    poster="{{role.avatar}}" end-top="140">
+    <view wx:if="{{!loading}}" class="header-btn role-focus {{role.is_collection ? 'is-focus':''}}" bindtap="focusRole">
+      {{ role.is_collection ? "已收藏" : "收藏" }}
+    </view>
+  </header-scroll-bar>
+
+  <view class="role-info" style="height:{{ isShowFullAvatar ? maxHeight: '460rpx' }}" bindtap="showFullAvatar">
+    <block wx:if="{{!isDefaultPoster}}">
+      <view class="role-avatar" style="{{bgImage}}"></view>
+      <view class="role-avatar role-avatar-larger" style="{{bgImageLarger}}"></view>
+    </block>
+
+    <view class="role-info-footer">
+      <view class="role-name">{{ role.name }}</view>
+      <view class="role-extra">
+        <text>{{ role.info }}</text>
+      </view>
+    </view>
+
+    <view wx:if="{{!loading}}" class="role-save {{role.is_collection ? 'is-save':''}}" catchtap="focusRole">
+      {{ role.is_collection ? "已收藏" : "收藏" }}
+    </view>
+  </view>
+
+  <!-- 信息统计 -->
+  <role-count role="{{role}}" />
+
+  <!-- 角色简介 -->
+  <m-panel title="个人简介" subtitle="更多信息" scroll-x="{{ false }}" arrow bindtap="showInformationPage">
+    <view wx:if="{{role.brief}}" class="summary">{{role.brief}}</view>
+    <view wx:else class="summary no-data">暂无简介</view>
+  </m-panel>
+
+  <!-- 角色相册 -->
+  <m-panel wx:if="{{role.photo_count}}" title="相册" subtitle="全部{{role.photo_count}}张"
+    to="/pages/photo/index?type=role&id={{role.id}}">
+    <photo-group photos="{{role.photos}}" />
+  </m-panel>
+
+  <!-- 角色影视 -->
+  <m-panel wx:if="{{role.movie_count}}" title="角色影视" subtitle="全部{{role.movie_count}}部"
+    to="../movie/index?id={{role.id}}">
+    <movie-row wx:for="{{role.movies}}" movie="{{item}}" wx:key="id" />
+  </m-panel>
+
+  <!-- 角色影人 -->
+  <m-panel wx:if="{{role.actor_count}}" title="角色影人" subtitle="全部{{role.actor_count}}人"
+    to="../actor/index?id={{role.id}}">
+    <actor-row wx:for="{{role.actors}}" actor="{{item}}" wx:key="id" />
+  </m-panel>
+
+  <footer-info />
+</view>
+
+<!-- 详细介绍 -->
+<page-container custom-style="background: transparent" show="{{ isShowHalfPage }}" bind:leave="halfPageLeave">
+  <information wx:if="{{isShowInformation}}" role="{{ role }}" bind:close="hideInformationPage" />
+</page-container>
+
+<m-message id="message" />

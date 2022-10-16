@@ -1,0 +1,11 @@
+<view class="skeleton-wrapper">
+	<view class="skeleton skeleton-animation">
+		<view class="skeleton-item" wx:for="1234567" wx:key="index">
+			<view class="item-poster"></view>
+			<view class="item-info">
+				<view class="item-info-title"></view>
+				<view class="item-info-count" style="width: 24%"></view>
+			</view>
+		</view>
+	</view>
+</view>

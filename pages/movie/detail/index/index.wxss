@@ -1,0 +1,137 @@
+page {
+  background-color: #f5f5f5;
+}
+
+.container .movie-subtitle {
+  font-size: 24rpx;
+  color: #e1e1e1;
+}
+
+.container .btn-group {
+  display: flex;
+  align-items: center;
+}
+
+.container .btn-group .btn {
+  margin-left: 20rpx;
+  padding: 0 10rpx;
+  border-radius: 6rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.container .btn-group .btn.is-wish {
+  color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container .btn-group.has-rating {
+  font-size: 24rpx;
+}
+
+.container .btn-group.has-rating .my-rating {
+  margin-left: 8rpx;
+  color: #f7ba2a;
+  font-weight: bold;
+}
+
+.container .movie-rate {
+  display: flex;
+  align-items: center;
+}
+
+.container .movie-rate .movie-rate-value {
+  margin-left: 4rpx;
+  font-size: 24rpx;
+}
+
+.container .is-coming {
+  height: 40rpx;
+}
+
+.container .is-coming .wish-count {
+  color: #f7ba2a;
+  font-size: 28rpx;
+  margin-right: 4rpx;
+}
+
+.container .is-coming .wish-label {
+  font-size: 24rpx;
+}
+
+.container .article-list .article-item {
+  padding: 20rpx 0;
+}
+
+.info-wrapper {
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  background-color: #232020;
+}
+
+.info-wrapper .custom-panel {
+  margin: 0;
+  background-color: transparent;
+}
+
+.info-wrapper .custom-panel .panel-more {
+  color: #fff;
+}
+
+.info-wrapper .egg {
+  margin: 30rpx 20rpx 0;
+  color: #b0b3bb;
+  font-size: 28rpx;
+}
+
+.info-wrapper .egg .icon {
+  padding-right: 10rpx;
+  font-size: 32rpx;
+}
+
+.info-wrapper .tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30rpx 20rpx 0;
+  color: #f5f5f5;
+}
+
+.info-wrapper .tag-list .tag {
+  font-size: 24rpx;
+  line-height: 56rpx;
+  height: 56rpx;
+  padding: 0 24rpx;
+  margin: 0 16rpx 16rpx 0;
+  border-radius: 28rpx;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.info-wrapper .summary {
+  white-space: normal;
+  color: #f5f5f5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  text-align: justify;
+  white-space: pre-wrap;
+}
+
+.info-wrapper .actor-list .actor-row .actor-name {
+  color: #fff;
+}
+
+.info-wrapper .actor-list .actor-row .actor-label {
+  color: rgba(245, 245, 245, 0.75);
+}
+
+.info-wrapper .role-list .role-row .role-name {
+  color: #fff;
+}
+
+.actor-name,
+.actor-extra,
+.role-name {
+  color: #fff;
+}

@@ -1,0 +1,10 @@
+<m-navbar-group line-color="#e54847" active-color="#e54847" bind:change="tabChange">
+  <m-navbar wx:for="{{navs}}" wx:for-item="n" title="{{n.title}}" name="{{n.name}}" wx:key="name" />
+</m-navbar-group>
+
+<view class="photo-list">
+  <photo-item wx:for="{{list}}" wx:for-item="photo" photo="{{photo}}" wx:key="id" data-index="{{index}}"
+    bindtap="preview" />
+</view>
+
+<m-loadmore loading="{{loading}}" />

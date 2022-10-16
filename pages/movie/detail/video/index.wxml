@@ -1,0 +1,17 @@
+<view class="container">
+  <!-- 影视信息 -->
+  <movie-card movie="{{movie}}" />
+
+  <!-- 分类 -->
+  <m-navbar-group custom-class="navbar-group" line-color="#ffbe10" active-color="#ffbe10" active-name="trailer"
+    bind:change="typeChange">
+    <m-navbar wx:for="{{videos}}" title="{{item.type}}" name="{{ item.type_en }}" wx:key="type_en" />
+  </m-navbar-group>
+
+  <!-- 详情 -->
+  <view class="video-list">
+    <video-item wx:for="{{videoList}}" wx:key="id" video="{{item}}" />
+  </view>
+</view>
+
+<m-loadmore wx:if="{{loading}}" loading="{{loading}}" />

@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "role-count": "./components/role-count",
+    "information": "./components/information"
+  }
+}

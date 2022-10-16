@@ -1,0 +1,14 @@
+<view class="menu-list">
+  <view class="menu-item" bindtap="pathToMovie">
+    <c-icon class="menu-icon" name="movie-fill" />
+    <view class="menu-name">影视</view>
+  </view>
+  <view class="menu-item">
+    <c-icon class="menu-icon" name="user" />
+    <view class="menu-name">影人</view>
+  </view>
+  <view class="menu-item">
+    <c-icon class="menu-icon" name="user" />
+    <view class="menu-name">角色</view>
+  </view>
+</view>

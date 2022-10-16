@@ -1,0 +1,22 @@
+<view class="comment-box">
+    <view class="cover" bindtap="back"></view>
+
+    <view class="comment-main" style="bottom: {{ keyboradHeight }}px;">
+        <view class="comment-header" wx:if="{{to}}">
+            <view class="to-user">评论给 {{ to.username }}</view>
+        </view>
+
+        <textarea fixed auto-height show-confirm-bar="{{ false }}" disable-default-padding value="{{ content }}"
+            bindinput="inputChange" adjust-position="{{false}}" class="comment-edit" placeholder="爱笑的人运气不会太差~"
+            placeholder-class="placeholder" focus confirm-hold confirm-type="send" hold-keyboard />
+
+        <view class="comment-footer">
+            <view class="word-count">{{ content.length }}/200</view>
+            <view wx:if="{{!submitLoading}}" class="tool-item submit {{ content.length === 0 ? 'is-disable' : '' }}"
+                bindtap="submit">发布</view>
+            <view class="submit" wx:else>
+                <m-spinner type="snake" />
+            </view>
+        </view>
+    </view>
+</view>

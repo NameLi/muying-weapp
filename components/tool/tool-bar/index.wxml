@@ -1,0 +1,40 @@
+<view class="tool-bar-wrapper">
+	<view class="tool-bar">
+		<view class="bar-tool-left">
+			<!-- 自定义内容 -->
+			<slot wx:if="{{ useSlotLeft }}" name="left" />
+
+			<!-- 评论虚拟框 -->
+			<view wx:else class="virtual-input" bindtap="pathToCommentEdit">
+				来点碎碎念...
+			</view>
+		</view>
+
+		<!-- 用户操作按钮 -->
+		<view class="bar-tool">
+			<!-- 自定义 -->
+			<slot />
+
+			<!-- 用户点赞 -->
+			<user-like tool-item-class="tool-item" type="{{type}}" data="{{data}}" />
+
+			<!-- 用户收藏 -->
+			<user-collection tool-item-class="tool-item" type="{{type}}" data="{{data}}" />
+
+			<!-- 用户评论 -->
+			<view class="tool-item" bindtap="showCommentPage">
+				<view class="tool-item-icon">
+					<c-icon class="icon" name="comment-fill" />
+				</view>
+				<view class="tool-item-count">{{ data.comment_count || "评论" }}</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<!-- 内容层 -->
+<page-container custom-style="background: transparent" show="{{ isShowComment }}" bind:enter="halfPageEnter"
+	bind:leave="halfPageLeave">
+	<!-- 评论 -->
+	<comment-page wx:if="{{ isShowComment }}" _id="{{ data.id }}" type="{{type}}" bind:close="hideCommentPage" />
+</page-container>

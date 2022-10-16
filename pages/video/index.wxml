@@ -1,0 +1,11 @@
+<view class="container">
+  <!-- 加载动画 -->
+  <video-list-skeleton wx:if="{{loading}}" />
+  <!-- 视列表 -->
+  <view class="video-list">
+    <video-card id="video_{{ item.id }}" wx:for="{{list}}" video="{{item}}" wx:key="id" video-id="{{ videoId }}"
+      bind:on-play="playVideo" />
+
+    <m-loadmore loading="{{loading}}" />
+  </view>
+</view>
