@@ -12,7 +12,7 @@
 - `微信小程序`
 - `computed` [微信小程序官方提供的 computed 扩展](https://github.com/wechat-miniprogram/computed)
 - `iconfont` [阿里字体图标库](https://www.iconfont.cn/)
-- `mind-ui-weapp` [个人为本项目开发的`微信小程序`移动端组件库](https://mind-ui-doc.ixook.com/docs) 
+- `mind-ui-weapp` [个人为本项目开发的`微信小程序`移动端组件库](https://github.com/NameLi/mind-ui-weapp) 
 
 ## 项目下载
 ```
