@@ -14,6 +14,9 @@
 - `iconfont` [阿里字体图标库](https://www.iconfont.cn/)
 - `mind-ui-weapp` [个人为本项目开发的`微信小程序`移动端组件库](https://github.com/NameLi/mind-ui-weapp) 
 
+## 开发文档
+- `muying-weapp-doc` [慕影网微信小程序版开发文档](https://weapp-doc.ixook.com) 
+
 ## 项目下载
 ```
 git clone https://github.com/NameLi/muying-weapp.git
