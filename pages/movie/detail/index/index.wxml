@@ -19,7 +19,7 @@
         <text class="movie-rate-value">{{ movie.rating }}</text>
       </view>
 
-      <view class="movie-subtitle" wx:else>{{ movie.title_original }}</view>
+      <view class="movie-subtitle ellipsis" wx:else>{{ movie.title_original }}{{ movie.title_original }}</view>
     </view>
   </header-scroll-bar>
 

@@ -1,0 +1,13 @@
+.summary {
+  margin-top: 20rpx;
+  padding: 0 32rpx;
+  line-height: 1.6;
+  text-align: justify;
+  word-break: break-all;
+
+  .no-summary {
+    text-align: center;
+    font-size: 28rpx;
+    color: var(--color-text-secondary);
+  }
+}

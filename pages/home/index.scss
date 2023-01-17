@@ -3,8 +3,9 @@ page {
   padding-bottom: 10rpx;
 }
 
-.page {
+.main {
   visibility: hidden;
+
   &.is-visible {
     visibility: visible;
   }
@@ -15,5 +16,9 @@ page {
   height: 36rpx;
   line-height: 40rpx;
   font-size: 24rpx;
-  color: #888;
+  color: var(--color-text-secondary);
+}
+
+.article-item {
+  padding: 20rpx 0 !important;
 }

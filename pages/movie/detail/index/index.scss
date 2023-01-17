@@ -4,6 +4,7 @@ page {
 
 .container {
   .movie-subtitle {
+    max-width: 400rpx;
     font-size: 24rpx;
     color: #e1e1e1;
   }
@@ -146,4 +147,8 @@ page {
 .actor-extra,
 .role-name {
   color: #fff;
+}
+
+.article-item {
+  padding: 20rpx 0 !important;
 }

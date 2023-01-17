@@ -13,8 +13,9 @@
 
     <view class="header-content {{ !isTop ? 'is-show' : '' }}" style="height: {{headerContentH}}px;">
       <view class="header-box">
+        <!-- 海报 -->
         <view class="header-poster" wx:if="{{poster}}">
-          <image mode="heightFix" class="poster" src="{{poster}}" />
+          <image mode="aspectFill" class="poster" style="width: {{posterW}}px;height: {{posterH}}px" src="{{poster}}" />
         </view>
         <view class="header-info">
           <view class="title">{{ title }}</view>

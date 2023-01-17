@@ -1,5 +1,19 @@
 <view class="container">
   <m-timeline>
+    <m-timeline-item text="v1.1">
+      <view class="content">
+        <view class="title">2023-01-17</view>
+        <view class="intro">1. 增加<text class="code">.scss</text>原生支持配置，移除原有<text class="code">.wxss</text>文件；</view>
+        <view class="intro">2. 样式文件抽取到<text class="code">/static/styles</text>文件夹中，增加<text class="code">theme.scss</text>主题配置文件；</view>
+        <view class="intro">3. 增加获取系统信息的<text class="code">systemInfo</text>方法，<text class="code">header-bar</text>等组件高度等由该方法获取；</view>
+        <view class="intro">4. 首页轮播图背景色改由<text class="code">swiper</text>组件中设置，减少代码传递；</view>
+        <view class="intro">5. 优化一些组件样式，增加样式穿透能力<text class="code">apply-shared</text>；</view>
+        <view class="intro">6. 优化<text class="code">iconfont</text>文件引入方式;</view>
+        <view class="intro">7. 优化<text class="code">Page</text>扩展并抽离为<text class="code">/extend/pages.js</text>文件；</view>
+        <view class="intro">8. 更新<text class="code">mind-ui-weapp</text>组件到<text class="code">v1.1.0</text></view>
+      </view>
+    </m-timeline-item>
+
     <m-timeline-item text="v1.0">
       <view class="content">
         <view class="title">2022-10-15</view>
@@ -10,7 +24,7 @@
     <m-timeline-item text="v0.1">
       <view class="content">
         <view class="title">2022-10-12</view>
-        <view class="intro">项目中使用的组件库 mind-ui-weapp 升级为使用 npm 方式安装。</view>
+        <view class="intro">项目中使用的组件库<text class="code">mind-ui-weapp</text>升级为使用<text class="code">npm</text>方式安装。</view>
       </view>
     </m-timeline-item>
 

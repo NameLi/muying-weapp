@@ -6,7 +6,7 @@
   right: 0;
   bottom: 0;
   padding-top: 20rpx;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #fff;
 
   .skeleton {
     height: 32rpx;
@@ -55,7 +55,6 @@
 
     .summary {
       margin-top: 20rpx;
-      padding: 30rpx;
       line-height: 1.6;
       text-align: justify;
       word-break: break-all;

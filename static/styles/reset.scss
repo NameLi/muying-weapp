@@ -1,0 +1,41 @@
+page,
+view,
+scroll-view,
+swiper,
+movable-area,
+cover-view,
+text,
+icon,
+rich-text,
+progress,
+button,
+checkbox-group,
+checkbox,
+form,
+input,
+label,
+picker,
+picker-view,
+radio-group,
+slider,
+switch,
+textarea,
+navigator,
+audio,
+image,
+video,
+live-player,
+live-pusher,
+open-data,
+web-view {
+  box-sizing: border-box;
+}
+
+page {
+  font-size: 28rpx;
+  color: #303133;
+  overscroll-behavior-y: none;
+  font-family: 'PingFang SC', Helvetica, Arial, sans-serif;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}

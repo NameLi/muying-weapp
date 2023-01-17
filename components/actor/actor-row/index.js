@@ -1,7 +1,10 @@
 const app = getApp()
 
 Component({
-  externalClasses: ['actor-class', 'actor-name-class', 'actor-extra-class'],
+  options: {
+    virtualHost: true,
+    styleIsolation: 'apply-shared'
+  },
 
   properties: {
     actor: {

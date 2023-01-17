@@ -2,9 +2,10 @@ const app = getApp()
 
 Component({
   options: {
+    virtualHost: true,
     styleIsolation: 'apply-shared'
   },
-
+  
   behaviors: [wx.computedBehavior],
 
   properties: {

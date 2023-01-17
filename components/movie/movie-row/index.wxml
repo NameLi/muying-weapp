@@ -1,20 +1,20 @@
 <view class="movie-row" bindtap="pathTo">
-  <view class="poster-wrapper">
-    <image mode="aspectFill" lazy-load src="{{ movie.poster }}" class="img-cover" />
+  <view class="movie-row__poster">
+    <image class="poster" mode="aspectFill" lazy-load src="{{ movie.poster }}" />
 
-    <view class="category-tag" wx:if="{{isShowCategory}}">{{ movie.category }}</view>
+    <view class="movie-row__tag" wx:if="{{isShowCategory}}">{{ movie.category }}</view>
 
-    <view class="info" wx:if="{{!isComing}}">
+    <view class="movie-row__info" wx:if="{{!isComing}}">
       <text class="episode" wx:if="{{movie.episode_count}}">全{{ movie.episode_count }}集</text>
       <text class="rating" wx:if="{{movie.rating}}">{{ movie.rating }}分</text>
       <text class="rating" wx:else>暂无评分</text>
     </view>
-    <view class="info white" wx:else>
+    <view class="movie-row__info white" wx:else>
       <view class="wish-count" wx:if="{{movie.wish_count}}">
         {{ movie.wish_count }} 想看
       </view>
     </view>
   </view>
-  <view class="title">{{ movie.title }}</view>
+  <view class="movie-row__title">{{ movie.title }}</view>
   <slot />
 </view>

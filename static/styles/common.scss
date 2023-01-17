@@ -1,0 +1,30 @@
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.skeleton-animation {
+  height: 100%;
+  animation: skeleton 1.3s ease-in-out infinite alternate;
+}
+
+@keyframes skeleton {
+  from {
+    opacity: 0.35;
+  }
+
+  to {
+    opacity: 0.96;
+  }
+}

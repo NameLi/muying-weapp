@@ -1,30 +1,36 @@
+import colorToRgba from "../../../../utils/color"
+
 Component({
   properties: {
     swiper: {
-      type: Array
+      type: Array,
+      observer(val) {
+        if (val.length) {
+          this.swiperChange()
+        }
+      }
+    },
+    isTop: {
+      type: Boolean,
+      value: true
     }
   },
 
   data: {
-    swiperIndex: 0
+    swiperIndex: 0,
+    backgroundStyle: ""
   },
 
-  methods: {
-    navigateTo(e) {
-      // const data = e.currentTarget.dataset.data;
-    },
 
-    swiperChangeHandle(e) {
-      const index = e.detail.current
-      const bgcolor = this.data.swiper[index].bgcolor
+  methods: {
+    swiperChange(e) {
+      const index = e ? e.detail.current : 0;
+      const bgcolor = this.data.swiper[index].bgcolor;
+      const bgcolorRgba = colorToRgba(bgcolor, 0);
 
       this.setData({
-        swiperIndex: index
-      })
-
-      this.triggerEvent('onchange', {
-        index,
-        bgcolor
+        swiperIndex: index,
+        backgroundStyle: `background-image: linear-gradient(${bgcolor}, ${bgcolorRgba})`
       })
     }
   }

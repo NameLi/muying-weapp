@@ -1,4 +1,4 @@
-<view class="article-item m-hairline--bottom article-class" bindtap="pathTo">
+<view class="article-item m-hairline--bottom" bindtap="pathTo">
   <view class="article-title">
     <text class="title">{{ article.title }}</text>
   </view>

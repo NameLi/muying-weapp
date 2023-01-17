@@ -10,6 +10,7 @@ Page({
     loading: false,
     account: "",
     password: "",
+    code: "",
     isShowPassword: false,
   },
 

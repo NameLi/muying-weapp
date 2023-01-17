@@ -54,7 +54,7 @@
         font-size: 28rpx;
         padding: 12rpx 0 4rpx 70rpx;
         line-height: 44rpx;
-        color: #333;
+        color: var(--color-text-primary);
         word-break: break-all;
 
         .is-delete {
@@ -63,7 +63,7 @@
             background-color: #f5f5f5;
             font-size: 24rpx;
             border-radius: 6rpx;
-            color: #999;
+            color: var(--color-text-secondary);
         }
     }
 
@@ -73,7 +73,7 @@
         justify-content: space-between;
         padding: 12rpx 0 0 70rpx;
         height: 44rpx;
-        color: #999;
+        color: var(--color-text-secondary);
         font-size: 24rpx;
 
         &::before {

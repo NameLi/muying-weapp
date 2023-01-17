@@ -42,7 +42,7 @@
 
     .placeholder {
         line-height: 1.4;
-        color: #999;
+        color: var(--color-text-secondary);
         font-size: 24rpx;
     }
 
@@ -56,7 +56,7 @@
         .word-count {
             flex: 1;
             font-size: 24rpx;
-            color: #999;
+            color: var(--color-text-secondary);
         }
 
         .submit {

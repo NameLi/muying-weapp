@@ -1,13 +1,13 @@
 <view class="skeleton-wrapper" style="top:{{top}}">
-    <view class="skeleton skeleton-animation">
-        <view class="skeleton-item" wx:for="{{total}}" wx:key="index">
-            <view class="skeleton-poster"></view>
-            <view class="skeleton-info">
-                <view class="title"></view>
-                <view class="info-item"></view>
-                <view class="info-item"></view>
-                <view class="info-item" style="width: 40%"></view>
-            </view>
-        </view>
+  <view class="skeleton skeleton-animation">
+    <view class="skeleton-item" wx:for="{{total}}" wx:key="index">
+      <view class="skeleton-poster"></view>
+      <view class="skeleton-info">
+        <view class="title"></view>
+        <view class="info-item"></view>
+        <view class="info-item"></view>
+        <view class="info-item" style="width: 40%"></view>
+      </view>
     </view>
+  </view>
 </view>

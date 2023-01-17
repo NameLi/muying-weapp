@@ -107,8 +107,7 @@
     "borderStyle": "black",
     "color": "#b7bac3",
     "selectedColor": "#e54847",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/home/index",
         "text": "首页",
         "iconPath": "/images/tabbar/home.png",
@@ -134,5 +133,8 @@
       }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "resolveAlias": {
+    "~/*": "/*"
+  }
 }

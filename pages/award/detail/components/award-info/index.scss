@@ -40,7 +40,7 @@
   .award-subtitle {
     padding: 0 30rpx;
     font-size: 28rpx;
-    color: #666;
+    color: var(--color-text-regular);
     height: 40rpx;
     line-height: 40rpx;
   }
@@ -48,14 +48,14 @@
     margin-top: 10rpx;
     padding: 0 30rpx;
     font-size: 24rpx;
-    color: #666;
+    color: var(--color-text-regular);
   }
   .award-brief {
     margin-top: 10rpx;
     padding: 0 30rpx;
     font-size: 28rpx;
     line-height: 44rpx;
-    color: #333;
+    color: var(--color-text-primary);
     white-space: normal;
     display: -webkit-box;
     -webkit-box-orient: vertical;

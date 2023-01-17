@@ -51,7 +51,7 @@
 			}
 
 			.rate-count {
-				color: #999;
+				color: var(--color-text-secondary);
 			}
 		}
 
@@ -62,7 +62,7 @@
 			justify-content: space-around;
 			flex-direction: column;
 			padding: 20rpx 30rpx;
-			color: #999;
+			color: var(--color-text-secondary);
 			font-size: 24rpx;
 
 			.rate-item {
@@ -103,7 +103,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
-		color: #999;
+		color: var(--color-text-secondary);
 		height: 70rpx;
 
 		.better-item {

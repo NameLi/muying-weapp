@@ -1,6 +1,6 @@
 <view class="home-swiper__wrap">
-  <swiper class="home-swiper" autoplay="{{true}}" interval="4000" duration="500" circular
-    bindchange="swiperChangeHandle">
+  <swiper class="home-swiper" autoplay="{{true}}" interval="2000" duration="500" circular
+    bindchange="swiperChange">
     <swiper-item class="swiper-item" wx:for="{{swiper}}" wx:key="id" data-data="{{ item }}" catchtap='navigateTo'>
       <image class="slide-image" src="{{item.banner}}" mode="aspectFill" />
     </swiper-item>
@@ -9,3 +9,5 @@
     <text class="dot {{index ==  swiperIndex ? 'is-active': ''}}" wx:for="{{swiper}}" wx:key="index"></text>
   </view>
 </view>
+
+<view class="bgcolor {{ !isTop ? 'transparent': '' }}" style="{{ backgroundStyle }}"></view>

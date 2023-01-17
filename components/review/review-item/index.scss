@@ -1,58 +1,59 @@
 .review {
-    padding: 12rpx 30rpx;
-    margin-bottom: 20rpx;
-    background: #fff;
-    box-shadow: 0 0 6rpx #f1f1f1;
+  padding: 12rpx 30rpx;
+  margin-bottom: 20rpx;
+  background: #fff;
+  box-shadow: 0 0 6rpx #f1f1f1;
 
-    .review-header {
-        display: flex;
-        height: 52rpx;
-        line-height: 52rpx;
-        flex-shrink: 0;
+  .review-header {
+    display: flex;
+    align-items: center;
+    height: 52rpx;
+    line-height: 52rpx;
+    flex-shrink: 0;
 
-        .review-title {
-            font-size: 32rpx;
-            font-weight: bold;
-            margin-right: 20rpx;
-            color: #333;
-            flex: 1;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+    .review-title {
+      font-size: 32rpx;
+      font-weight: bold;
+      margin-right: 20rpx;
+      color: var(--color-text-primary);
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
+  }
 
-    .review-brief {
-        margin: 20rpx 0 20rpx;
+  .review-brief {
+    margin: 20rpx 0 20rpx;
 
-        .review-content {
-            font-size: 28rpx;
-            line-height: 44rpx;
-            color: #555;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
-            overflow: hidden;
-            text-align: justify;
-        }
+    .review-content {
+      font-size: 28rpx;
+      line-height: 44rpx;
+      color: #555;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      text-align: justify;
     }
+  }
 
-    .review-tool {
-        display: flex;
-        justify-content: space-between;
-        height: 40rpx;
-        line-height: 40rpx;
-        font-size: 24rpx;
-        color: #888;
+  .review-tool {
+    display: flex;
+    justify-content: space-between;
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 24rpx;
+    color: #888;
 
-        .review__original {
-            margin-left: 6rpx;
-            color: rgba(#42bd56, 0.6);
-        }
+    .review__original {
+      margin-left: 6rpx;
+      color: rgba(#42bd56, 0.6);
     }
+  }
 }
 
 ._stars_null {
-    font-size: 24rpx;
-    color: #aaa;
+  font-size: 24rpx;
+  color: #aaa;
 }

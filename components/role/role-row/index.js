@@ -3,6 +3,11 @@ const app = getApp();
 Component({
   externalClasses: ['role-class', 'role-name-class'],
 
+  options: {
+    virtualHost: true,
+    styleIsolation: 'apply-shared'
+  },
+
   properties: {
     role: {
       type: Object,

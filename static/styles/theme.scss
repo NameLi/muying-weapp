@@ -1,0 +1,32 @@
+/* 颜色定义 */
+page {
+  /* theme */
+  --color-theme: #e54847;
+  /* theme */
+  --color-theme-light: rgba(249, 106, 25, .75);
+  /* Primary */
+  --color-primary: #409EFF;
+  /* Success */
+  --color-success: #67C23A;
+  /* Warning */
+  --color-warning: #E6A23C;
+  /* Danger */
+  --color-danger: #F56C6C;
+  /* Info */
+  --color-info: #909399;
+
+  /* 主要文字 标题 */
+  --color-text-primary: #303133;
+  /* 常规文字 正文 */
+  --color-text-regular: #606266;
+  /* 次要文字 辅助 */
+  --color-text-secondary: #909399;
+
+  /* 边框 */
+  --color-border: #dcdee2;
+  /* 遮罩颜色 */
+  --color-mask: rgba(0, 0, 0, 0.55);
+
+  /* 骨架屏颜色 */
+  --color-skeleton: #f1f1f1;
+}

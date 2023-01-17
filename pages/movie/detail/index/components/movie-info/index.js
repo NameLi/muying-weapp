@@ -21,7 +21,7 @@ Component({
   },
 
   data: {
-    headerBarH: app.globalData.customBarH
+    headerBarH: app.globalData.headerBarH
   },
 
   computed: {
@@ -29,9 +29,9 @@ Component({
       return data.movie.episode_count > 0;
     },
     poster(data) {
-      return typeof data.movie.poster === "object"
-        ? data.movie.poster.small
-        : data.movie.poster;
+      return typeof data.movie.poster === "object" ?
+        data.movie.poster.small :
+        data.movie.poster;
     },
     countries(data) {
       return arrayToString(data.movie.countries)
@@ -51,6 +51,15 @@ Component({
   },
 
   methods: {
+    posterPreview() {
+      const current = this.data.poster;
+
+      wx.previewImage({
+        current,
+        urls: [current]
+      })
+    },
+
     // 显示更多信息
     showDetailModal() {
       this.triggerEvent("show-detail")

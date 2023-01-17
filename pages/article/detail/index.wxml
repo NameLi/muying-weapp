@@ -36,7 +36,9 @@
     <image mode="aspectFill" wx:if="{{article.cover}}" class="article-cover" src="{{article.cover}}" />
 
     <!-- 文章内容 -->
-    <rich-text class="article-content" nodes="{{article.content}}" />
+    <view class="article-content">
+      <rich-text nodes="{{content}}" />
+    </view>
   </view>
 
   <!-- 所属影视 -->

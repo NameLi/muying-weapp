@@ -8,12 +8,12 @@
     margin-left: 28rpx;
     .serial-name {
       font-size: 32rpx;
-      color: #333;
+      color: var(--color-text-primary);
     }
     .serial-label {
       margin-top: 10rpx;
       font-size: 28rpx;
-      color: #999;
+      color: var(--color-text-secondary);
     }
   }
 }

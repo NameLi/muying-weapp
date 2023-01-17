@@ -13,7 +13,7 @@
     background-color: var(--color-skeleton);
 
     .count {
-      color: #999;
+      color: var(--color-text-secondary);
       font-size: 24rpx;
     }
 
@@ -52,7 +52,7 @@
           height: 40rpx;
           line-height: 40rpx;
           font-size: 24rpx;
-          color: #999;
+          color: var(--color-text-secondary);
         }
       }
     }

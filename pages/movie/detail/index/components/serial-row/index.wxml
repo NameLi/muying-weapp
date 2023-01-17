@@ -1,5 +1,5 @@
 <view class="serial-row" bindtap="pathTo">
-  <!-- 小程序 computed 什么周期有问题，会先与 props 触发，导致值为 null -->
+  <!-- 小程序 computed 生命周期有问题，会先于 props 触发，导致值为 null -->
   <view class="poster-group" wx:if="{{ photos }}">
     <image-group class="image-group" images="{{photos}}" />
   </view>

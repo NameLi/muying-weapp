@@ -1,31 +1,37 @@
 <view class="movie-item m-hairline--bottom" bindtap="pathTo">
-  <view class="poster-wrapper">
-    <image mode="aspectFill" lazy-load src="{{movie.poster}}" class="img-cover" />
+  <view class="movie-item__poster">
+    <image class="poster" mode="aspectFill" lazy-load src="{{movie.poster}}" />
     <view class="sort" wx:if="{{index}}">
       <text class="sort-bg {{ index <= 3 ? 'sort-'+index : '' }}"></text>
       <text class="sort-value">{{ index }}</text>
     </view>
   </view>
 
-  <view class="movie-info">
-    <view class="title">
-      <view class="name ellipsis">{{ title }}</view>
+  <view class="movie-item__content">
+    <view class="movie__title-wrap">
+      <!-- 标题 -->
+      <view class="movie__title ellipsis">
+        <rich-text nodes="{{title}}" />
+      </view>
 
-      <view class="rating {{ movie.is_thrid_rating ? 'is-third' : '' }}" wx:if="{{!isComing && movie.rating}}">
-        <text class="value">{{ movie.rating }}</text>
-        <text class="label">分</text>
+      <view class="movie__rating {{ movie.is_thrid_rating ? 'is-third' : '' }}" wx:if="{{!isComing && movie.rating}}">
+        <text class="rating__value">{{ movie.rating }}</text>
+        <text class="rating__label">分</text>
       </view>
     </view>
 
-    <view wx:if="{{isComing}}" class="info-item wish-count">
-      <text class="wish-count">{{ movie.wish_count }}</text>人想看
+    <view wx:if="{{isComing}}" class="movie-item__info">
+      <text class="wish-count">{{ movie.wish_count }}</text>
+      <text>人想看</text>
     </view>
-    <view wx:else class="info-item ellipsis">
+
+    <view wx:else class="movie-item__info ellipsis">
       <text wx:if="{{isShowCategory}}" class="category-tag border">{{ movie.category }}</text>
       <text>{{ movie.year }}</text>
     </view>
-    <view class="info-item ellipsis">{{ movie.genres }}</view>
-    <view class="info-item ellipsis">{{ movie.countries }}</view>
+
+    <view class="movie-item__info ellipsis">{{ movie.genres }}</view>
+    <view class="movie-item__info ellipsis">{{ movie.countries }}</view>
     <slot />
   </view>
 </view>

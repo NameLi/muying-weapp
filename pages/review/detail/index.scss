@@ -50,7 +50,7 @@
 
         .review-info {
           font-size: 28rpx;
-          color: #999;
+          color: var(--color-text-secondary);
         }
       }
     }
@@ -71,7 +71,7 @@
       padding-bottom: 30rpx;
       font-size: 28rpx;
       text-align: right;
-      color: #999;
+      color: var(--color-text-secondary);
 
       .origin-link {
         color: var(--color-theme);
@@ -88,7 +88,7 @@
     .copyright {
       line-height: 70rpx;
       font-size: 24rpx;
-      color: #999;
+      color: var(--color-text-secondary);
     }
   }
 }

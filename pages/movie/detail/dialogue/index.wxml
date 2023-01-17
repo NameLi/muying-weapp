@@ -1,6 +1,6 @@
 <view class="list">
   <view class="item m-hairline--bottom" wx:for="{{list}}" wx:key="id">
-    <text decode>{{item.content}}</text>
+    <text decode>{{ index + 1 }}. {{item.content}}</text>
   </view>
 </view>
 

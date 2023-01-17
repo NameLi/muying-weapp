@@ -3,7 +3,7 @@
         <view class="review-title ellipsis">{{ review.title }}</view>
 
         <view class="_stars" wx:if="{{review.rating}}">
-            <m-rate value="{{review.rating}}" size="28" step="2" max="10" readonly allow-half />
+            <m-rate value="{{review.rating}}" size="24" step="2" max="10" readonly allow-half />
         </view>
     </view>
 

@@ -38,7 +38,7 @@
 
 					&.is-active {
 						.m-tab-item__content {
-							color: #333;
+							color: var(--color-text-primary);
 						}
 					}
 
@@ -49,7 +49,7 @@
 						height: 46rpx;
 						line-height: 46rpx;
 						font-size: 24rpx;
-						color: #999;
+						color: var(--color-text-secondary);
 					}
 				}
 			}

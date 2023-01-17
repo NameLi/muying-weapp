@@ -1,40 +1,53 @@
 .home-swiper__wrap {
-    margin: 20rpx 20rpx 0;
-    position: relative;
+  margin: 20rpx 20rpx 0;
+  position: relative;
 
-    .home-swiper {
-        height: 380rpx;
-        border-radius: 8rpx;
-        overflow: hidden;
+  .home-swiper {
+    height: 380rpx;
+    border-radius: 8rpx;
+    overflow: hidden;
 
-        .slide-image {
-            height: 380rpx;
-            width: 100%;
-            border-radius: 8rpx;
-        }
+    .slide-image {
+      height: 380rpx;
+      width: 100%;
+      border-radius: 8rpx;
     }
+  }
 
-    .swiper-indicator {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        bottom: 14rpx;
-        height: 4rpx;
-        text-align: center;
+  .swiper-indicator {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 14rpx;
+    height: 4rpx;
+    text-align: center;
 
-        .dot {
-            display: inline-block;
-            margin: 0 2rpx;
-            width: 30rpx;
-            height: 4rpx;
-            background: #fff;
-            vertical-align: top;
-            border-radius: 2rpx;
+    .dot {
+      display: inline-block;
+      margin: 0 2rpx;
+      width: 30rpx;
+      height: 4rpx;
+      background: #fff;
+      vertical-align: top;
+      border-radius: 2rpx;
 
-            &.is-active {
-                background: var(--color-theme);
-            }
-        }
+      &.is-active {
+        background: var(--color-theme);
+      }
     }
+  }
+}
 
+.bgcolor {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 700rpx;
+  transition: background-image 0.6s ease-in-out, opacity .6s ease-in-out;
+
+  &.transparent {
+    opacity: 0;
+  }
 }

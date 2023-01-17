@@ -1,4 +1,6 @@
-import { getArticle } from "../../../api/article"
+import {
+  getArticle
+} from "../../../api/article"
 
 Page({
 
@@ -10,6 +12,7 @@ Page({
     article: {
       movie: {},
       author: {},
+      content: ""
     },
     scrollTop: 0,
   },
@@ -21,6 +24,9 @@ Page({
     isShowHeaderAuthor(data) {
       return data.scrollTop > 70;
     },
+    content(data) {
+      return data.article.content.replace(/<img/g, "<img class='img'")
+    }
   },
 
   onLoad(options) {
@@ -29,9 +35,16 @@ Page({
   },
 
   async getArticle() {
-    this.setData({ loading: true });
-    const { code, data } = await getArticle(this.data.id);
-    this.setData({ loading: false });
+    this.setData({
+      loading: true
+    });
+    const {
+      code,
+      data
+    } = await getArticle(this.data.id);
+    this.setData({
+      loading: false
+    });
 
     if (code === 200) {
       this.setData({
@@ -42,7 +55,9 @@ Page({
     wx.stopPullDownRefresh();
   },
 
-  onPageScroll({ scrollTop }) {
+  onPageScroll({
+    scrollTop
+  }) {
     this.setData({
       scrollTop
     })

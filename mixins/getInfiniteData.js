@@ -12,18 +12,18 @@ module.exports = Behavior({
     list: [],
     total: 0,
     page: 1,
-    per_page: 10,
+    per_page: 20,
     _isError: false,
-  },
-
-  ready: function () {
-    this.loadMore()
   },
 
   computed: {
     isShowSkeleton(data) {
       return data.loading && data.page === 1;
     }
+  },
+
+  ready() {
+    this.loadMore()
   },
 
   methods: {
@@ -80,7 +80,7 @@ module.exports = Behavior({
 
         this.data._isError = false;
 
-        if (data.length < this.data.per_page) {
+        if (data.length !== this.data.per_page) {
           this.setData({
             noMoreData: true
           })

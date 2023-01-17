@@ -6,6 +6,6 @@ Component({
   },
   
   data: {
-    headerBarH: app.globalData.customBarH
+    headerBarH: app.globalData.headerBarH
   }
 })

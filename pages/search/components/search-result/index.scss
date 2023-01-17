@@ -11,6 +11,7 @@
     color: rgb(102, 102, 102);
     border-bottom: 1px solid #eee;
     background-color: #fff;
+
     &::after {
       content: "";
       position: absolute;
@@ -23,21 +24,25 @@
       transform: translateX(-50%);
       transition: left 0.2s;
     }
+
     &.menu-movie {
       &::after {
         left: 68rpx;
       }
     }
+
     &.menu-actor {
       &::after {
         left: 180rpx;
       }
     }
+
     &.menu-role {
       &::after {
         left: 292rpx;
       }
     }
+
     .menu-item {
       display: inline-block;
       width: 112rpx;
@@ -47,6 +52,7 @@
       font-size: 28rpx;
       text-align: center;
       transition: font-size 0.2s;
+
       &.is-active {
         font-size: 32rpx;
       }
@@ -55,6 +61,7 @@
 
   .result-list {
     padding: 80rpx 0 15rpx;
+
     .no-data {
       height: 400rpx;
       line-height: 400rpx;
@@ -64,7 +71,7 @@
 
     // 影视样式重写
     .movie-result {
-      .poster-wrapper {
+      .movie-item__poster {
         width: 134rpx;
         height: 180rpx;
       }

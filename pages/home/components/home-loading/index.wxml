@@ -1,7 +1,7 @@
 <view class="skeleton-container" style="padding-top: {{ statusBarH }}px;">
   <view class="skeleton skeleton-animation">
-    <view class="header-bar" style="height: {{headerBarH}}px;{{ headerStyle }}">
-      <view class="search" style="height: {{searchBarH}}px;"></view>
+    <view class="header-bar" style="height: {{titleBarH}}px;">
+      <view class="search" style="height: {{searchBarH}}px;margin-right: {{capsuleW + 8}}px;"></view>
     </view>
 
     <view class="swiper"></view>

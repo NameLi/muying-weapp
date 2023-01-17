@@ -1,11 +1,12 @@
 .actor-item {
+  position: relative;
   display: flex;
   margin: 0 30rpx;
   padding: 16rpx 0;
-  position: relative;
   background-color: #fff;
 
   .actor-avatar {
+    flex-shrink: 0;
     position: relative;
     width: 138rpx;
     height: 190rpx;
@@ -22,14 +23,14 @@
     .actor-name {
       padding-bottom: 8rpx;
       font-size: 32rpx;
-      color: #333;
+      color: var(--color-text-primary);
       line-height: 48rpx;
     }
 
     .info-item {
       font-size: 28rpx;
       line-height: 46rpx;
-      color: #999;
+      color: var(--color-text-secondary);
 
       .info-item__delimiter {
         margin: 0 4rpx;
@@ -43,6 +44,6 @@
   height: 46rpx;
   line-height: 40rpx;
   font-size: 24rpx;
-  color: #999;
+  color: var(--color-text-secondary);
   padding-top: 12rpx;
 }

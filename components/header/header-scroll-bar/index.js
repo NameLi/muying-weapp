@@ -60,16 +60,17 @@ Component({
   },
 
   data: {
+    isHome: false,
     isReady: false,
     headerScrollTop: 0,
     headerScrollTopValue: 0,
     statusBarH: app.globalData.statusBarH,
-    headerBarH: app.globalData.customBarH,
-    headerContentH: app.globalData.customBarH - app.globalData.statusBarH,
-    capsuleL: 0,
-    capsuleH: 0,
-    backgroundStyle: "",
-    isHome: false,
+    headerBarH: app.globalData.headerBarH,
+    headerContentH: app.globalData.titleBarH,
+    capsuleL: app.globalData.capsule.left,
+    capsuleH: app.globalData.capsule.height,
+    posterH: app.globalData.titleBarH - 8,
+    posterW: (app.globalData.titleBarH - 8) * 0.716,
   },
 
   computed: {
@@ -83,7 +84,7 @@ Component({
       if (data.headerScrollTop < data.startTop) {
         return `opacity: 0;`;
       };
-      // const rate = (data.headerScrollTop - data.startTop) / data.endTop;
+
       const rate = data.headerScrollTop / data.statusBarH
       const opacity = rate > 1 ? 1 : rate;
       return `opacity: ${opacity};`;
@@ -91,15 +92,6 @@ Component({
   },
 
   attached() {
-    const customBar = app.globalData.customBar
-    const capsuleH = customBar.height
-    const capsuleL = customBar.left
-
-    this.setData({
-      capsuleH,
-      capsuleL,
-    })
-
     // 是否为首页
     this.setData({
       isHome: getCurrentPages().length === 1

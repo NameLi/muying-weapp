@@ -1,17 +1,31 @@
 .container {
 	padding-top: 20rpx;
 }
+
 .content {
 	padding: 32rpx;
 	border-radius: 6rpx;
 	background-color: #f1f1f1;
-	.title {
 
+	.title {
+		height: 48rpx;
+		line-height: 38rpx;
+		font-weight: bold;
+		color: var(--color-theme);
 	}
+
 	.intro {
 		padding-top: 10rpx;
 		line-height: 1.6;
-		color: #666;
+		color: var(--color-text-regular);
 		font-size: 24rpx;
+	}
+
+	.code {
+		margin: 0 4px;
+		padding: 2px 4px;
+		border-radius: 4px;
+		color: var(--color-theme);
+		background-color: rgba(249, 106, 25, .15);
 	}
 }

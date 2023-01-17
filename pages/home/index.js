@@ -1,11 +1,17 @@
-import { getIndex } from '../../api/api';
-import { SHARE_IMG } from "../../config.js";
+import {
+  getIndex
+} from '../../api/api';
+import {
+  SHARE_IMG
+} from "../../config.js";
 
 Page({
   data: {
     loading: true,
 
     isReady: false,
+
+    isTop: true,
 
     swiper: [],
 
@@ -27,11 +33,7 @@ Page({
     coming: {
       data: [],
       count: 0
-    },
-
-    advert: {},
-    scrollTop: 0,
-    bgcolor: "",
+    }
   },
 
   onLoad() {
@@ -47,7 +49,10 @@ Page({
 
   // 获取首页信息
   async getIndex() {
-    const { code, data } = await getIndex()
+    const {
+      code,
+      data
+    } = await getIndex()
 
     if (code === 200) {
       const {
@@ -69,41 +74,28 @@ Page({
           loading: false
         }, () => {
           wx.showTabBar();
-
-          // 设置状态栏字体颜色为白色，默认加载中时为黑色
-          wx.setNavigationBarColor({
-            frontColor: '#ffffff',
-            backgroundColor: '#ffffff',
-          })
         })
       })
-
-      if (swiper) {
-        this.swiperChange({
-          detail: {
-            index: 0,
-            bgcolor: swiper[0].bgcolor
-          }
-        })
-      }
     }
   },
 
-  // 轮播切换变色
-  swiperChange(e) {
-    this.setData({
-      bgcolor: e.detail.bgcolor
-    })
+  onPageScroll({
+    scrollTop
+  }) {
+    const threshold = 60; // 滚动变化的阈值
+
+    if (scrollTop > threshold && this.data.isTop) {
+      this.setData({
+        isTop: false
+      })
+    } else if (scrollTop <= threshold && !this.data.isTop) {
+      this.setData({
+        isTop: true
+      })
+    }
   },
 
-  // 滚动头部固定
-  onPageScroll({ scrollTop }) {
-    this.setData({
-      scrollTop
-    })
-  },
-
-  onShareAppMessage(res) {
+  onShareAppMessage() {
     return {
       title: '慕影网，遇见好电影',
       imageUrl: SHARE_IMG,

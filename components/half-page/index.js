@@ -93,7 +93,7 @@ Component({
     timer: null,
     contentHeight: '100vh',
     statusBarH: app.globalData.statusBarH,
-    headerBarH: app.globalData.customBarH
+    headerBarH: app.globalData.headerBarH
   },
 
   computed: {

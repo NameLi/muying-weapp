@@ -5,6 +5,11 @@
   margin-right: 16rpx;
   padding-bottom: 15rpx;
   width: 188rpx;
+
+  &:nth-last-child(1) {
+    margin-right: 0;
+  }
+
   .actor-avatar {
     position: relative;
     width: 188rpx;
@@ -14,6 +19,7 @@
     border-radius: 6rpx;
     background-color: rgba(#f5f5f5, 0.45);
   }
+
   .actor-info {
     .actor-name {
       padding-top: 10rpx;
@@ -23,6 +29,7 @@
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+
     .actor-label {
       color: #ccc;
       font-size: 24rpx;

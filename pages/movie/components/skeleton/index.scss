@@ -1,55 +1,55 @@
 .skeleton-wrapper {
-    z-index: 999;
-    position: absolute;
-    left: 0;
-    top: 70rpx;
-    bottom: 0;
-    right: 0;
-    overflow: hidden;
-    background-color: #fff;
+  z-index: 999;
+  position: absolute;
+  left: 0;
+  top: 70rpx;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  background-color: #fff;
 }
 
 .skeleton {
-    animation: skeleton 1.3s ease-in-out infinite alternate;
+  animation: skeleton 1.3s ease-in-out infinite alternate;
 }
 
 @keyframes skeleton {
-    from {
-        opacity: 0.25;
-    }
+  from {
+    opacity: 0.25;
+  }
 
-    to {
-        opacity: 0.96;
-    }
+  to {
+    opacity: 0.96;
+  }
 }
 
 .skeleton-item {
-    display: flex;
-    padding: 16rpx 0;
-    margin: 0 30rpx;
-    height: 252rpx;
+  display: flex;
+  padding: 16rpx 0;
+  margin: 0 30rpx;
+  height: 252rpx;
 
-    .skeleton-poster {
-        width: 164rpx;
-        height: 220rpx;
-        border-radius: 6rpx;
-        background-color: var(--color-skeleton);
+  .skeleton-poster {
+    width: 164rpx;
+    height: 220rpx;
+    border-radius: 6rpx;
+    background-color: var(--color-skeleton);
+  }
+
+  .skeleton-info {
+    flex: 1;
+    margin-left: 24rpx;
+
+    .title {
+      margin-bottom: 30rpx;
+      height: 44rpx;
+      background-color: var(--color-skeleton);
     }
 
-    .skeleton-info {
-        flex: 1;
-        margin-left: 24rpx;
-
-        .title {
-            margin-bottom: 30rpx;
-            height: 44rpx;
-            background-color: var(--color-skeleton);
-        }
-
-        .info-item {
-            margin-top: 16rpx;
-            height: 28rpx;
-            background-color: var(--color-skeleton);
-        }
+    .info-item {
+      margin-top: 16rpx;
+      height: 28rpx;
+      background-color: var(--color-skeleton);
     }
+  }
 }

@@ -1,7 +1,12 @@
+import { HOST } from "../../../../config"
 const app = getApp()
 
 Component({
   behaviors: [wx.computedBehavior],
+
+  options: {
+    styleIsolation: "shared",
+  },
 
   properties: {
     keyword: {
@@ -113,24 +118,22 @@ Component({
     // 搜索
     async search() {
       if (this.data[this.data.type + "NoMoreData"]) return;
-
-      if (this.data.loading) return;
-
+      
       this.setData({
         loading: true
       })
-
+      
       if (this.data[this.data.type + "Total"] === 0) {
         this.setData({
           isShowLoading: true
         })
       }
-
+      
       if (this.data.cancel) {
         this.data.cancel.abort();
         this.data.cancel = null;
       }
-
+      
       let page = 1;
       if (this.data.type === "actor") {
         page = this.data.actorPage;
@@ -147,7 +150,7 @@ Component({
       };
 
       this.data.cancel = wx.request({
-        url: app.HOST + '/search',
+        url: HOST + '/search',
         data: params,
         header: {
           'content-type': 'application/json',
@@ -204,6 +207,8 @@ Component({
           })
         },
         fail: (err) => {
+          console.warn(err)
+
           this.setData({
             loading: false
           })

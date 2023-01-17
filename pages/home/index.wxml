@@ -3,12 +3,12 @@
   <home-loading />
 </m-transition>
 
-<view class="page {{ isReady ? 'is-visible' : 'is-hidden' }}">
-  <!-- 头部 -->
-  <header-bar scroll-top="{{ scrollTop }}" bgcolor="{{ bgcolor }}" />
+<view class="main {{ isReady ? 'is-visible' : 'is-hidden' }}">
+  <!-- 自定义头部 -->
+  <header-bar is-top="{{isTop}}" />
 
   <!-- 轮播 -->
-  <home-swiper swiper="{{ swiper }}" bind:onchange="swiperChange" />
+  <home-swiper is-top="{{isTop}}" swiper="{{ swiper }}" />
 
   <!-- 菜单 -->
   <home-menu />

@@ -8,6 +8,6 @@
     <m-cell icon="feed" icon-color="#ffbe10" title="意见反馈" url="/pages/profile/feedback/index" />
     <m-cell icon="aboutus" icon-color="#ffbe10" title="关于作者" url="/pages/profile/aboutus/index" />
     <m-cell icon="edit" icon-color="#ffbe10" title="更新日志" url="/pages/profile/changelog/index" />
-    <m-cell icon="set" icon-color="#ffbe10" title="系统设置" url="/pages/profile/setting/index" />
+    <m-cell icon="set" icon-color="#ffbe10" title="设置" url="/pages/profile/setting/index" />
   </m-cell-group>
 </view>

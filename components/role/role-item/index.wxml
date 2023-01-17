@@ -1,10 +1,12 @@
 <view class="role-item m-hairline--bottom" bindtap="pathTo">
-    <image mode="aspectFill" class="role-avatar" lazy-load src="{{role.avatar}}" />
+  <image mode="aspectFill" class="role-avatar" lazy-load src="{{role.avatar}}" />
 
-    <view class="role-info">
-        <view class="role-name ellipsis">{{ name }}</view>
-        <view class="info-item ellipsis" wx:if="{{ role.name_en }}">{{ role.name_en }}</view>
-        <view class="info-item info">{{ info }}</view>
-        <!-- <view class="role-brief">{{ role.brief }}</view> -->
+  <view class="role-info">
+    <view class="role-name ellipsis">
+      <rich-text nodes="{{name}}" />
     </view>
+    <view class="info-item ellipsis" wx:if="{{ role.name_en }}">{{ role.name_en }}</view>
+    <view class="info-item info">{{ info }}</view>
+    <!-- <view class="role-brief">{{ role.brief }}</view> -->
+  </view>
 </view>

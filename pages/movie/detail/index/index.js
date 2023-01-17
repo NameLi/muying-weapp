@@ -59,7 +59,7 @@ Page({
     isShowFavoriteCreate: false,  // 创建收藏夹
 
     statusBarH: app.globalData.statusBarH,
-    headerBarH: app.globalData.customBarH
+    headerBarH: app.globalData.headerBarH
   },
 
   computed: {

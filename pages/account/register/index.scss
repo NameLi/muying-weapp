@@ -18,7 +18,7 @@
       align-items: center;
       position: relative;
       margin-top: 40rpx;
-      height: 81rpx;
+      height: 82rpx;
       border-bottom: 1px solid #eee;
 
       .send-code {
@@ -60,6 +60,6 @@
     margin-top: 50rpx;
     padding: 0 80rpx;
     font-size: 24rpx;
-    color: #999;
+    color: var(--color-text-secondary);
   }
 }

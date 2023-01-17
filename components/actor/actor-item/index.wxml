@@ -2,7 +2,9 @@
   <image class="actor-avatar" mode="aspectFill" lazy-load src="{{ actor.avatar }}" />
 
   <view class="actor-info">
-    <view class="actor-name ellipsis">{{ actor.name }}</view>
+    <view class="actor-name ellipsis">
+      <rich-text nodes="{{name}}" />
+    </view>
     <view class="info-item ellipsis">{{ actor.name_en }}</view>
     <view class="info-item ellipsis">
       <text class="info-item__label">{{ actor.gender }}</text>

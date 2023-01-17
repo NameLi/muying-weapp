@@ -1,6 +1,6 @@
 {
   "navigationStyle": "custom",
-  "navigationBarTextStyle": "black",
+  "navigationBarTextStyle": "white",
   "usingComponents": {
     "header-bar": "./components/home-header",
     "home-menu": "./components/home-menu",

@@ -36,6 +36,8 @@ Component({
     timer: null,
     backing: false,
     el: null,
+    statusBarH: app.globalData.statusBarH,
+    headerBarH: app.globalData.headerBarH,
   },
 
   computed: {
@@ -55,14 +57,6 @@ Component({
   },
 
   attached() {
-    const statusBarH = app.globalData.statusBarH
-    const headerBarH = app.globalData.customBarH
-
-    this.setData({
-      statusBarH,
-      headerBarH
-    })
-
     // 是否为首页
     this.setData({
       isHome: getCurrentPages().length === 1

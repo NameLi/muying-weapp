@@ -3,4 +3,4 @@
   <text class="is-premiere">{{ p.premiere ? "(首映)" : "" }}</text>
 </m-cell>
 
-<m-loadmore wx:if="{{loading}}" loading="{{loading}}" />
+<m-loadmore loading="{{loading}}" />

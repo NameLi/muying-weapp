@@ -1,58 +1,58 @@
 <view class="movie-info-wrapper" style="padding-top: {{ headerBarH }}px">
-	<view class="movie-poster">
-		<image class="poster" mode="aspectFill" src="{{poster}}" />
-	</view>
+  <view class="movie-poster">
+    <image class="poster" mode="aspectFill" src="{{poster}}" bindtap="posterPreview" />
+  </view>
 
-	<view class="movie-info">
-		<!-- 奖项 -->
-		<view wx:if="{{movie.awards_total_count}}" class="award-icon" bindtap="pathToAward">
-			<image class="honour-icon" src="/images/honour-cup.png" />
-		</view>
+  <view class="movie-info">
+    <!-- 奖项 -->
+    <view wx:if="{{movie.awards_total_count}}" class="award-icon" bindtap="pathToAward">
+      <image class="honour-icon" src="/images/honour-cup.png" />
+    </view>
 
-		<view class="title">{{ movie.title }}</view>
+    <view class="title">{{ movie.title }}</view>
 
-		<view class="subtitle"> {{ movie.title_original }}</view>
+    <view class="subtitle">{{ movie.title_original }}</view>
 
-		<view class="info-brief {{ isEpisode ? 'is-episode' : '' }}" bindtap="showDetailModal">
-			<view class="info-list genre">{{ genres }}</view>
-			<view class="info-list">
-				<text>{{ countries }}</text>
-				<text class="delimiter" wx:if="{{movie.year}}">·</text>
-				<text>{{ movie.year }}</text>
-				<text class="delimiter" wx:if="{{durations && !isEpisode}}">·</text>
-				<text wx:if="{{!isEpisode}}">{{ durations }}</text>
-			</view>
-			<!-- 剧集 -->
-			<view class="info-list" wx:if="{{isEpisode}}">
-				<text>共{{ movie.episode_count }}集</text>
-				<text class="delimiter">·</text>
-				<text>每集{{ movie.durations }}分钟</text>
-			</view>
-		</view>
+    <view class="info-brief {{ isEpisode ? 'is-episode' : '' }}" bindtap="showDetailModal">
+      <view class="info-list genre">{{ genres }}</view>
+      <view class="info-list">
+        <text>{{ countries }}</text>
+        <text class="delimiter" wx:if="{{movie.year}}">·</text>
+        <text>{{ movie.year }}</text>
+        <text class="delimiter" wx:if="{{durations && !isEpisode}}">·</text>
+        <text wx:if="{{!isEpisode}}">{{ durations }}</text>
+      </view>
+      <!-- 剧集 -->
+      <view class="info-list" wx:if="{{isEpisode}}">
+        <text>共{{ movie.episode_count }}集</text>
+        <text class="delimiter">·</text>
+        <text>每集{{ movie.durations }}分钟</text>
+      </view>
+    </view>
 
-		<!-- 想看/评分 -->
-		<block wx:if="{{!loading}}">
-			<view class="btn-group" wx:if="{{!movie.is_rating}}">
-				<view class="btn {{ movie.is_wish ? 'is-wish' : '' }}" bindtap="userMovieWish">
-					<c-icon class="icon" name="love" />
-					{{ movie.is_wish ? "已想看" : "想看" }}
-				</view>
+    <!-- 想看/评分 -->
+    <block wx:if="{{!loading}}">
+      <view class="btn-group" wx:if="{{!movie.is_rating}}">
+        <view class="btn {{ movie.is_wish ? 'is-wish' : '' }}" bindtap="userMovieWish">
+          <c-icon class="icon" name="love" />
+          {{ movie.is_wish ? "已想看" : "想看" }}
+        </view>
 
-				<!-- 未上映的不可选看过 -->
-				<view wx:if="{{movie.release_status !== 1}}" class="btn" bindtap="pathToRate">
-					<c-icon class="icon" name="star-fill" />
-					看过
-				</view>
-			</view>
+        <!-- 未上映的不可选看过 -->
+        <view wx:if="{{movie.release_status !== 1}}" class="btn" bindtap="pathToRate">
+          <c-icon class="icon" name="star-fill" />
+          看过
+        </view>
+      </view>
 
-			<!-- 已评分 -->
-			<view class="btn-group has-rating" wx:else bindtap="pathToRateEdit">
-				<view class="rating-value">
-					<text class="text">已看过</text>
-					<m-rate value="{{movie.my_rating.rating}}" step="2" max="10" size="28" allow-half readonly />
-				</view>
-				<text class="rating-date">{{ movie.my_rating.created_date }}</text>
-			</view>
-		</block>
-	</view>
+      <!-- 已评分 -->
+      <view class="btn-group has-rating" wx:else bindtap="pathToRateEdit">
+        <view class="rating-value">
+          <text class="text">已看过</text>
+          <m-rate value="{{movie.my_rating.rating}}" step="2" max="10" size="28" allow-half readonly />
+        </view>
+        <text class="rating-date">{{ movie.my_rating.created_date }}</text>
+      </view>
+    </block>
+  </view>
 </view>

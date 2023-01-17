@@ -65,7 +65,7 @@ Component({
                 cancelText: '取消播放',
                 confirmText: '继续播放',
                 confirmColor: '#f7af0c',
-                cancelColor: '#999999',
+                cancelColor: 'var(--color-text-secondary)999',
                 success: (res) => {
                   if (res.confirm) {
                     this.setData({

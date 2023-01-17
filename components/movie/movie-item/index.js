@@ -27,10 +27,7 @@ Component({
 
   computed: {
     title(data) {
-      return data.movie?.title.replace(
-        data.keyword,
-        `${data.keyword}`
-      );
+      return '<div class="title">' + data.movie.title.replace(data.keyword, `<span class="keyword">${data.keyword}</span>`) + '</div>';
     },
     isShowCategory(data) {
       if (data.movie) {

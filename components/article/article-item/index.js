@@ -4,9 +4,10 @@ Component({
   externalClasses: ['article-class'],
 
   options: {
-    addGlobalClass: true,
+    virtualHost: true,
+    styleIsolation: 'apply-shared'
   },
-  
+
   behaviors: [wx.computedBehavior],
 
   properties: {
@@ -24,7 +25,7 @@ Component({
       return app.dateBefore(data.article?.created_at)
     }
   },
-  
+
   methods: {
     pathTo() {
       wx.navigateTo({
