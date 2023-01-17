@@ -1,9 +1,9 @@
 <!-- 加载骨架屏 -->
-<skeleton wx:if="{{isShowSkeleton}}" top="15rpx" />
+<!-- <skeleton wx:if="{{isShowSkeleton}}" top="15rpx" /> -->
 
 <view class="main">
   <!-- 标题 shadow -->
-  <view class="group-title-holder" wx:if="{{ groups.length }}"></view>
+  <!-- <view class="group-title-holder" wx:if="{{ groups.length }}"></view> -->
 
   <view class="group m-hairline--bottom" wx:for="{{groups}}" wx:for-item="group" wx:key="date">
     <view class="group-title">

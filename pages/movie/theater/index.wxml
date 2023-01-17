@@ -1,5 +1,5 @@
 <!-- 加载骨架屏 -->
-<skeleton wx:if="{{isShowSkeleton}}" top="15rpx" />
+<!-- <skeleton wx:if="{{isShowSkeleton}}" top="15rpx" /> -->
 
 <view class="main">
   <movie-item wx:for="{{ list }}" movie="{{ item }}" wx:key="id" />

@@ -1,8 +1,0 @@
-.logout {
-  position: fixed;
-  bottom: 20rpx;
-  left: 15rpx;
-  right: 15rpx;
-  padding-bottom: constant(safe-area-inset-bottom);
-  padding-bottom: env(safe-area-inset-bottom);
-}

@@ -1,7 +1,0 @@
-page {
-  background-color: #f5f5f5;
-}
-
-.main {
-  margin-bottom: 20rpx;
-}

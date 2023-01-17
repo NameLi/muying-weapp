@@ -64,6 +64,7 @@ const expandPage = () => {
     return originalPage(config)
   }
 }
+expandPage(),
 
 
 App({
@@ -96,7 +97,6 @@ App({
 
   async onLaunch() {
 
-    expandPage(),
 
       wx.login({
         success: async ({ code }) => {
